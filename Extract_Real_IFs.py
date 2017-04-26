@@ -3,7 +3,7 @@
 VERSION:
 -------
 
-Version (by release date): 2017-03-05
+Version (by release date): 2017-04-26
 
 DEVELOPER INFORMATION:
 ---------------------
@@ -18,7 +18,7 @@ PUBLICATION:
 
 TriFlow: Triaging Android Applications using Speculative Information Flows
 O. Mirzaei, G. Suarez-Tangil, J. E. Tapiador, J. M. de Fuentes
-ACM Asia Conference on Computer and Communications Security (ASIACCS), Abu Dhabi, UAE (May 2017)
+ACM Asia Conference on Computer and Communications Security (ASIACCS), Abu Dhabi, UAE (April 2017)
 
 COPYRIGHT NOTICE:
 ----------------
