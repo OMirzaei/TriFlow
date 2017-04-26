@@ -3,7 +3,7 @@
 VERSION:
 -------
 
-Version (by release date): 2017-02-15
+Version (by release date): 2017-04-26
 
 DEVELOPER INFORMATION:
 ---------------------
@@ -18,7 +18,7 @@ PUBLICATION:
 
 TriFlow: Triaging Android Applications using Speculative Information Flows
 O. Mirzaei, G. Suarez-Tangil, J. E. Tapiador, J. M. de Fuentes
-ACM Asia Conference on Computer and Communications Security (ASIACCS), Abu Dhabi, UAE (May 2017)
+ACM Asia Conference on Computer and Communications Security (ASIACCS), Abu Dhabi, UAE (April 2017)
 
 COPYRIGHT NOTICE:
 ----------------
@@ -80,16 +80,12 @@ else:
     # Directory of frequency table for all information flows
     Output_Dir = arguments[arguments.index('-o') + 1]
 
-# Home directory
-Home_Dir = os.path.curdir
+Home_Dir = os.path.curdir       # Home directory
 
-# Total number of apps from which FlowDroid was able to extract any information flows
-Num_Apps = 0                                            
+Num_Apps = 0                    # Total number of apps from which FlowDroid was able to extract any information flows
 
-# Dictionary of SuSi source API methods in natural format
-Dict_Srcs_Nat = {}
-# Dictionary of SuSi sink API methods in natural format
-Dict_Snks_Nat = {}                                      
+Dict_Srcs_Nat = {}              # Dictionary of SuSi source API methods in natural format
+Dict_Snks_Nat = {}              # Dictionary of SuSi sink API methods in natural format
 
 num_src = 0
 with open(os.path.join(Home_Dir,'Sources.txt')) as src_txt:
@@ -105,16 +101,11 @@ with open(os.path.join(Home_Dir,'Sinks.txt')) as snk_txt:
         Dict_Snks_Nat[num_snk + 1] = line
         num_snk += 1
 
-# ********************* End of Initialization *********************
-
-# ************************ Creating the super set of all possible flows between sources and sinks ************************
-
-# Contains real info-flows which are extracted by FlowDroid
+# Creating matrices for storing real information flows and their frequencies (Note: The zero index is not used for the sake of facility)
 Real_InfoFlows_method = defaultdict(int)
-# Contains the frequencies of info-flows, i.e. how many apps have a particular info-flow
 Freq_InfoFlows_method = {}
 
-# ********************* End of Creating the super set of all possible flows between sources and sinks *********************
+# ********************* End of Initialization *********************
 
 # ********************* Main Body *********************
 
@@ -122,18 +113,19 @@ for file in glob.iglob(os.path.join(Input_Dir, "*.txt")):
 
     dirname,filename = os.path.split(file)
 
-    # Reading the pre-computed real number of info-flows which are obtained from FlowDroid
+    # Reading real information flows extracted from FlowDroid output files
     f = open(file,'rb')
     real_flows = pickle.load(f)
 
     if real_flows:
         Num_Apps += 1
 
-    # Updating the corresponding array based on the real info-flows
+    # Updating the corresponding array based on the real number of sources and sinks in each app (Those which have connections)
     for i in range(0,len(real_flows)):
         Real_InfoFlows_method[(real_flows[i][0], real_flows[i][1])] += 1
     
     f.close()
+
 
 # Creating the overall frequency matrix for information flows
 for key in Real_InfoFlows_method.iterkeys():
@@ -142,28 +134,26 @@ for key in Real_InfoFlows_method.iterkeys():
 
 # ********************* End of Main Body *********************
 
-# ********************* Saving the results *********************
+# ********************* Storing the results *********************
 
 if not os.path.exists(Output_Dir):
     os.mkdir(Output_Dir)
 
-# ********************* Creating a table of all information flows with non-zero frequencies *********************
+# ********************* Creating the frequency table of Non-Empty information flows for methods *********************
 
 # Creating the headers of rows and columns
 with open(os.path.join(Output_Dir,'Freq_InfoFlows.csv'), 'wb') as csvfile:
     a = csv.writer(csvfile)
-    # Creating the headers
-    a.writerow(['Source']+['Sink']+['Frequency'])
+    a.writerow(['Sources']+['Sinks']+['Frequency'])
     for key in Freq_InfoFlows_method.iterkeys():
         if Freq_InfoFlows_method[key] != 0:
             fr = str(Freq_InfoFlows_method[key])
             a.writerow([Dict_Srcs_Nat[key[0]]]+[Dict_Snks_Nat[key[1]]]+[fr])
 
-# ****************** End of Creating a table of all information flows with non-zero frequencies ******************
+# ****************** End of Creating the frequency table of Non-Empty information flows for methods ******************
 
-# ********************* Sorting the frequency table of information flows *********************
+# ********************* Sorting the frequency table of Non-Empty information flows for methods *********************
 
-# Opening the unsorted frequency table
 Unsorted_File =open(os.path.join(Output_Dir,'Freq_InfoFlows.csv'), 'rb')
 infile = csv.reader(Unsorted_File)
 infields = infile.next()
@@ -175,9 +165,8 @@ with open(os.path.join(Output_Dir,'Freq_InfoFlows_Sorted.csv'),'wb') as csvfile:
     for row in Sorted_File:
         a.writerow(row)
 
-# ********************* End of Sorting the frequency table of information flows *********************
+# ********************* End of Sorting the frequency table of Non-Empty information flows for methods *********************
 
-# Removing the unsorted frequency table
-os.remove(os.path.join(Output_Dir,'Freq_InfoFlows.csv'))
+os.remove(os.path.join(Output_Dir,'Freq_InfoFlows.csv'))     #Removing the unsorted frequency table
 
-# ********************* End of Saving the results *********************
+# ********************* End of Storing the results *********************
