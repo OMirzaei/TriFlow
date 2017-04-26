@@ -3,7 +3,7 @@
 VERSION:
 -------
 
-Version (by release date): 2017-02-15
+Version (by release date): 2017-04-26
 
 DEVELOPER INFORMATION:
 ---------------------
@@ -18,7 +18,7 @@ PUBLICATION:
 
 TriFlow: Triaging Android Applications using Speculative Information Flows
 O. Mirzaei, G. Suarez-Tangil, J. E. Tapiador, J. M. de Fuentes
-ACM Asia Conference on Computer and Communications Security (ASIACCS), Abu Dhabi, UAE (May 2017)
+ACM Asia Conference on Computer and Communications Security (ASIACCS), Abu Dhabi, UAE (April 2017)
 
 COPYRIGHT NOTICE:
 ----------------
@@ -115,7 +115,7 @@ print 'Extracting total information flows from applications...'
 subprocess.call([sys.executable, os.path.join(Home_Dir,'Extract_Total_IFs.py'), '-i', os.path.join(Input_Dir,'All_Apks'), '-o', os.path.join(Home_Dir,'Total_Flows')])
 # Calculates the probabilities of information flows
 print 'Calculating the probabilities of information flows...'
-subprocess.call([sys.executable, os.path.join(Home_Dir,'Probability.py'), '-r', os.path.join(Home_Dir,'Real_Flows'), '-t', os.path.join(Home_Dir,'Total_Flows'), '-o', Output_Dir])
+subprocess.call([sys.executable, os.path.join(Home_Dir,'Probability.py'), '-r', os.path.join(Home_Dir,'Real_Flows'), '-t', os.path.join(Home_Dir,'Total_Flows/Flows'), '-o', Output_Dir])
 print 'Probability table was created...'
 
 # Separating real information flows of malwares and benign applications
