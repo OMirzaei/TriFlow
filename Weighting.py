@@ -3,7 +3,7 @@
 VERSION:
 -------
 
-Version (by release date): 2017-02-15
+Version (by release date): 2017-04-26
 
 DEVELOPER INFORMATION:
 ---------------------
@@ -18,7 +18,7 @@ PUBLICATION:
 
 TriFlow: Triaging Android Applications using Speculative Information Flows
 O. Mirzaei, G. Suarez-Tangil, J. E. Tapiador, J. M. de Fuentes
-ACM Asia Conference on Computer and Communications Security (ASIACCS), Abu Dhabi, UAE (May 2017)
+ACM Asia Conference on Computer and Communications Security (ASIACCS), Abu Dhabi, UAE (April 2017)
 
 COPYRIGHT NOTICE:
 ----------------
@@ -79,13 +79,11 @@ else:
 
 # ************************ End of Initialization ************************
 
-# ********************* Creating dictionaries *********************
+# ********************* Main Body *********************
 
-# Dictionary of info-flows' frequencies in malwares
-Dict_Freq_Mal = {}
-# Dictionary of info-flows' frequencies in benign applications
-Dict_Freq_Good = {}                                     
-Dict_Weights = {}
+Dict_Freq_Mal = {}                      # Dictionary of info-flows' frequencies in malwares
+Dict_Freq_Good = {}                     # Dictionary of info-flows' frequencies in benign apps
+Dict_Score = {}
 K = 0
 with open(os.path.join(Input_Dir,'Freq_InfoFlows_Malware.csv')) as Freq_Mal:
         reader = csv.reader(Freq_Mal)
@@ -98,25 +96,23 @@ with open(os.path.join(Input_Dir,'Freq_InfoFlows_Benign.csv')) as Freq_Good:
         for row in reader:
             Dict_Freq_Good[(row[0],row[1])]=row[2]
 
-# ********************* End of Creating dictionaries *********************
-
-# ********************* Calculating the weights of info-flows *********************
-
 min_value = Dict_Freq_Good[min(Dict_Freq_Good, key=Dict_Freq_Good.get)]     # Minimum frequency value in goodware dataset
 K =  math.ceil(-math.log(ast.literal_eval(min_value),2))
-
 for key,value in Dict_Freq_Mal.iteritems():
     if key in Dict_Freq_Good:
-        Dict_Weights[key] = -ast.literal_eval(Dict_Freq_Mal[key]) * math.log(ast.literal_eval(Dict_Freq_Good[key]),2)
+        Dict_Score[key] = -ast.literal_eval(Dict_Freq_Mal[key]) * math.log(ast.literal_eval(Dict_Freq_Good[key]),2)
     else:
-        Dict_Weights[key] = ast.literal_eval(Dict_Freq_Mal[key]) * K
+        Dict_Score[key] = ast.literal_eval(Dict_Freq_Mal[key]) * K
 for key,value in Dict_Freq_Good.iteritems():
     if key not in Dict_Freq_Mal:
-        Dict_Weights[key] = 0
+        Dict_Score[key] = 0
 
-# ********************* End of Calculating the weights of info-flows *********************
+# ********************* End of Main Body *********************
 
-Sorted_Dict_Weights = collections.OrderedDict(sorted(Dict_Weights.items(), key=lambda t: float(t[1])))
+
+# ********************* Storing the results *********************
+
+Sorted_Dict_Score = collections.OrderedDict(sorted(Dict_Score.items(), key=lambda t: float(t[1])))
 
 # ********************* Creating the weight table for all information flows *********************
 
@@ -127,7 +123,9 @@ if not os.path.exists(Output_Dir):
 with open(os.path.join(Output_Dir,'Weights_InfoFlows_Sorted.csv'), 'wb') as csvfile:
     a = csv.writer(csvfile)
     a.writerow(['Source']+['Sink']+['Weight'])
-    for key,value in Sorted_Dict_Weights.iteritems():
-        a.writerow([key[0]]+[key[1]]+[Sorted_Dict_Weights[key]])
+    for key,value in Sorted_Dict_Score.iteritems():
+        a.writerow([key[0]]+[key[1]]+[Sorted_Dict_Score[key]])
 
 # ****************** End of Creating the weight table for all information flows ******************
+
+# ********************* End of Storing the results *********************
