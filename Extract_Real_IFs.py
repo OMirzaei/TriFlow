@@ -3,7 +3,7 @@
 VERSION:
 -------
 
-Version (by release date): 2017-02-15
+Version (by release date): 2017-03-05
 
 DEVELOPER INFORMATION:
 ---------------------
@@ -62,6 +62,8 @@ import shutil
 import csv
 import glob
 import pickle
+import time
+import multiprocessing
 import sys
 
 # ************************ End of Importing Modules ************************
@@ -77,13 +79,15 @@ else:
     # Directory of real flows extracted from FlowDroid output files
     Output_Dir = arguments[arguments.index('-o') + 1]
 
-# Home directory
+# Directories
 Home_Dir = os.path.curdir
 
+# Number of processes
+n_procs = 4
 # Dictionary of SuSi source API methods in natural format
 Dict_Srcs_Nat = {}
 # Dictionary of SuSi sink API methods in natural format
-Dict_Snks_Nat = {}                          
+Dict_Snks_Nat = {}
 # Dictionary of real information flows
 Dict_Real_Flows = []
 
@@ -94,6 +98,8 @@ with open(os.path.join(Home_Dir,'Sources.txt')) as src_txt:
         Dict_Srcs_Nat[line] = num_src + 1
         num_src += 1
 
+num_src_method = num_src
+
 num_snk = 0
 with open(os.path.join(Home_Dir,'Sinks.txt')) as snk_txt:
     for line in snk_txt:
@@ -101,36 +107,24 @@ with open(os.path.join(Home_Dir,'Sinks.txt')) as snk_txt:
         Dict_Snks_Nat[line] = num_snk + 1
         num_snk += 1
 
+num_snk_method = num_snk
+
 # ********************* End of Initialization *********************
 
-# ************************ Creating the Super Set ************************
+# ********************* Functions *********************
 
-# Counting the total number of sources
-with open(os.path.join(Home_Dir,"Sources_Smali.txt")) as myfile:
-    num_src_method = sum(1 for line in myfile)
-# Counting the total number of sinks
-with open(os.path.join(Home_Dir,"Sinks_Smali.txt")) as myfile:
-    num_snk_method = sum(1 for line in myfile)
+def Extract_RealFlows(appfile):
 
-# ********************* End of Creating the Super Set *********************
+    global Dict_Real_Flows
 
-# ********************* Main Body *********************
-
-if not os.path.exists(Output_Dir):
-    os.mkdir(Output_Dir)
-
-for file in glob.iglob(os.path.join(Input_Dir, "*.txt")):
-
-    dirname,filename = os.path.split(file)
-
-    flag_method = [[0 for x in range(num_snk_method+1)] for x in range(num_src_method+1)]
-    # Contains the source index
+    dirname,filename = os.path.split(appfile)
+    # A flag to avoid repetitive real flows (Note: The zero index is not used for the sake of facility)
+    flag_realflows = [[0 for x in range(num_snk_method+1)] for x in range(num_src_method+1)]
     row_idx = 0
-    # Contains the sink index
     col_idx = 0
 
-    if filename[:-10] + '-realflows.txt' not in os.listdir(Output_Dir):
-        # Reading the FlowDroid output file
+    if filename not in os.listdir(Output_Dir):
+        # Opening FlowDroid output file to extract real information flows
         flows_file = open(os.path.join(Input_Dir,filename),'rb')
         for line in flows_file:
             if 'Found a flow to sink' in line:
@@ -144,15 +138,26 @@ for file in glob.iglob(os.path.join(Input_Dir, "*.txt")):
                 if src_name in Dict_Srcs_Nat.keys():
                     row_idx = Dict_Srcs_Nat[src_name]
 
-            if flag_method[row_idx][col_idx] == 0 and row_idx != 0 and col_idx != 0:
+            if flag_realflows[row_idx][col_idx] == 0 and row_idx != 0 and col_idx != 0:
                 Dict_Real_Flows.append((row_idx,col_idx))
-                flag_method[row_idx][col_idx] = 1
-
+                flag_realflows[row_idx][col_idx] = 1
         flows_file.close()
+
         result = open(os.path.join(Output_Dir,filename[:-10] + '-realflows.txt'),'wb')
         pickle.dump(Dict_Real_Flows,result)
         result.close()
         Dict_Real_Flows = []
 
-# ********************* End of Main Body *********************
+# ********************* End of Functions *********************
 
+# ********************* Main Body *********************
+
+if not os.path.exists(Output_Dir):
+    os.mkdir(Output_Dir)
+
+pool = multiprocessing.Pool(n_procs)
+results = [pool.apply_async(Extract_RealFlows, [appfile]) for appfile in glob.iglob(os.path.join(Input_Dir, "*.txt"))]
+pool.close()
+pool.join()
+
+# ********************* End of Main Body *********************
