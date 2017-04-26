@@ -3,7 +3,7 @@
 VERSION:
 -------
 
-Version (by release date): 2017-02-15
+Version (by release date): 2017-04-26
 
 DEVELOPER INFORMATION:
 ---------------------
@@ -18,7 +18,7 @@ PUBLICATION:
 
 TriFlow: Triaging Android Applications using Speculative Information Flows
 O. Mirzaei, G. Suarez-Tangil, J. E. Tapiador, J. M. de Fuentes
-ACM Asia Conference on Computer and Communications Security (ASIACCS), Abu Dhabi, UAE (May 2017)
+ACM Asia Conference on Computer and Communications Security (ASIACCS), Abu Dhabi, UAE (April 2017)
 
 COPYRIGHT NOTICE:
 ----------------
@@ -82,13 +82,11 @@ else:
     # Directory of probability table for all information flows
     Output_Dir = arguments[arguments.index('-o') + 1]
 
-# Home directory
-Home_Dir = os.path.curdir
+# Directories
+Home_Dir = os.path.curdir           # Home directory
 
-# Dictionary of SuSi source API methods in natural format
-Dict_Srcs_Nat = {}
-# Dictionary of SuSi sink API methods in natural format
-Dict_Snks_Nat = {}                                          
+Dict_Srcs_Nat = {}                  # Dictionary of SuSi source API methods in natural format
+Dict_Snks_Nat = {}                  # Dictionary of SuSi sink API methods in natural format
 
 num_src = 0
 with open(os.path.join(Home_Dir,'Sources.txt')) as src_txt:
@@ -104,18 +102,12 @@ with open(os.path.join(Home_Dir,'Sinks.txt')) as snk_txt:
         Dict_Snks_Nat[num_snk + 1] = line
         num_snk += 1
 
-# ********************* End of Initialization *********************
-
-# ************************ Creating the super set of all possible flows between sources and sinks ************************
-
-# Contains real info-flows which are extracted by FlowDroid
+# Creating matrices for storing real info-flows, total info-flows, and their probabilities
 Real_InfoFlows_method = defaultdict(int)
-# Contains total info-flows which are specified through looking into apps' smali codes
 Total_InfoFlows_method = defaultdict(int)
-# Contains the probabilities of info-flows, i.e. the probability of an info-flow to be real (given by FlowDroid) when it is found in the apps' smali codes
 Prob_InfoFlows_method = {}
 
-# ********************* End of Creating the super set of all possible flows between sources and sinks *********************
+# ********************* End of Initialization *********************
 
 # ********************* Main Body *********************
 
@@ -125,19 +117,19 @@ for file in glob.iglob(os.path.join(Real_Flows_Dir, "*.txt")):
 
     flag_total = defaultdict(int)
 
-    # Reading the pre-computed total number of possible info-flows by looking into the smali codes of applications
+    # Counting the total number of sources and sinks within each app by looking through smali files
     total_flows = pickle.load(open(os.path.join(Total_Flows_Dir,filename[:-14]+'-totalflows.txt'),'rb'))
 
-    # Updating the corresponding array based on the total info-flows
+    # Updating the corresponding array based on the total number of sources and sinks in each app
     for i in range(0,len(total_flows)):
         flag_total[(total_flows[i][0], total_flows[i][1])] = 1
         Total_InfoFlows_method[(total_flows[i][0], total_flows[i][1])] += 1
 
-    # Reading the pre-computed real number of info-flows which are obtained from FlowDroid
+    # Counting the real number of sources and sinks within each app by looking through smali files
     f = open(file,'rb')
     real_flows = pickle.load(f)
 
-    # Updating the corresponding array based on the real info-flows
+    # Updating the corresponding array based on the real number of sources and sinks in each app (Those which have connections)
     for i in range(0,len(real_flows)):
         if flag_total[(real_flows[i][0], real_flows[i][1])] == 1:
             Real_InfoFlows_method[(real_flows[i][0], real_flows[i][1])] += 1
@@ -151,27 +143,26 @@ for key in Real_InfoFlows_method.iterkeys():
 
 # ********************* End of Main Body *********************
 
-# ********************* Saving the results *********************
+# ********************* Storing the results *********************
 
 if not os.path.exists(Output_Dir):
     os.mkdir(Output_Dir)
 
-# ********************* Creating a table of all information flows with non-zero probabilities *********************
+# ********************* Creating the probability table of Non-Empty information flows *********************
 
+# Creating the headers of rows and columns
 with open(os.path.join(Output_Dir,'Prob_InfoFlows.csv'), 'wb') as csvfile:
     a = csv.writer(csvfile)
-    # Creating the headers
-    a.writerow(['Source']+['Sink']+['Probability'])
+    a.writerow(['Sources']+['Sinks']+['Probability'])
     for key in Prob_InfoFlows_method.iterkeys():
         if Prob_InfoFlows_method[key] != 0:
             pr = str(Prob_InfoFlows_method[key])
             a.writerow([Dict_Srcs_Nat[key[0]]]+[Dict_Snks_Nat[key[1]]]+[pr])
 
-# ****************** End of Creating a table of all information flows with non-zero probabilities ******************
+# ****************** End of Creating the probability table of Non-Empty information flows ******************
 
-# ********************* Sorting the probability table of information flows *********************
+# ********************* Sorting the probability table of Non-Empty information flows *********************
 
-# Opening the unsorted probability table
 Unsorted_File =open(os.path.join(Output_Dir,'Prob_InfoFlows.csv'), 'rb')
 infile = csv.reader(Unsorted_File)
 infields = infile.next()
@@ -183,9 +174,8 @@ with open(os.path.join(Output_Dir,'Prob_InfoFlows_Sorted.csv'),'wb') as csvfile:
     for row in Sorted_File:
         a.writerow(row)
 
-# ********************* End of Sorting the probability table of information flows *********************
+# ********************* End of Sorting the probability table of Non-Empty information flows *********************
 
-# Removing the unsorted probability table
-os.remove(os.path.join(Output_Dir,'Prob_InfoFlows.csv'))
+os.remove(os.path.join(Output_Dir,'Prob_InfoFlows.csv'))     # Removing the unsorted probability table
 
-# ********************* End of Saving the results *********************
+# ********************* End of Storing the results *********************
