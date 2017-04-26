@@ -355,4 +355,4 @@ with open(os.path.join(Output_Dir,"Sorted_Scores.csv"),'wb') as csvfile:
 
 os.remove(os.path.join(Output_Dir,'Scores.csv'))     #Removing the unsorted table of scores
 
-# ************************ End of Storing the results ************************
+# *********************** End of Storing the results ************************
