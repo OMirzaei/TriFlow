@@ -3,7 +3,7 @@
 VERSION:
 -------
 
-Version (by release date): 2017-02-15
+Version (by release date): 2017-04-26
 
 DEVELOPER INFORMATION:
 ---------------------
@@ -18,7 +18,7 @@ PUBLICATION:
 
 TriFlow: Triaging Android Applications using Speculative Information Flows
 O. Mirzaei, G. Suarez-Tangil, J. E. Tapiador, J. M. de Fuentes
-ACM Asia Conference on Computer and Communications Security (ASIACCS), Abu Dhabi, UAE (May 2017)
+ACM Asia Conference on Computer and Communications Security (ASIACCS), Abu Dhabi, UAE (April 2017)
 
 COPYRIGHT NOTICE:
 ----------------
@@ -63,6 +63,8 @@ import glob
 import zipfile
 import subprocess
 import pickle
+import time
+import multiprocessing
 import sys
 
 # ************************ End of Importing Modules ************************
@@ -75,65 +77,136 @@ if '-i' not in arguments  or '-o' not in arguments:
 else:
     # Directory of applications (.apk files)
     Input_Dir = arguments[arguments.index('-i') + 1]
-    # Directory of total flows extracted from each application
+    # Directory of total flows extracted from applications
     Output_Dir = arguments[arguments.index('-o') + 1]
 
 # Home directory
 Home_Dir = os.path.curdir
-# Directory of total sources and sinks extracted from each application
-Total_SrcsSnks_Loc = Home_Dir + '/Total_Srcs_Snks'
+# Location of dexdump
+dexdump_Loc = Home_Dir + '/dexdump'
 
-global rows_idx_method
-global cols_idx_method
+# Number of processes
+n_procs = 4
+# Dictionary of SuSi source API methods
+Dict_Srcs = {}
+# Dictionary of SuSi sink API methods
+Dict_Snks = {}
+# Dictionary of total information flows between all sources and sinks
+Dict_Total_Flows = []
 
-Dict_Result = []
+num_src = 0
+with open(os.path.join(Home_Dir,'Sources_DexCode.txt')) as src_txt:
+    for line in src_txt:
+        line = line.strip()
+        line = line.replace('->','.')
+        line = line.replace('(',':(')
+        Dict_Srcs[line] = num_src + 1
+        num_src += 1
+
+num_src_method = num_src
+
+num_snk = 0
+with open(os.path.join(Home_Dir,'Sinks_DexCode.txt')) as snk_txt:
+    for line in snk_txt:
+        line = line.strip()
+        line = line.replace('->','.')
+        line = line.replace('(',':(')
+        Dict_Snks[line] = num_snk + 1
+        num_snk += 1
+
+num_snk_method = num_snk
 
 # ********************* End of Initialization *********************
 
-# ************************ Creating the Super Set ************************
+# ********************* Functions *********************
 
-# Counting the total number of sources
-with open(os.path.join(Home_Dir,"Sources_Smali.txt")) as myfile:
-    num_src_method = sum(1 for line in myfile)
-# Counting the total number of sinks
-with open(os.path.join(Home_Dir,"Sinks_Smali.txt")) as myfile:
-    num_snk_method = sum(1 for line in myfile)
+def DisAssemble_Dex(app):
+    # ********************** Extracting App's Name **********************
+    app_name = app.split('/')[-1][:-4]
+    # ********************** End of Extracting App's Name **********************
+    # ********************** Removing Smali_Files and Unzipped_App folders if they already exist **********************
+    if app_name in os.listdir(Input_Dir):
+        shutil.rmtree(os.path.join(Input_Dir,app_name))
+    # ********************** End of Removing Smali_Files and Unzipped_App folders if they already exist **********************
+    # ********************** Unzipping the application (.apk file) **********************
+    os.mkdir(os.path.join(Input_Dir,app_name))
+    with zipfile.ZipFile(app,"r") as zip_ref:
+        zip_ref.extractall(os.path.join(Input_Dir,app_name))
+    # ********************** End of Unzipping the application (.apk file) **********************
+    # ********************** Disassembling the classes.dex file within the unzipped folder using dexdump **********************
+    dex_file = open(os.path.join(Input_Dir,app_name,app_name + '.txt'),'wb')
+    subprocess.call([os.path.join(dexdump_Loc,'dexdump'), '-d', os.path.join(Input_Dir,app_name,'classes.dex')], stdout=dex_file)
+    # ********************** End of Disassembling the classes.dex file within the unzipped folder **********************
 
-# ********************* End of Creating the Super Set *********************
+
+def Extract_TotalFlows(appfile):
+
+    global Dict_Total_Flows
+    # A flag to avoid repetitive sources and sinks found within an application (Note: The zero index is not used for the sake of facility)
+    flag_srcs = [0 for x in range(num_src_method + 1)]
+    flag_snks = [0 for x in range(num_snk_method + 1)]
+    # Two matrices which are used to store total sources and sinks found within an application
+    rows_idx_method = [0 for x in range(num_src_method+1)]
+    cols_idx_method = [0 for x in range(num_snk_method+1)]
+
+    dirname,filename = os.path.split(appfile)
+
+    if filename + '-Sources_Results.txt' not in os.listdir(Output_Dir) or filename + '-Sinks_Results.txt' not in os.listdir(Output_Dir):
+        # Contains all the sources
+        srcs_results = open(os.path.join(Output_Dir,filename + '-Sources_Results.txt'),'wb')
+        # Contains all the sinks
+        snks_results = open(os.path.join(Output_Dir,filename + '-Sinks_Results.txt'),'wb')
+
+        DisAssemble_Dex(appfile)
+        # Opening the diassembled .dex file
+        dex_file = open(os.path.join(Input_Dir, filename[:-4], filename[:-4] + '.txt'),'rb')
+        for line in dex_file:
+            if ';.' in line:
+                line = line.split(' ')
+                API_Method = [i for i in line if (';.' in i)][0]
+                if API_Method in Dict_Srcs.iterkeys() and flag_srcs[Dict_Srcs[API_Method]] == 0:
+                        flag_srcs[Dict_Srcs[API_Method]] = 1
+                if API_Method in Dict_Snks.iterkeys() and flag_snks[Dict_Snks[API_Method]] == 0:
+                        flag_snks[Dict_Snks[API_Method]] = 1
+
+        pickle.dump(flag_srcs,srcs_results)
+        pickle.dump(flag_snks,snks_results)
+        srcs_results.close()
+        snks_results.close()
+
+        rows_idx_method = pickle.load(open(os.path.join(Output_Dir,filename + '-Sources_Results.txt'),'rb'))
+        cols_idx_method = pickle.load(open(os.path.join(Output_Dir,filename + '-Sinks_Results.txt'),'rb'))
+
+        # Updating the dictionary based on the total number of sources and sinks in each app
+        for i in range(0,num_src_method+1):
+            if rows_idx_method[i] == 1:
+                for j in range(0,num_snk_method+1):
+                    if cols_idx_method[j] == 1:
+                        Dict_Total_Flows.append((i, j))
+
+        result = open(os.path.join(Output_Dir,filename + '-totalflows.txt'),'wb')
+        pickle.dump(Dict_Total_Flows,result)
+        result.close()
+        Dict_Total_Flows = []
+
+        shutil.rmtree(os.path.join(Input_Dir,filename[:-4]))
+        shutil.move(os.path.join(Output_Dir,filename + '-Sources_Results.txt'),os.path.join(Output_Dir,'Sources',filename + '-Sources_Results.txt'))
+        shutil.move(os.path.join(Output_Dir,filename + '-Sinks_Results.txt'),os.path.join(Output_Dir,'Sinks',filename + '-Sinks_Results.txt'))
+        shutil.move(os.path.join(Output_Dir,filename + '-totalflows.txt'),os.path.join(Output_Dir,'Flows',filename + '-totalflows.txt'))
+
+# ********************* End of Functions *********************
 
 # ********************* Main Body *********************
 
 if not os.path.exists(Output_Dir):
     os.mkdir(Output_Dir)
+    os.mkdir(os.path.join(Output_Dir,'Sources'))
+    os.mkdir(os.path.join(Output_Dir,'Sinks'))
+    os.mkdir(os.path.join(Output_Dir,'Flows'))
 
-# Extracts total sources and sinks from applications
-subprocess.call([sys.executable, os.path.join(Home_Dir,'Extract_Total_SrcsSnks.py'), '-i', Input_Dir, '-o', Total_SrcsSnks_Loc])
-
-for file in glob.iglob(os.path.join(Input_Dir, "*.apk")):
-
-    dirname,filename = os.path.split(file)
-    # Contains all the sources which are found from the smali codes of an application
-    rows_idx_method = [0 for x in range(num_src_method+1)]
-    # Contains all the sinks which are found from the smali codes of an application
-    cols_idx_method = [0 for x in range(num_snk_method+1)]
-
-    if filename + '-Sources_Results.txt' in os.listdir(Total_SrcsSnks_Loc) and filename + '-Sinks_Results.txt' in os.listdir(Total_SrcsSnks_Loc) and filename + '-totalflows.txt' not in os.listdir(Output_Dir):
-        # Reading pre-computed files which contian all sources and sinks
-        rows_idx_method = pickle.load(open(os.path.join(Total_SrcsSnks_Loc,filename + '-Sources_Results.txt'),'rb'))
-        cols_idx_method = pickle.load(open(os.path.join(Total_SrcsSnks_Loc,filename + '-Sinks_Results.txt'),'rb'))
-
-        # Creating a set of all possible info-flows
-        for i in range(0,num_src_method+1):
-            if rows_idx_method[i] == 1:
-                for j in range(0,num_snk_method+1):
-                    if cols_idx_method[j] == 1:
-                        Dict_Result.append((i,j))
-
-        result = open(os.path.join(Output_Dir,filename + '-totalflows.txt'),'wb')
-        pickle.dump(Dict_Result,result)
-        result.close()
-        Dict_Result = []
-
-shutil.rmtree(Total_SrcsSnks_Loc)
+pool = multiprocessing.Pool(n_procs)
+results = [pool.apply_async(Extract_TotalFlows, [appfile]) for appfile in glob.iglob(os.path.join(Input_Dir, "*.apk"))]
+pool.close()
+pool.join()
 
 # ********************* End of Main Body *********************
