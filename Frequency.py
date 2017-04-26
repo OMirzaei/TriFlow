@@ -132,7 +132,7 @@ for key in Real_InfoFlows_method.iterkeys():
     if Real_InfoFlows_method[key] != 0:
         Freq_InfoFlows_method[key] = float(Real_InfoFlows_method[key]) / Num_Apps
 
-# ********************* End of Main Body *********************
+# ******************** End of Main Body *********************
 
 # ********************* Storing the results *********************
 
