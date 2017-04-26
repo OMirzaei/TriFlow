@@ -3,7 +3,7 @@
 VERSION:
 -------
 
-Version (by release date): 2017-02-15
+Version (by release date): 2017-04-26
 
 DEVELOPER INFORMATION:
 ---------------------
@@ -18,7 +18,7 @@ PUBLICATION:
 
 TriFlow: Triaging Android Applications using Speculative Information Flows
 O. Mirzaei, G. Suarez-Tangil, J. E. Tapiador, J. M. de Fuentes
-ACM Asia Conference on Computer and Communications Security (ASIACCS), Abu Dhabi, UAE (May 2017)
+ACM Asia Conference on Computer and Communications Security (ASIACCS), Abu Dhabi, UAE (April 2017)
 
 COPYRIGHT NOTICE:
 ----------------
@@ -89,7 +89,8 @@ print 'Scoring process started...'
 print 'Extracting total information flows from applications...'
 subprocess.call([sys.executable, os.path.join(Home_Dir,'Extract_Total_IFs.py'), '-i', Apps_Dir, '-o', os.path.join(Home_Dir,'Total_Flows_Apps')])
 print 'Scoring applications and preparing a detailed report...'
-subprocess.call([sys.executable, os.path.join(Home_Dir,'Score.py'), '-f', os.path.join(Home_Dir,'Total_Flows_Apps'), '-t', Tables_Dir, '-o', Output_Dir])
+subprocess.call([sys.executable, os.path.join(Home_Dir,'Score.py'), '-f', os.path.join(Home_Dir,'Total_Flows_Apps/Flows'), '-t', Tables_Dir, '-o', Output_Dir])
+#subprocess.call([sys.executable, os.path.join(Home_Dir,'Score_Normalized.py'), '-f', os.path.join(Home_Dir,'Total_Flows_Apps/Flows'), '-t', Tables_Dir, '-o', Output_Dir])
 
 print 'End of scoring!'
 
