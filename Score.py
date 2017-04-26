@@ -3,7 +3,7 @@
 VERSION:
 -------
 
-Version (by release date): 2017-02-15
+Version (by release date): 2017-04-26
 
 DEVELOPER INFORMATION:
 ---------------------
@@ -18,7 +18,7 @@ PUBLICATION:
 
 TriFlow: Triaging Android Applications using Speculative Information Flows
 O. Mirzaei, G. Suarez-Tangil, J. E. Tapiador, J. M. de Fuentes
-ACM Asia Conference on Computer and Communications Security (ASIACCS), Abu Dhabi, UAE (May 2017)
+ACM Asia Conference on Computer and Communications Security (ASIACCS), Abu Dhabi, UAE (April 2017)
 
 COPYRIGHT NOTICE:
 ----------------
@@ -40,7 +40,7 @@ by the MINECO grant TIN2016-79095-C2-2-R (SMOG-DEV - Security Mechanisms for Fog
 MAIN FUNCTIONALITY:
 ------------------
 
-This module scores applications based on the probabilities of information flows and their weights
+This module scores applications based on the probabilities of information flows and their weights.
 
 ARGUMENTS:
 ---------
@@ -84,9 +84,9 @@ else:
     # Directory of probability table for all information flows
     Output_Dir = arguments[arguments.index('-o') + 1]
 
-Home_Dir = os.path.curdir											# Home directory
-Loc_SuSi_Cat = Home_Dir + '/SuSi'                                   # Location of SuSi categories .txt files
-
+# Directories
+Home_Dir = os.path.curdir
+Loc_SuSi_Cat = Home_Dir + '/SuSi'                   # Location of SuSi categories .txt files
 
 # Calculating the number of applications for which we intend to estimate the score
 num_apps = len([item for item in os.listdir(Total_Flows_Dir) if '.txt' in item])
@@ -95,28 +95,10 @@ Apps_Names = [0 for x in range(num_apps + 1)]
 # Creating a matrix for storing score values
 Scores = [0 for x in range(num_apps + 1)]
 
-
-Dict_Srcs_Smali = {}                                                # Dictionary of SuSi sources in smali format
-Dict_Snks_Smali = {}                                                # Dictionary of SuSi sinks in smali format
-Dict_Srcs_Nat = {}                                                  # Dictionary of SuSi sources in natural format
-Dict_Snks_Nat = {}                                                  # Dictionary of SuSi sinks in natural format
-Sources_Cat = {}                                                    # Dictionary of SuSi sources categories
-Sinks_Cat = {}                                                      # Dictionary of SuSi sinks categories
-
-
-num_src = 0
-with open(os.path.join(Home_Dir,'Sources_Smali.txt')) as src_txt:
-    for line in src_txt:
-        line = line.strip()
-        Dict_Srcs_Smali[line] = num_src + 1
-        num_src += 1
-
-num_snk = 0
-with open(os.path.join(Home_Dir,'Sinks_Smali.txt')) as snk_txt:
-    for line in snk_txt:
-        line = line.strip()
-        Dict_Snks_Smali[line] = num_snk + 1
-        num_snk += 1
+Dict_Srcs_Nat = {}                                      # Dictionary of SuSi sources in natural format
+Dict_Snks_Nat = {}                                      # Dictionary of SuSi sinks in natural format
+Sources_Cat = {}                                        # Dictionary of SuSi sources categories
+Sinks_Cat = {}                                          # Dictionary of SuSi sinks categories
 
 num_src = 0
 with open(os.path.join(Home_Dir,'Sources.txt')) as src_txt:
@@ -163,9 +145,9 @@ Cat_Snk = ['LOCATION_INFORMATION','PHONE_CONNECTION','VOIP','PHONE_STATE','EMAIL
 
 # ************************ Creating the Dictionary ************************
 
-Dict_Prob = {}
-Dict_Weight = {}
-Dict_Total = {}
+Dict_Prob = {}                      # Dictionary of information flows' probabilities
+Dict_Weight = {}                    # Dictionary of information flows' weights
+Dict_Total = {}                     # Dictionary of information flows' probabilities and weights
 with open(os.path.join(Tables_Dir,'Prob_InfoFlows_Sorted.csv')) as CSV_Prob:
     reader = csv.reader(CSV_Prob)
     reader.next()
@@ -187,7 +169,7 @@ for key,value in Dict_Weight.iteritems():
 
 # ************************ End of Creating the Dictionary ************************
 
-# ************************ Extracting information flows ************************
+# ************************ Scoring ************************
 
 if not os.path.exists(Output_Dir):
     os.mkdir(Output_Dir)
@@ -211,9 +193,12 @@ for file in glob.iglob(os.path.join(Total_Flows_Dir, "*.txt")):
 
     dirname,filename = os.path.split(file)
 
-    total_flows = pickle.load(open(os.path.join(Total_Flows_Dir,filename),'rb'))        # Loading the total number of flows
+    # Counting the total number of sources and sinks within each app by looking through smali files
+    total_flows = pickle.load(open(os.path.join(Total_Flows_Dir,filename),'rb'))
+
     num_flows = len(total_flows)
 
+    # Updating the corresponding array based on the total number of sources and sinks in each app (for methods)
     for i in range(0,num_flows):
         # ************************ Calculating the score of application ************************
         src_name = str(Dict_Srcs_Nat[total_flows[i][0]]+'\n')
@@ -228,9 +213,9 @@ for file in glob.iglob(os.path.join(Total_Flows_Dir, "*.txt")):
 
 
     # The below matrices are used for storing the name and score of each application (Zero index is not used)
-    if 'apk' in filename:           #Goodware
+    if 'apk' in filename:           # Goodware
         Apps_Names[idx_app] = filename[:-15]
-    else:                           #Malware
+    else:                           # Malware
         Apps_Names[idx_app] = filename[:-15] + '.apk'
     if num_flows != 0:
         Scores[idx_app] = float(Score) / num_flows
@@ -246,7 +231,7 @@ for file in glob.iglob(os.path.join(Total_Flows_Dir, "*.txt")):
         Output_File.write('\n')
         Output_File.write('\n')
 
-        Dict_Score_Cat = OrderedDict(sorted(Dict_Score_Cat.items(), key=lambda t: t[1], reverse = True))          #Sort the dictionary of categories
+        Dict_Score_Cat = OrderedDict(sorted(Dict_Score_Cat.items(), key=lambda t: t[1], reverse = True))          # Sort the dictionary of categories
 
         for key_cat in Dict_Score_Cat:
             if Dict_Score_Cat[key_cat][0] != 0:
@@ -257,12 +242,12 @@ for file in glob.iglob(os.path.join(Total_Flows_Dir, "*.txt")):
                     percent = (Dict_Score_Cat[key_cat][0] / Scores[idx_app]) * 100
                     Output_File.write('[' + key_cat[0] + ', ' + key_cat[1] + ']' + ' = ' + str(Dict_Score_Cat[key_cat][0]) + ' (' + str(percent) + '% of the score' + ')\n')
 
-                #A dictionary for storing the contribution of each information flow to the total score
+                # A dictionary for storing the contribution of each information flow to the total score
                 Dict_Score_IF = {}
 
                 for i in range(1,len(Dict_Score_Cat[key_cat])):
                     Dict_Score_IF[(Dict_Score_Cat[key_cat][i][0],Dict_Score_Cat[key_cat][i][1])] = Dict_Score_Cat[key_cat][i][2]
-                Dict_Score_IF = OrderedDict(sorted(Dict_Score_IF.items(), key=lambda t: t[1], reverse = True))          #Sort the dictionary of information flows
+                Dict_Score_IF = OrderedDict(sorted(Dict_Score_IF.items(), key=lambda t: t[1], reverse = True))          # Sort the dictionary of information flows
 
                 for key_IF in Dict_Score_IF:
                     if Dict_Score_IF[key_IF] != 0:
@@ -274,7 +259,10 @@ for file in glob.iglob(os.path.join(Total_Flows_Dir, "*.txt")):
                 Output_File.write('\n\n')
     # ************************ End of writing to output file ************************
 
-# ************************ End of Extracting information flows ************************
+# ************************ End of Scoring ************************
+
+
+# ************************ Storing the results ************************
 
 # ********************* Creating the table of scores based on information flows for methods *********************
 
@@ -303,5 +291,6 @@ with open(os.path.join(Output_Dir,"Sorted_Scores.csv"),'wb') as csvfile:
 
 # ********************* End of Sorting the table of scores based on information flows for methods *********************
 
-os.remove(os.path.join(Output_Dir,'Scores.csv'))     #Removing the unsorted table of scores
+os.remove(os.path.join(Output_Dir,'Scores.csv'))     # Removing the unsorted table of scores
 
+# ************************ End of Storing the results ************************
