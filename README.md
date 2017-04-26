@@ -44,15 +44,15 @@ python   Score_TriFlow.py   -a   ‘/Directory/of/Your/Applications’   -t   �
 Once the above command is terminated, you will have two files in your desired output directory. The first one is “Sorted_Scores.csv” and contains all the scores for new applications, while the second one is “Scores_Percent.txt” that provides you with a detailed explanation of scores and the contribution of flows in each score.
 
 To normalize scores to your arbitrary ranges, you need to do the following three simple steps:
-•	Set the new_min and new_max variables in “Score_Normalized.py” script with your required minimum and maximum ranges.
-•	Comment the line 92 in “Score_TriFlow.py” script
-•	Un-comment the line 93 in “Score_TriFlow.py” script
+•	Set the new_min and new_max variables in “Score_Normalized.py” script with your required minimum and maximum ranges. <br />
+•	Comment the line 92 in “Score_TriFlow.py” script. <br />
+•	Un-comment the line 93 in “Score_TriFlow.py” script. <br />
 
 WHAT’S NEW IN THE CURRENT VERSION? 
 ------------------------------------------------------
-•	Info-flows are extracted from Dalvik bytecodes instead of smali codes.
-•	Users/Analysts can normalize scores to their arbitrary ranges.
-•	The efficiencies of scripts have been improved.
+•	Info-flows are extracted from Dalvik bytecodes instead of smali codes. <br />
+•	Users/Analysts can normalize scores to their arbitrary ranges. <br />
+•	The efficiencies of scripts have been improved. <br />
 
 COPYRIGHT NOTICE:
 --------------------------
