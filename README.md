@@ -54,6 +54,8 @@ WHAT’S NEW IN THE CURRENT VERSION?
 •	Users/Analysts can normalize scores to their arbitrary ranges. <br />
 •	The efficiencies of scripts have been improved. <br />
 
+Note: The dexdump disassembler uploaded to this repository is for Mac operating system. You may need to download the relevant variant of this tool and replace it with the current one based on your operating system. <br />
+
 COPYRIGHT NOTICE:
 --------------------------
 
