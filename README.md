@@ -21,6 +21,13 @@ TriFlow: Triaging Android Applications using Speculative Information Flows <br /
 O. Mirzaei, G. Suarez-Tangil, J. E. Tapiador, J. M. de Fuentes <br />
 ACM Asia Conference on Computer and Communications Security (ASIACCS), Abu Dhabi, UAE (April 2017) <br />
 
+AWARDS:
+------------------
+
+3rd Place Award from CSAW-Europe Best Applied Security Research Competition <br />
+As the third top applied security research work in Europe <br />
+Grenoble INP-ESISAR, Valence, France (November 2017) <br />
+
 INSTALLATION INSTRUCTIONS:
 ----------------------------------------
 
