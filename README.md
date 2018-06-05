@@ -46,7 +46,7 @@ Once the above command is terminated, you will have two tables namely “Prob_In
 
 To score new applications based on the trained model, you need to copy all your applications in an arbitrary directory, and, then, running the below command in terminal:
 
-python   Score_TriFlow.py   -a   ‘/Directory/of/Your/Applications’   -t   ‘/Directory/of/ProbabilityAndWeight/Tables’   -o   ‘/Your/Desired/Output/Directory
+python   Score_TriFlow.py   -a   ‘/Directory/of/Your/Applications’   -t   ‘/Directory/of/ProbabilityAndWeight/Tables’   -o   ‘/Your/Desired/Output/Directory'
 
 Once the above command is terminated, you will have two files in your desired output directory. The first one is “Sorted_Scores.csv” and contains all the scores for new applications, while the second one is “Scores_Percent.txt” that provides you with a detailed explanation of scores and the contribution of flows in each score. <br />
 
