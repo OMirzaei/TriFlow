@@ -24,9 +24,12 @@ ACM Asia Conference on Computer and Communications Security (ASIACCS), Abu Dhabi
 AWARDS:
 ------------------
 
-3rd Place Award from CSAW-Europe Best Applied Security Research Competition <br />
-As the third top applied security research work in Europe <br />
-Grenoble INP-ESISAR, Valence, France (November 2017) <br />
+•	Best Previously Published Paper Award from 4th Spanish National Cybersecurity Research Conference <br />
+	Donostia-San Sebastian, Spain (June 2018) <br />
+
+•	3rd Place Award from CSAW-Europe Best Applied Security Research Competition <br />
+	As the third top applied security research work in Europe <br />
+	Grenoble INP-ESISAR, Valence, France (November 2017) <br />
 
 INSTALLATION INSTRUCTIONS:
 ----------------------------------------
