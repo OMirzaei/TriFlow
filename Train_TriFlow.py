@@ -11,7 +11,7 @@ DEVELOPER INFORMATION:
 Name: Omid Mirzaei
 Laboratory: Computer Security Lab (COSEC)
 University: Universidad Carlos III de Madrid
-Website: http://www.seg.inf.uc3m.es/~omirzaei/
+Website: https://cosec.inf.uc3m.es/~omid-mirzaei/
 
 PUBLICATION:
 -----------
