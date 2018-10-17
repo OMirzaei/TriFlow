@@ -60,7 +60,7 @@ To normalize scores to your arbitrary ranges, you need to do the following three
 
 WHAT’S NEW IN THE CURRENT VERSION? 
 ------------------------------------------------------
-•	Info-flows are extracted from Dalvik bytecodes (smali codes). <br />
+•	Info-flows are extracted from smali code. <br />
 •	Users/Analysts can normalize scores to their arbitrary ranges. <br />
 •	The efficiencies of scripts have been improved. <br />
 
