@@ -95,7 +95,7 @@ Dict_Snks = {}
 Dict_Total_Flows = []
 
 num_src = 0
-with open(os.path.join(Home_Dir,'Sources_Dalvik.txt')) as src_txt:
+with open(os.path.join(Home_Dir,'Sources_Smali.txt')) as src_txt:
     for line in src_txt:
         line = line.strip()
         line = line.replace('->','.')
@@ -106,7 +106,7 @@ with open(os.path.join(Home_Dir,'Sources_Dalvik.txt')) as src_txt:
 num_src_method = num_src
 
 num_snk = 0
-with open(os.path.join(Home_Dir,'Sinks_Dalvik.txt')) as snk_txt:
+with open(os.path.join(Home_Dir,'Sinks_Smali.txt')) as snk_txt:
     for line in snk_txt:
         line = line.strip()
         line = line.replace('->','.')
