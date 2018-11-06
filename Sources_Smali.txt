@@ -2209,7 +2209,7 @@ Lcom/android/internal/telephony/CallManager;->getAllPhones()Ljava/util/List;
 Landroid/view/textservice/SuggestionsInfo;->getSequence()I
 Lcom/android/internal/telephony/uicc/UiccController;->getUiccCard()Lcom/android/Iernal/telephony/UiccCard;
 Lcom/android/email/activity/MessageOrderManager;->getHandlerForContentObserver()Landroid/os/Handler;
-dalvik/system/BaseDexClassLoader->getPackage(Ljava/lang/String;)Ljava/lang/Package;
+dalvik/system/BaseDexClassLoader;->getPackage(Ljava/lang/String;)Ljava/lang/Package;
 Lcom/android/server/wm/WindowManagerService;->getVisibleWindowsForDisplay(ILjava/util/List;)V
 Lcom/android/server/DevicePolicyManagerService;->getPasswordMinimumUpperCase(Landroid/content/ComponentName;I)I
 Landroid/server/search/SearchManagerService;->getAssistIntent(I)Landroid/content/ComponentName;
@@ -2545,7 +2545,7 @@ Lorg/apache/harmony/xnet/provider/jsse/SSLRecordProtocol;->getDataSize(I)I
 Lcom/android/server/WallpaperManagerService;->getWallpaperInfo()Landroid/app/WallpaperInfo;
 Lorg/apache/harmony/xnet/provider/jsse/SSLSocketImpl;->getSupportedProtocols()[Ljava/lang/String;
 Landroid/net/sip/ISipSession$Stub$Proxy;->getLocalIp()Ljava/lang/String;
-libcore/net/http/ResponseHeaders->getConnection()Ljava/lang/String;
+libcore/net/http/ResponseHeaders;->getConnection()Ljava/lang/String;
 Lcom/android/server/MountService;->getVolumeState(Ljava/lang/String;)Ljava/lang/String;
 Landroid/net/Uri$StringUri;->getPathSegments()Ljava/util/List;
 Landroid/speech/tts/TextToSpeechService$SpeechItem;->getVolume()F
@@ -2605,7 +2605,7 @@ Landroid/telephony/PhoneNumberUtils;->networkPortionToCalledPartyBCDWithLength(L
 Lcom/android/server/InputMethodManagerService$InputMethodAndSubtypeListManager;->getNextInputMethod(ZLandroid/view/inputmethod/InputMethodInfo;Landroid/view/inputmethod/InputMethodSubtype;)Lcom/android/server/InputMethodManagerService$ImeSubtypeListItem;
 Landroid/net/wifi/p2p/nsd/WifiP2pDnsSdServiceResponse;->getDnsQueryName()Ljava/lang/String;
 Landroid/net/SSLCertificateSocketFactory;->createSocket(Ljava/lang/String;ILjava/net/InetAddress;I)Ljava/net/Socket;
-libcore/net/http/RequestHeaders->getConnection()Ljava/lang/String;
+libcore/net/http/RequestHeaders;->getConnection()Ljava/lang/String;
 Landroid/telephony/ServiceState;->getCdmaEriIconMode()I
 Lcom/android/internal/telephony/Connection;->getOrigDialString()Ljava/lang/String;
 Lorg/apache/harmony/xnet/provider/jsse/SSLEngineImpl;->getSession()Ljavax/net/ssl/SSLSession;
@@ -2789,7 +2789,7 @@ Landroid/provider/MediaStore$Audio$Albums;->getContentUri(Ljava/lang/String;)Lan
 Lcom/android/ex/chips/Queries$Query;->getContentUri()Landroid/net/Uri;
 Lcom/android/emailcommon/provider/EmailContent;->getUri()Landroid/net/Uri;
 Landroid/provider/Settings$NameValueTable;->getUriFor(Landroid/net/Uri;Ljava/lang/String;)Landroid/net/Uri;
-libcore/net/http/ResponseHeaders->getUri()Ljava/net/URI;
+libcore/net/http/ResponseHeaders;->getUri()Ljava/net/URI;
 Landroid/content/CursorLoader;->getUri()Landroid/net/Uri;
 Lcom/google/android/picasasync/PicasaFacade;->getAlbumsUri()Landroid/net/Uri;
 Landroid/provider/MediaStore$Files;->getMtpObjectsUri(Ljava/lang/String;J)Landroid/net/Uri;
@@ -2832,7 +2832,7 @@ Landroid/app/DownloadManager;->getUriForDownloadedFile(J)Landroid/net/Uri;
 Lcom/android/server/am/ServiceRecord$StartItem;->getUriPermissionsLocked()Lcom/android/server/am/UriPermissionOwner;
 Landroid/provider/MediaStore$Images$Thumbnails;->getContentUri(Ljava/lang/String;)Landroid/net/Uri;
 Landroid/content/pm/VerificationParams;->getOriginatingURI()Landroid/net/Uri;
-libcore/net/http/RequestHeaders->getUri()Ljava/net/URI;
+libcore/net/http/RequestHeaders;->getUri()Ljava/net/URI;
 Lcom/android/internal/policy/impl/keyguard/KeyguardSecurityModel;->getBackupSecurityMode(Lcom/android/Iernal/policy/impl/keyguard/KeyguardSecurityModel$SecurityMode;)Lcom/android/Iernal/policy/impl/keyguard/KeyguardSecurityModel$SecurityMode;
 Lcom/google/android/picasasync/PicasaFacade;->getSettingsUri()Landroid/net/Uri;
 Lcom/google/android/picasasync/PicasaFacade;->getPostAlbumsUri()Landroid/net/Uri;
@@ -2868,7 +2868,7 @@ Lcom/android/launcher2/LauncherSettings$Favorites;->getContentUri(JZ)Landroid/ne
 Lcom/android/email/AttachmentInfo;->getUriForIntent(Landroid/content/Context;J)Landroid/net/Uri;
 Lcom/android/phone/PhoneUtils;->getProviderGatewayUri(Landroid/content/Intent;)Landroid/net/Uri;
 Lorg/xml/sax/helpers/NamespaceSupport;->getURI(Ljava/lang/String;)Ljava/lang/String;
-libcore/net/http/HttpEngine->getUri()Ljava/net/URI;
+libcore/net/http/HttpEngine;->getUri()Ljava/net/URI;
 Lorg/apache/http/message/BasicRequestLine;->getUri()Ljava/lang/String;
 Landroid/media/RingtoneManager;->getValidRingtoneUri(Landroid/content/Context;)Landroid/net/Uri;
 Landroid/provider/MediaStore$Audio$Playlists$Members;->getContentUri(Ljava/lang/String;J)Landroid/net/Uri;
@@ -6499,7 +6499,7 @@ Lcom/android/inputmethod/keyboard/internal/KeyStylesSet$EmptyKeyStyle;->getStrin
 Lorg/apache/harmony/xnet/provider/jsse/ConnectionState;->getPaddingSize(I)I
 Lcom/android/inputmethod/compat/CompatUtils;->getInputLanguageSelectionIntent(Ljava/lang/String;I)Landroid/content/Intent;
 Landroid/webkit/WebView$PrivateAccess;->getVerticalScrollFactor()F
-libcore/net/http/HttpsURLConnectionImpl->getHeaderFieldKey(I)Ljava/lang/String;
+libcore/net/http/HttpsURLConnectionImpl;->getHeaderFieldKey(I)Ljava/lang/String;
 Ljava/net/Inet6Address;->getScopeId()I
 Lcom/android/org/bouncycastle/util/encoders/Base64;->encode([B)[B
 Landroid/support/v4/view/AccessibilityDelegateCompat$AccessibilityDelegateStubImpl;->getAccessibilityNodeProvider(Ljava/lang/Object;Landroid/view/View;)Landroid/support/v4/view/accessibility/AccessibilityNodeProviderCompat;
@@ -6550,7 +6550,7 @@ Landroid/content/pm/IPackageManager$Stub$Proxy;->getActivityInfo(Landroid/conten
 Landroid/widget/GridLayout;->getRowCount()I
 Lcom/android/inputmethod/keyboard/internal/KeyboardIconsSet;->getIconDrawable(I)Landroid/graphics/drawable/Drawable;
 Lcom/android/videoeditor/util/MediaItemUtils;->getMinimumImageItemDuration()J
-libcore/io/ForwardingOs->geteuid()I
+libcore/io/ForwardingOs;->geteuid()I
 Lcom/android/i18n/phonenumbers/geocoding/AreaCodeMap;->getSmallerMapStorage(Ljava/util/SortedMap;)Lcom/android/i18n/phonenumbers/geocoding/AreaCodeMapStorageStrategy;
 Lcom/google/android/picasasync/PicasaSyncManager;->get(Landroid/content/Context;)Lcom/google/android/picasasync/PicasaSyncManager;
 Lcom/android/mms/util/ThumbnailManager;->getVideoThumbnail(Landroid/net/Uri;Lcom/android/mms/util/ItemLoadedCallback;)Lcom/android/mms/util/ItemLoadedFuture;
@@ -6647,7 +6647,7 @@ Landroid/content/pm/ContainerEncryptionParams;->getMacAlgorithm()Ljava/lang/Stri
 Landroid/renderscript/Element;->getDataKind()Landroid/renderscript/Element$DataKind;
 Lcom/google/android/apps/lightcycle/opengl/Sprite;->getHeight()I
 Landroid/accounts/IAccountAuthenticatorResponse$Stub$Proxy;->getInterfaceDescriptor()Ljava/lang/String;
-libcore/icu/CollationElementIteratorICU->getInstance(ILjava/lang/String;)libcore/icu/CollationElementIteratorICU
+libcore/icu/CollationElementIteratorICU;->getInstance(ILjava/lang/String;)libcore/icu/CollationElementIteratorICU
 Landroid/graphics/drawable/Drawable;->createFromResourceStream(Landroid/content/res/Resources;Landroid/util/TypedValue;Ljava/io/InputStream;Ljava/lang/String;)Landroid/graphics/drawable/Drawable;
 Lcom/coremedia/iso/boxes/CompositionTimeToSample;->getContentSize()J
 Landroid/media/RemoteControlClient;->getRcMediaIntent()Landroid/app/PendingIntent;
@@ -6687,7 +6687,7 @@ Landroid/gesture/GestureLibrary;->getOrientationStyle()I
 Landroid/filterfw/core/VertexFrame;->getVboId()I
 Lcom/android/camera/PhotoModule$ImageNamer;->getTitle()Ljava/lang/String;
 Landroid/media/videoeditor/MediaImageItem;->getGeneratedImageClip()Ljava/lang/String;
-libcore/net/http/HttpEngine->getConnection()libcore/net/http/HttpConnection
+libcore/net/http/HttpEngine;->getConnection()libcore/net/http/HttpConnection
 Lcom/android/internal/policy/impl/GlobalActions$GlobalActionsDialog;->getListView()Landroid/widget/ListView;
 Ljava/util/zip/ZipEntry;->getName()Ljava/lang/String;
 Lorg/apache/harmony/security/x509/Certificate;->access$300(Lorg/apache/harmony/security/x509/Certificate;)[B
@@ -6709,12 +6709,12 @@ Lcom/googlecode/mp4parser/authoring/Mp4TrackImpl;->getSampleDescriptionBox()Lcom
 Lcom/android/videoeditor/TransitionsAdapter;->getTransitions()[Lcom/android/videoeditor/TransitionType;
 Landroid/hardware/usb/UsbDeviceConnection;->getFileDescriptor()I
 Landroid/webkit/WebHistoryItem;->getId()I
-libcore/icu/ICU->getAvailableBreakIteratorLocales()[Ljava/util/Locale;
+libcore/icu/ICU;->getAvailableBreakIteratorLocales()[Ljava/util/Locale;
 Landroid/widget/AdapterView;->getSelectedItemPosition()I
 Lcom/googlecode/mp4parser/AbstractBox;->getParent()Lcom/coremedia/iso/boxes/ContainerBox;
 Lcom/android/i18n/phonenumbers/Phonemetadata$PhoneMetadata;->getNumberFormat(I)Lcom/android/i18n/phonenumbers/Phonemetadata$NumberFormat;
 Lcom/google/common/collect/ImmutableEntry;->getValue()Ljava/lang/Object;
-libcore/util/ZoneInfo->getOffset(IIIIII)I
+libcore/util/ZoneInfo;->getOffset(IIIIII)I
 Lcom/android/ex/chips/RecipientEntry;->getPhotoBytes()[B
 Landroid/graphics/drawable/ShapeDrawable$ShapeState;->getChangingConfigurations()I
 Ljava/lang/reflect/Method;->getName()Ljava/lang/String;
@@ -6729,7 +6729,7 @@ Landroid/hardware/Camera$Parameters;->getFocusMode()Ljava/lang/String;
 Landroid/view/accessibility/AccessibilityEvent;->getRecord(I)Landroid/view/accessibility/AccessibilityRecord;
 Lcom/android/email/mail/store/ExchangeStore;->getSettingActivityClass()Ljava/lang/Class;
 Landroid/widget/AbsListView;->getContextMenuInfo()Landroid/view/ContextMenu$ContextMenuInfo;
-libcore/icu/RuleBasedCollatorICU->getCollationElementIterator(Ljava/text/CharacterIterator;)libcore/icu/CollationElementIteratorICU
+libcore/icu/RuleBasedCollatorICU;->getCollationElementIterator(Ljava/text/CharacterIterator;)libcore/icu/CollationElementIteratorICU
 Landroid/hardware/input/IInputDevicesChangedListener$Stub;->asBinder()Landroid/os/IBinder;
 Lcom/google/common/base/Joiner$3;->get(I)Ljava/lang/Object;
 Landroid/filterfw/core/FilterPort;->getFilter()Landroid/filterfw/core/Filter;
@@ -6790,7 +6790,7 @@ Ljava/security/Provider;->entrySet()Ljava/util/Set;
 Landroid/widget/AbsListView$RecycleBin;->getActiveView(I)Landroid/view/View;
 Landroid/view/View;->getSystemUiVisibility()I
 Landroid/text/BoringLayout;->getTopPadding()I
-libcore/icu/ICU->getAvailableDateFormatSymbolsLocales()[Ljava/util/Locale;
+libcore/icu/ICU;->getAvailableDateFormatSymbolsLocales()[Ljava/util/Locale;
 Ljava/util/zip/Inflater;->getRemaining()I
 Landroid/webkit/WebViewClassic;->getViewDelegate()Landroid/webkit/WebViewProvider$ViewDelegate;
 Lcom/android/videoeditor/util/FileUtils;->getMaskFilename(Landroid/content/Context;I)Ljava/lang/String;
@@ -6885,7 +6885,7 @@ Lorg/apache/http/impl/AbstractHttpClientConnection;->createEntitySerializer()Lor
 Lcom/coremedia/iso/boxes/fragment/TrackRunBox;->getEntries()Ljava/util/List;
 Lcom/android/inputmethod/latin/SuggestedWords$SuggestedWordInfo;->getDebugString()Ljava/lang/String;
 Lcom/google/common/collect/MapMakerInternalMap$NullEntry;->getPreviousExpirable()Lcom/google/common/collect/MapMakerInternalMap$ReferenceEntry;
-dalvik/system/profiler/HprofData$StackTrace->getThreadId()I
+dalvik/system/profiler/HprofData$StackTrace;->getThreadId()I
 Landroid/app/admin/DeviceAdminReceiver;->getManager(Landroid/content/Context;)Landroid/app/admin/DevicePolicyManager;
 Landroid/text/StaticLayout;->getEllipsizedWidth()I
 Lgov/nist/javax/sip/message/SIPResponse;->getStatusLine()Lgov/nist/javax/sip/header/StatusLine;
@@ -6925,7 +6925,7 @@ Lcom/android/wallpaper/fall/ScriptField_Constants;->createElement(Landroid/rende
 Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
 Landroid/widget/ProgressBar;->getProgressDrawable()Landroid/graphics/drawable/Drawable;
 Ljava/text/NumberFormat;->getCurrencyInstance(Ljava/util/Locale;)Ljava/text/NumberFormat;
-libcore/net/http/RawHeaders->getResponseCode()I
+libcore/net/http/RawHeaders;->getResponseCode()I
 Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView$3;->getCallback()Lcom/android/Iernal/policy/impl/keyguard/KeyguardSecurityCallback;
 Ljava/lang/reflect/Method;->getDeclaringClass()Ljava/lang/Class;
 Ljava/net/Socks4Message;->getPort()I
@@ -6966,7 +6966,7 @@ Ljava/util/concurrent/ScheduledThreadPoolExecutor;->shutdownNow()Ljava/util/List
 Lcom/android/org/bouncycastle/jce/netscape/NetscapeCertRequest;->getPublicKey()Ljava/security/PublicKey;
 Ljava/net/URLConnection;->getHeaderField(I)Ljava/lang/String;
 Landroid/speech/tts/TtsEngines;->getLocalePrefForEngine(Ljava/lang/String;)Ljava/lang/String;
-libcore/icu/NativeDecimalFormat->getMinimumIntegerDigits()I
+libcore/icu/NativeDecimalFormat;->getMinimumIntegerDigits()I
 Lcom/android/launcher2/LauncherViewPropertyAnimator;->getListeners()Ljava/util/ArrayList;
 Landroid/graphics/drawable/Drawable;->getLayoutInsets()Landroid/graphics/Insets;
 Lorg/xml/sax/SAXParseException;->getSystemId()Ljava/lang/String;
@@ -7017,7 +7017,7 @@ Lcom/google/android/apps/lightcycle/camera/NullSurfaceCameraPreview;->getCamera(
 Landroid/mtp/MtpDevice;->getParent(I)J
 Lcom/android/server/am/TaskRecord;->getInactiveDuration()J
 Ljava/util/jar/JarFile;->getEntry(Ljava/lang/String;)Ljava/util/zip/ZipEntry;
-libcore/net/http/ResponseHeaders->getExpires()Ljava/util/Date;
+libcore/net/http/ResponseHeaders;->getExpires()Ljava/util/Date;
 Landroid/content/res/XmlBlock$Parser;->getAttributeValue(I)Ljava/lang/String;
 Landroid/view/IWindowSession$Stub$Proxy;->getInterfaceDescriptor()Ljava/lang/String;
 Landroid/content/pm/Signature;->getPublicKey()Ljava/security/PublicKey;
@@ -7064,7 +7064,7 @@ Lcom/android/mms/dom/NodeImpl;->getOwnerDocument()Lorg/w3c/dom/Document;
 Lcom/android/server/am/ActivityStack;->resolveActivity(Landroid/content/Intent;Ljava/lang/String;ILjava/lang/String;Landroid/os/ParcelFileDescriptor;I)Landroid/content/pm/ActivityInfo;
 Lcom/android/internal/util/StateMachine$LogRec;->getInfo()Ljava/lang/String;
 Ljava/io/EmulatedFieldsForLoading;->get(Ljava/lang/String;D)D
-libcore/icu/NativeDecimalFormat->getGroupingSize()I
+libcore/icu/NativeDecimalFormat;->getGroupingSize()I
 Ljava/net/URLConnection;->getPermission()Ljava/security/Permission;
 Lgov/nist/javax/sip/header/To;->getUserAtHostPort()Ljava/lang/String;
 Landroid/filterpacks/imageproc/ResizeFilter;->getOutputFormat(Ljava/lang/String;Landroid/filterfw/core/FrameFormat;)Landroid/filterfw/core/FrameFormat;
@@ -7244,7 +7244,7 @@ Lcom/google/common/collect/MapMakerInternalMap$1;->getEntry()Lcom/google/common/
 Lcom/android/launcher2/PagedViewWidget;->getPreviewSize()[I
 Landroid/app/ApplicationPackageManager;->getActivityInfo(Landroid/content/ComponentName;I)Landroid/content/pm/ActivityInfo;
 Landroid/preference/Preference;->getTitle()Ljava/lang/CharSequence;
-dalvik/system/profiler/BinaryHprof$Tag->get(B)dalvik/system/profiler/BinaryHprof$Tag
+dalvik/system/profiler/BinaryHprof$Tag;->get(B)dalvik/system/profiler/BinaryHprof$Tag
 Landroid/mtp/MtpObjectInfo;->getThumbPixHeight()I
 Landroid/webkit/WebView;->getTouchIconUrl()Ljava/lang/String;
 Landroid/view/GLES20Layer;->getLayer()I
@@ -7287,7 +7287,7 @@ Lcom/android/systemui/statusbar/phone/QuickSettings;->getService()Lcom/android/s
 Landroid/media/CamcorderProfile;->get(I)Landroid/media/CamcorderProfile;
 Lcom/android/org/bouncycastle/asn1/ASN1TaggedObject;->getTagNo()I
 Lgov/nist/javax/sip/header/AuthenticationHeader;->getRealm()Ljava/lang/String;
-libcore/net/url/FileURLConnection->getPermission()Ljava/security/Permission;
+libcore/net/url/FileURLConnection;->getPermission()Ljava/security/Permission;
 Lcom/android/launcher2/CellLayout;->getCountX()I
 Lcom/android/launcher2/CellLayout;->getCountY()I
 Lcom/adobe/xmp/options/SerializeOptions;->getNewline()Ljava/lang/String;
@@ -7398,7 +7398,7 @@ Lcom/google/common/collect/TreeMultiset$LiveEntry;->getCount()I
 Lcom/android/inputmethod/latin/LogEntries$AutoCorrectionCancelledEntry;->getLogStrings()[Ljava/lang/String;
 Lcom/android/mms/dom/smil/SmilParElementImpl$1;->getParentElementTime()Lorg/w3c/dom/smil/ElementTime;
 Lgov/nist/javax/sip/header/AuthenticationHeader;->getResponse()Ljava/lang/String;
-libcore/net/http/HttpsURLConnectionImpl->getRequestProperties()Ljava/util/Map;
+libcore/net/http/HttpsURLConnectionImpl;->getRequestProperties()Ljava/util/Map;
 Lorg/kxml2/io/KXmlParser;->getEventType()I
 Landroid/support/v4/view/MotionEventCompat;->getX(Landroid/view/MotionEvent;I)F
 Lcom/android/commands/monkey/MonkeyMotionEvent;->getDownTime()J
@@ -7428,7 +7428,7 @@ Ljava/net/URLConnection;->getFileNameMap()Ljava/net/FileNameMap;
 Landroid/view/animation/Animation;->getRepeatCount()I
 Landroid/widget/Editor$SuggestionsPopupWindow$SuggestionAdapter;->getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
 Landroid/graphics/drawable/LayerDrawable;->getNumberOfLayers()I
-libcore/io/IoBridge->getSocketLocalPort(Ljava/io/FileDescriptor;)I
+libcore/io/IoBridge;->getSocketLocalPort(Ljava/io/FileDescriptor;)I
 Ljava/nio/channels/spi/AbstractSelectableChannel;->configureBlocking(Z)Ljava/nio/channels/SelectableChannel;
 Lcom/android/phone/sip/SipProfileDb;->getProfilesCount()I
 Lcom/android/launcher2/Workspace;->createWidgetBitmap(Lcom/android/launcher2/ItemInfo;Landroid/view/View;)Landroid/graphics/Bitmap;
@@ -7501,7 +7501,7 @@ Lcom/android/mms/dom/DocumentImpl;->getElementsByTagNameNS(Ljava/lang/String;Lja
 Lcom/google/common/collect/ForwardingMultimap;->get(Ljava/lang/Object;)Ljava/util/Collection;
 Lorg/apache/harmony/xnet/provider/jsse/CipherSuite;->getByName(Ljava/lang/String;)Lorg/apache/harmony/xnet/provider/jsse/CipherSuite;
 Landroid/os/RemoteCallbackList;->getBroadcastItem(I)Landroid/os/IInterface;
-libcore/net/http/HttpsURLConnectionImpl->getReadTimeout()I
+libcore/net/http/HttpsURLConnectionImpl;->getReadTimeout()I
 Ljava/net/Socket;->getTcpNoDelay()Z
 Lcom/android/launcher2/Workspace$InverseZInterpolator;->getInterpolation(F)F
 Landroid/media/audiofx/AudioEffect;->getParameter(I[S)I
@@ -7559,7 +7559,7 @@ Lcom/google/common/collect/BstMutationRule;->getNodeFactory()Lcom/google/common/
 Landroid/content/pm/PathPermission;->getWritePermission()Ljava/lang/String;
 Landroid/app/Fragment;->getTargetRequestCode()I
 Landroid/hardware/input/InputManager;->getCurrentKeyboardLayoutForInputDevice(Ljava/lang/String;)Ljava/lang/String;
-libcore/util/ZoneInfo->getOffset(J)I
+libcore/util/ZoneInfo;->getOffset(J)I
 Landroid/text/method/TextKeyListener;->getInstance(ZLandroid/text/method/TextKeyListener$Capitalize;)Landroid/text/method/TextKeyListener;
 Landroid/content/pm/IPackageManager$Stub$Proxy;->getPackageUid(Ljava/lang/String;I)I
 Lorg/apache/http/impl/cookie/NetscapeDraftSpec;->getVersionHeader()Lorg/apache/http/Header;
@@ -7608,7 +7608,7 @@ Lcom/android/mms/TempFileProvider;->getScrapPath(Landroid/content/Context;Ljava/
 Ljava/util/logging/LogManager;->getLogManager()Ljava/util/logging/LogManager;
 Lorg/apache/james/mime4j/field/datetime/parser/TokenMgrError;->getMessage()Ljava/lang/String;
 Lcom/android/email/mail/store/ImapFolder;->getMessagesInternal([Ljava/lang/String;Lcom/android/emailcommon/mail/Folder$MessageRetrievalListener;)[Lcom/android/emailcommon/mail/Message;
-libcore/net/http/RawHeaders->getValue(I)Ljava/lang/String;
+libcore/net/http/RawHeaders;->getValue(I)Ljava/lang/String;
 Lorg/apache/harmony/security/asn1/ASN1Type;->getEncodedLength(Lorg/apache/harmony/security/asn1/BerOutputStream;)I
 Landroid/app/ApplicationPackageManager;->queryIntentActivitiesAsUser(Landroid/content/Intent;II)Ljava/util/List;
 Landroid/graphics/drawable/AnimatedRotateDrawable;->getDrawable()Landroid/graphics/drawable/Drawable;
@@ -7680,7 +7680,7 @@ Landroid/widget/AbsListView;->getChoiceMode()I
 Landroid/widget/TextView$Marquee;->getScroll()F
 Ljava/lang/Integer;->getInteger(Ljava/lang/String;Ljava/lang/Integer;)Ljava/lang/Integer;
 Lgov/nist/javax/sip/stack/TLSMessageChannel;->getSIPStack()Lgov/nist/javax/sip/stack/SIPTransactionStack;
-junit/framework/ComparisonFailure->getMessage()Ljava/lang/String;
+junit/framework/ComparisonFailure;->getMessage()Ljava/lang/String;
 Lcom/googlecode/mp4parser/AbstractBox;->getUserType()[B
 Landroid/view/inputmethod/InputMethodManager;->getCurrentInputMethodSubtype()Landroid/view/inputmethod/InputMethodSubtype;
 Ljava/nio/DoubleArrayBuffer;->get([DII)Ljava/nio/DoubleBuffer;
@@ -7716,7 +7716,7 @@ Lorg/xml/sax/helpers/ParserAdapter$AttributeListAdapter;->getValue(Ljava/lang/St
 Landroid/view/TextureView;->getSurfaceTexture()Landroid/graphics/SurfaceTexture;
 Landroid/view/ViewConfiguration;->getZoomControlsTimeout()J
 Landroid/gesture/GestureLibrary;->recognize(Landroid/gesture/Gesture;)Ljava/util/ArrayList;
-libcore/icu/LocaleData->get(Ljava/util/Locale;)libcore/icu/LocaleData
+libcore/icu/LocaleData;->get(Ljava/util/Locale;)libcore/icu/LocaleData
 Lorg/apache/harmony/xnet/provider/jsse/Finished;->getType()I
 Ljava/security/cert/PKIXParameters;->getDate()Ljava/util/Date;
 Lcom/android/exchange/EasSyncService;->validateAccount(Lcom/android/emailcommon/provider/HostAuth;Landroid/content/Context;)Landroid/os/Bundle;
@@ -7739,7 +7739,7 @@ Lgov/nist/javax/sip/address/SipUri;->getHost()Ljava/lang/String;
 Ljava/net/NetworkInterface;->getName()Ljava/lang/String;
 Landroid/hardware/usb/UsbAccessory;->getDescription()Ljava/lang/String;
 Lcom/android/inputmethod/latin/Utils;->getStackTrace()Ljava/lang/String;
-dalvik/system/VMRuntime->getExternalBytesAllocated()J
+dalvik/system/VMRuntime;->getExternalBytesAllocated()J
 Ljava/net/URI;->getPort()I
 Landroid/hardware/Camera$Parameters;->getSupportedPreviewFpsRange()Ljava/util/List;
 Ljava/net/URL;->getPort()I
@@ -7753,14 +7753,14 @@ Landroid/filterfw/core/Filter;->getInputFormat(Ljava/lang/String;)Landroid/filte
 Lorg/apache/harmony/security/asn1/ASN1OctetString;->getDecodedObject(Lorg/apache/harmony/security/asn1/BerInputStream;)Ljava/lang/Object;
 Ljava/nio/DatagramChannelImpl$DatagramSocketAdapter;->getChannel()Ljava/nio/channels/DatagramChannel;
 Lcom/android/videoeditor/util/MediaItemUtils;->getMinimumVideoItemDuration()J
-dalvik/system/profiler/SamplingProfiler->getHprofData()dalvik/system/profiler/HprofData
+dalvik/system/profiler/SamplingProfiler;->getHprofData()dalvik/system/profiler/HprofData
 Landroid/graphics/Paint;->getTextRunCursor([CIIIII)I
 Landroid/app/ContextImpl;->getPackageCodePath()Ljava/lang/String;
 Ljava/security/cert/CertPathValidator;->getInstance(Ljava/lang/String;Ljava/lang/String;)Ljava/security/cert/CertPathValidator;
 Lgov/nist/javax/sip/stack/UDPMessageProcessor;->getMaximumMessageSize()I
 Landroid/content/ISyncStatusObserver$Stub$Proxy;->getInterfaceDescriptor()Ljava/lang/String;
 Landroid/content/ContentProvider;->query(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Landroid/os/CancellationSignal;)Landroid/database/Cursor;
-libcore/icu/CollationElementIteratorICU->getOffset()I
+libcore/icu/CollationElementIteratorICU;->getOffset()I
 Lorg/apache/harmony/security/fortress/Engine;->getInstance(Ljava/lang/String;Ljava/lang/Object;)Lorg/apache/harmony/security/fortress/Engine$SpiAndProvider;
 Lgov/nist/javax/sip/parser/Parser;->sipVersion()Ljava/lang/String;
 Landroid/content/res/Resources;->loadXmlResourceParser(Ljava/lang/String;IILjava/lang/String;)Landroid/content/res/XmlResourceParser;
@@ -7805,7 +7805,7 @@ Lcom/android/internal/policy/impl/GlobalActions$ToggleAction;->create(Landroid/c
 Lcom/android/email/mail/store/imap/ImapList;->getKeyedStringOrEmpty(Ljava/lang/String;Z)Lcom/android/email/mail/store/imap/ImapString;
 Lcom/google/common/collect/SingletonImmutableList;->get(I)Ljava/lang/Object;
 Lcom/google/android/apps/lightcycle/camera/CameraUtility;->getPreviewSize()Lcom/google/android/apps/lightcycle/util/Size;
-libcore/net/http/HttpsURLConnectionImpl->getConnectTimeout()I
+libcore/net/http/HttpsURLConnectionImpl;->getConnectTimeout()I
 Landroid/content/res/Resources;->getAssets()Landroid/content/res/AssetManager;
 Lcom/android/internal/policy/impl/keyguard/KeyguardAbsKeyInputView;->getWrongPasswordStringId()I
 Ljava/net/Inet6Address;->getByAddress(Ljava/lang/String;[BI)Ljava/net/Inet6Address;
@@ -7824,7 +7824,7 @@ Lcom/android/i18n/phonenumbers/Phonemetadata$PhoneMetadata;->getId()Ljava/lang/S
 Lcom/google/common/collect/SortedMultisets$ElementSet;->tailSet(Ljava/lang/Object;)Ljava/util/SortedSet;
 Ljava/nio/charset/IllegalCharsetNameException;->getCharsetName()Ljava/lang/String;
 Ljava/text/DecimalFormat;->getMultiplier()I
-libcore/net/http/HttpsURLConnectionImpl->getHeaderFieldDate(Ljava/lang/String;J)J
+libcore/net/http/HttpsURLConnectionImpl;->getHeaderFieldDate(Ljava/lang/String;J)J
 Lcom/android/deskclock/worldclock/CitiesActivity$CityAdapter;->getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
 Landroid/speech/tts/TtsEngines;->getEngineInfo(Ljava/lang/String;)Landroid/speech/tts/TextToSpeech$EngineInfo;
 Landroid/widget/TabHost$ViewIdContentStrategy;->getContentView()Landroid/view/View;
@@ -7842,7 +7842,7 @@ Lcom/adobe/xmp/options/Options;->toString()Ljava/lang/String;
 Landroid/widget/LinearLayout;->getDividerDrawable()Landroid/graphics/drawable/Drawable;
 Landroid/graphics/Paint;->getShader()Landroid/graphics/Shader;
 Lorg/apache/http/message/BasicHeaderElement;->getParameterByName(Ljava/lang/String;)Lorg/apache/http/NameValuePair;
-junit/runner/BaseTestRunner->getPreference(Ljava/lang/String;)Ljava/lang/String;
+junit/runner/BaseTestRunner;->getPreference(Ljava/lang/String;)Ljava/lang/String;
 Landroid/app/LoadedApk;->getDataDir()Ljava/lang/String;
 Landroid/hardware/SensorManager;->getSensors()I
 Ljava/util/logging/LogManager;->getOrCreate(Ljava/lang/String;Ljava/lang/String;)Ljava/util/logging/Logger;
@@ -7923,7 +7923,7 @@ Landroid/view/InputQueue;->getInputChannel()Landroid/view/InputChannel;
 Lcom/android/exchange/ExchangeService$AccountList;->getById(J)Lcom/android/emailcommon/provider/Account;
 Landroid/view/accessibility/AccessibilityManager;->getEnabledAccessibilityServiceList(I)Ljava/util/List;
 Lcom/android/deskclock/widget/multiwaveview/TargetDrawable$DrawableWithAlpha;->getAlpha()F
-libcore/icu/LocaleData->getDateFormat(I)Ljava/lang/String;
+libcore/icu/LocaleData;->getDateFormat(I)Ljava/lang/String;
 Landroid/provider/Telephony$Threads;->getOrCreateThreadId(Landroid/content/Context;Ljava/lang/String;)J
 Ljava/security/cert/Certificate;->writeReplace()Ljava/lang/Object;
 Landroid/hardware/Sensor;->getVersion()I
@@ -8032,7 +8032,7 @@ Lgov/nist/javax/sip/header/HeaderFactoryImpl;->createMimeVersionHeader(II)Ljavax
 Landroid/widget/TextView;->getRightPaddingOffset()I
 Lgov/nist/javax/sip/stack/SIPTransaction;->getCipherSuite()Ljava/lang/String;
 Lcom/coremedia/iso/boxes/fragment/TrackRunBox$Entry;->getSampleFlags()Lcom/coremedia/iso/boxes/fragment/SampleFlags;
-libcore/icu/RuleBasedCollatorICU->getDecomposition()I
+libcore/icu/RuleBasedCollatorICU;->getDecomposition()I
 Landroid/graphics/Paint;->getColorFilter()Landroid/graphics/ColorFilter;
 Lcom/android/launcher2/AppsCustomizePagedView;->getPageForComponent(I)I
 Ljava/text/Collator;->getInstance(Ljava/util/Locale;)Ljava/text/Collator;
@@ -8057,7 +8057,7 @@ Lcom/android/inputmethod/latin/SubtypeSwitcher;->getInstance()Lcom/android/input
 Lcom/adobe/xmp/options/SerializeOptions;->getOmitPacketWrapper()Z
 Landroid/hardware/Camera$Parameters;->getJpegThumbnailQuality()I
 Landroid/app/IAlarmManager$Stub;->asBinder()Landroid/os/IBinder;
-libcore/net/http/ResponseHeaders->getMaxAgeSeconds()I
+libcore/net/http/ResponseHeaders;->getMaxAgeSeconds()I
 Lcom/android/providers/applications/ApplicationsProvider;->getPackageManager()Landroid/content/pm/PackageManager;
 Lcom/android/deskclock/widget/multiwaveview/TargetDrawable;->getX()F
 Lcom/android/deskclock/widget/multiwaveview/TargetDrawable;->getY()F
@@ -8129,7 +8129,7 @@ Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->getContentAppWi
 Landroid/os/UserManager;->getUserSerialNumber(I)I
 Landroid/media/videoeditor/MediaItem;->getEffect(Ljava/lang/String;)Landroid/media/videoeditor/Effect;
 Lcom/google/common/collect/MapMakerInternalMap$StrongEntry;->getNextExpirable()Lcom/google/common/collect/MapMakerInternalMap$ReferenceEntry;
-libcore/icu/ICU->getISOLanguages()[Ljava/lang/String;
+libcore/icu/ICU;->getISOLanguages()[Ljava/lang/String;
 Lcom/google/common/base/CharMatcher;->trimFrom(Ljava/lang/CharSequence;)Ljava/lang/String;
 Landroid/renderscript/Matrix2f;->getArray()[F
 Lcom/android/videoeditor/service/VideoEditorProject;->getZoomLevel()I
@@ -8294,7 +8294,7 @@ Ljava/net/DatagramPacket;->getSocketAddress()Ljava/net/SocketAddress;
 Landroid/content/pm/IPackageManager$Stub$Proxy;->queryContentProviders(Ljava/lang/String;II)Ljava/util/List;
 Landroid/app/PendingIntent;->getActivities(Landroid/content/Context;I[Landroid/content/Intent;ILandroid/os/Bundle;)Landroid/app/PendingIntent;
 Landroid/webkit/WebStorage$Origin;->getUsage()J
-junit/textui/ResultPrinter->getWriter()Ljava/io/PrIStream;
+junit/textui/ResultPrinter;->getWriter()Ljava/io/PrIStream;
 Landroid/provider/Settings$System;->getLongForUser(Landroid/content/ContentResolver;Ljava/lang/String;JI)J
 Landroid/accounts/AbstractAccountAuthenticator;->getIBinder()Landroid/os/IBinder;
 Landroid/content/pm/VerificationParams;->getManifestDigest()Landroid/content/pm/ManifestDigest;
@@ -8309,7 +8309,7 @@ Lgov/nist/javax/sip/header/Via;->getBranch()Ljava/lang/String;
 Lcom/android/internal/widget/ScrollingTabContainerView$TabView;->getTab()Landroid/app/ActionBar$Tab;
 Landroid/widget/RemoteViewsService$RemoteViewsFactoryAdapter;->getItemId(I)J
 Lorg/apache/http/impl/conn/LoggingSessionInputBuffer;->getMetrics()Lorg/apache/http/io/HttpTransportMetrics;
-dalvik/system/BlockGuard$BlockGuardPolicyException->getMessage()Ljava/lang/String;
+dalvik/system/BlockGuard$BlockGuardPolicyException;->getMessage()Ljava/lang/String;
 Lcom/android/inputmethod/latin/suggestions/MoreSuggestions$MoreSuggestionsParam;->getNumColumnInRow(I)I
 Landroid/content/ContextWrapper;->getCompatibilityInfo(I)Landroid/view/CompatibilityInfoHolder;
 Landroid/drm/DrmManagerClient;->getMetadata(Ljava/lang/String;)Landroid/content/ContentValues;
@@ -8324,7 +8324,7 @@ Lcom/android/videoeditor/LoadPreviewBitmapTask;->doInBackground([Ljava/lang/Void
 Ljava/nio/PipeImpl$PipeSinkChannel;->getFD()Ljava/io/FileDescriptor;
 Lcom/android/mms/transaction/DefaultRetryScheme;->getRetryLimit()I
 Ljavax/obex/PasswordAuthentication;->getPassword()[B
-libcore/io/ForwardingOs->getegid()I
+libcore/io/ForwardingOs;->getegid()I
 Lcom/android/internal/policy/impl/keyguard/KeyguardHostView$7;->getContext()Landroid/content/Context;
 Landroid/util/Singleton;->get()Ljava/lang/Object;
 Lcom/android/internal/policy/impl/keyguard/PagedView;->getViewportWidth()I
@@ -8361,7 +8361,7 @@ Landroid/gesture/GestureLibrary;->getGestureEntries()Ljava/util/Set;
 Landroid/graphics/Bitmap;->createBitmap([IIILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;
 Landroid/content/ContentProvider;->getReadPermission()Ljava/lang/String;
 Landroid/content/IOnPrimaryClipChangedListener$Stub;->asBinder()Landroid/os/IBinder;
-libcore/net/http/HttpEngine->getNetworkRequestHeaders()libcore/net/http/RawHeaders
+libcore/net/http/HttpEngine;->getNetworkRequestHeaders()libcore/net/http/RawHeaders
 Landroid/view/View;->getGlobalVisibleRect(Landroid/graphics/Rect;Landroid/graphics/PoI;)Z
 Lcom/android/email/widget/WidgetManager;->loadAccountIdPref(Landroid/content/Context;I)J
 Landroid/app/ActivityManager;->getRunningServices(I)Ljava/util/List;
@@ -8401,7 +8401,7 @@ Lcom/android/mms/model/ImageModel;->getBitmap(II)Landroid/graphics/Bitmap;
 Landroid/content/res/XmlBlock$Parser;->getPositionDescription()Ljava/lang/String;
 Landroid/webkit/WebViewCore;->getDeviceOrientationService()Landroid/webkit/DeviceOrientationService;
 Landroid/app/Activity;->getWindow()Landroid/view/Window;
-libcore/util/ZoneInfo->getDSTSavings()I
+libcore/util/ZoneInfo;->getDSTSavings()I
 Landroid/media/videoeditor/MediaVideoItem;->getAudioBitrate()I
 Lcom/android/mms/dom/DocumentImpl;->getXmlVersion()Ljava/lang/String;
 Landroid/os/UserManager;->getUserForSerialNumber(J)Landroid/os/UserHandle;
@@ -8418,7 +8418,7 @@ Landroid/renderscript/ProgramVertexFixedFunction$Builder;->getConstantInputType(
 Landroid/app/WallpaperManager$FastBitmapDrawable;->getOpacity()I
 Landroid/widget/SearchView;->getQuery()Ljava/lang/CharSequence;
 Landroid/view/inputmethod/InputMethodSubtype;->getNameResId()I
-libcore/icu/TimeZones->getZoneStrings(Ljava/util/Locale;)[Ljava/lang/String;
+libcore/icu/TimeZones;->getZoneStrings(Ljava/util/Locale;)[Ljava/lang/String;
 Lcom/android/org/bouncycastle/asn1/ASN1OutputStream;->getDLSubStream()Lcom/android/org/bouncycastle/asn1/ASN1OutputStream;
 Ljava/util/concurrent/locks/AbstractQueuedSynchronizer$ConditionObject;->getWaitingThreads()Ljava/util/Collection;
 Landroid/widget/GridLayout$Alignment;->getBounds()Landroid/widget/GridLayout$Bounds;
@@ -8504,7 +8504,7 @@ Landroid/hardware/input/IInputManager$Stub$Proxy;->getInputDevice(I)Landroid/vie
 Lcom/google/common/collect/MapMakerInternalMap$StrongEntry;->getHash()I
 Lgov/nist/javax/sip/stack/SIPTransaction;->getLastResponse()Lgov/nist/javax/sip/message/SIPResponse;
 Landroid/app/Activity;->getCurrentFocus()Landroid/view/View;
-libcore/net/http/HttpsURLConnectionImpl->getPeerPrincipal()Ljava/security/Principal;
+libcore/net/http/HttpsURLConnectionImpl;->getPeerPrincipal()Ljava/security/Principal;
 Lcom/android/launcher2/LauncherModel;->getShortcutInfo(Landroid/content/pm/PackageManager;Landroid/content/Intent;Landroid/content/Context;Landroid/database/Cursor;IILjava/util/HashMap;)Lcom/android/launcher2/ShortcutInfo;
 Ljava/net/NetworkInterface;->getHardwareAddress()[B
 Lcom/google/common/collect/BstMutationResult;->getOriginalRoot()Lcom/google/common/collect/BstNode;
@@ -8574,7 +8574,7 @@ Landroid/app/DialogFragment;->getTheme()I
 Lgov/nist/javax/sip/message/SIPMessage;->getTransactionId()Ljava/lang/String;
 Lgov/nist/javax/sip/header/SIPHeader;->getName()Ljava/lang/String;
 Landroid/content/ClipData$Item;->getIntent()Landroid/content/Intent;
-libcore/net/http/RequestHeaders->getContentLength()I
+libcore/net/http/RequestHeaders;->getContentLength()I
 Lorg/apache/james/mime4j/field/datetime/parser/SimpleCharStream;->getBeginLine()I
 Landroid/filterfw/core/GLFrame;->getInts()[I
 Ljava/util/Properties;->getProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
@@ -8617,7 +8617,7 @@ Lorg/apache/harmony/xnet/provider/jsse/AlertProtocol;->getAlertDescription()Ljav
 Lorg/apache/harmony/xnet/provider/jsse/AbstractSessionContext;->getSessionCacheSize()I
 Landroid/app/ISearchManager$Stub$Proxy;->getSearchablesInGlobalSearch()Ljava/util/List;
 Lcom/android/deskclock/timer/CountingTimerView$UnsignedTime;->calcTotalWidth(Ljava/lang/String;)F
-libcore/icu/CollationKeyICU->toByteArray()[B
+libcore/icu/CollationKeyICU;->toByteArray()[B
 Landroid/view/WindowManagerGlobal;->getWindowSession(Landroid/os/Looper;)Landroid/view/IWindowSession;
 Lorg/apache/harmony/security/x509/ORAddress$2;->getDecodedObject(Lorg/apache/harmony/security/asn1/BerInputStream;)Ljava/lang/Object;
 Lgov/nist/javax/sip/stack/SIPTransactionStack;->newSIPServerResponse(Lgov/nist/javax/sip/message/SIPResponse;Lgov/nist/javax/sip/stack/MessageChannel;)Lgov/nist/javax/sip/stack/ServerResponseInterface;
@@ -8702,7 +8702,7 @@ Lcom/android/providers/media/MediaProvider;->getDatabaseVersion(Landroid/content
 Lorg/apache/http/message/AbstractHttpMessage;->getLastHeader(Ljava/lang/String;)Lorg/apache/http/Header;
 Landroid/app/IWallpaperManager$Stub$Proxy;->getWallpaper(Landroid/app/IWallpaperManagerCallback;Landroid/os/Bundle;)Landroid/os/ParcelFileDescriptor;
 Lcom/android/camera/CameraSettings;->getMaxVideoDuration(Landroid/content/Context;)I
-libcore/icu/RuleBasedCollatorICU->getStrength()I
+libcore/icu/RuleBasedCollatorICU;->getStrength()I
 Landroid/filterfw/core/ShaderProgram;->getGLEnvironment()Landroid/filterfw/core/GLEnvironment;
 Landroid/text/Layout;->getLineVisibleEnd(I)I
 Ljava/security/cert/PKIXParameters;->getSigProvider()Ljava/lang/String;
@@ -8793,7 +8793,7 @@ Lorg/apache/james/mime4j/field/contenttype/parser/ContentTypeParser;->getType()L
 Landroid/text/format/DateFormat;->getMediumDateFormat(Landroid/content/Context;)Ljava/text/DateFormat;
 Landroid/hardware/Camera$Parameters;->getFocalLength()F
 Landroid/widget/GridLayout;->getLayoutParams(Landroid/view/View;)Landroid/widget/GridLayout$LayoutParams;
-libcore/io/DropBox->getReporter()libcore/io/DropBox$Reporter
+libcore/io/DropBox;->getReporter()libcore/io/DropBox$Reporter
 Lcom/android/deskclock/TimerSetupView;->getLayoutId()I
 Landroid/webkit/CookieSyncManager;->getInstance()Landroid/webkit/CookieSyncManager;
 Lorg/apache/harmony/security/x509/SubjectPublicKeyInfo;->getAlgorithmIdentifier()Lorg/apache/harmony/security/x509/AlgorithmIdentifier;
@@ -8878,7 +8878,7 @@ Landroid/view/View;->getAnimation()Landroid/view/animation/Animation;
 Landroid/widget/AccessibilityIterators$LineTextSegmentIterator;->getInstance()Landroid/widget/AccessibilityIterators$LineTextSegmentIterator;
 Lcom/android/videoeditor/util/FileUtils;->getAudioTrackFilename(Landroid/content/Context;I)Ljava/lang/String;
 Landroid/webkit/WebSettings;->getDefaultFixedFontSize()I
-libcore/net/http/RawHeaders->getHttpMinorVersion()I
+libcore/net/http/RawHeaders;->getHttpMinorVersion()I
 Lcom/adobe/xmp/impl/XMPDateTimeImpl;->getDay()I
 Lcom/android/server/sip/SipSessionGroup;->access$400(Lcom/android/server/sip/SipSessionGroup;Ljavax/sip/RequestEvent;Landroid/net/sip/ISipSessionListener;Ljavax/sip/ServerTransaction;I)Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;
 Lcom/android/email/mail/store/imap/ImapList;->getStringOrEmpty(I)Lcom/android/email/mail/store/imap/ImapString;
@@ -8888,7 +8888,7 @@ Lgov/nist/javax/sip/message/SIPRequest;->getViaPort()I
 Lcom/android/email/activity/UIControllerTwoPane$ActionBarControllerCallback;->getTitleMode()I
 Lcom/android/camera/ListPreference;->getKey()Ljava/lang/String;
 Lorg/apache/http/message/BasicHeader;->getElements()[Lorg/apache/http/HeaderElement;
-libcore/net/url/JarURLConnectionImpl->getJarFile()Ljava/util/jar/JarFile;
+libcore/net/url/JarURLConnectionImpl;->getJarFile()Ljava/util/jar/JarFile;
 Lgov/nist/javax/sip/header/CSeq;->getMethod()Ljava/lang/String;
 Landroid/view/GLES20Canvas;->getMaximumBitmapWidth()I
 Lcom/google/common/collect/MapMakerInternalMap$StrongExpirableEvictableEntry;->getPreviousExpirable()Lcom/google/common/collect/MapMakerInternalMap$ReferenceEntry;
@@ -9073,7 +9073,7 @@ Landroid/animation/ValueAnimator;->getDuration()J
 Landroid/view/accessibility/AccessibilityEvent;->getRecordCount()I
 Lcom/googlecode/mp4parser/authoring/tracks/CroppedTrack;->getCompositionTimeEntries()Ljava/util/List;
 Landroid/widget/GridLayout;->getOrientation()I
-libcore/io/ForwardingOs->getaddrinfo(Ljava/lang/String;libcore/io/StructAddrinfo)[Ljava/net/InetAddress;
+libcore/io/ForwardingOs;->getaddrinfo(Ljava/lang/String;libcore/io/StructAddrinfo)[Ljava/net/InetAddress;
 Landroid/view/View;->getWindowToken()Landroid/os/IBinder;
 Landroid/filterfw/core/FrameFormat;->getTarget()I
 Landroid/widget/CursorTreeAdapter;->getGroupId(I)J
@@ -9150,7 +9150,7 @@ Landroid/webkit/WebSettingsClassic;->getDefaultZoom()Landroid/webkit/WebSettings
 Landroid/app/DialogFragment;->getShowsDialog()Z
 Lcom/googlecode/mp4parser/AbstractContainerBox;->getBoxes(Ljava/lang/Class;)Ljava/util/List;
 Lorg/apache/http/impl/client/ClientParamsStack;->getParameter(Ljava/lang/String;)Ljava/lang/Object;
-libcore/icu/ICU->getAvailableLocales()[Ljava/util/Locale;
+libcore/icu/ICU;->getAvailableLocales()[Ljava/util/Locale;
 Landroid/widget/Editor;->getWordIterator()Landroid/text/method/WordIterator;
 Landroid/app/ActivityManagerProxy;->getFrontActivityScreenCompatMode()I
 Lorg/apache/http/impl/cookie/AbstractCookieSpec;->getAttribHandlers()Ljava/util/Collection;
@@ -9183,7 +9183,7 @@ Lcom/adobe/xmp/options/ParseOptions;->getValidOptions()I
 Lcom/android/mms/data/WorkingMessage;->getSlideshow()Lcom/android/mms/model/SlideshowModel;
 Lcom/android/mms/MmsApp;->getPduLoaderManager()Lcom/android/mms/util/PduLoaderManager;
 Ljava/util/Locale;->getDisplayVariant(Ljava/util/Locale;)Ljava/lang/String;
-dalvik/system/VMRuntime->getRuntime()dalvik/system/VMRuntime
+dalvik/system/VMRuntime;->getRuntime()dalvik/system/VMRuntime
 Lcom/android/email/mail/store/ImapStore;->getContext()Landroid/content/Context;
 Landroid/text/SpannableString;->getSpanEnd(Ljava/lang/Object;)I
 Lcom/android/internal/policy/impl/keyguard/KeyguardUpdateMonitor;->getPhoneState()I
@@ -9257,7 +9257,7 @@ Lcom/android/internal/widget/LockPatternUtils;->getAppWidgets()[I
 Ljava/net/DatagramSocket;->getLocalAddress()Ljava/net/InetAddress;
 Landroid/widget/TextView$CharWrapper;->getTextRunAdvances(IIIII[FILandroid/graphics/PaI;)F
 Landroid/view/View;->getHardwareLayer()Landroid/view/HardwareLayer;
-libcore/io/ForwardingOs->getsockoptTimeval(Ljava/io/FileDescriptor;II)libcore/io/StructTimeval
+libcore/io/ForwardingOs;->getsockoptTimeval(Ljava/io/FileDescriptor;II)libcore/io/StructTimeval
 Lcom/android/internal/policy/impl/PhoneWindowManager;->getLongIntArray(Landroid/content/res/Resources;I)[J
 Landroid/hardware/Camera$Parameters;->getSupportedFlashModes()Ljava/util/List;
 Lcom/android/email/RecipientAdapter;->getDefaultPhotoResource()I
@@ -9330,7 +9330,7 @@ Landroid/media/audiofx/PresetReverb;->getPreset()S
 Ljava/nio/charset/UnmappableCharacterException;->getInputLength()I
 Landroid/preference/Preference;->getPersistedString(Ljava/lang/String;)Ljava/lang/String;
 Landroid/content/pm/IPackageManager$Stub$Proxy;->getInstalledApplications(ILjava/lang/String;I)Landroid/content/pm/ParceledListSlice;
-libcore/net/http/RequestHeaders->getIfModifiedSince()Ljava/lang/String;
+libcore/net/http/RequestHeaders;->getIfModifiedSince()Ljava/lang/String;
 Lcom/android/internal/view/menu/MenuBuilder;->getRootMenu()Lcom/android/Iernal/view/menu/MenuBuilder;
 Lcom/android/email/activity/MessageListItemCoordinates;->getHeight(Landroid/view/View;Z)I
 Landroid/view/accessibility/AccessibilityRecord;->getCurrentItemIndex()I
@@ -9430,7 +9430,7 @@ Lcom/android/ex/chips/BaseRecipientAdapter;->getItemViewType(I)I
 Landroid/media/videoeditor/Effect;->getDuration()J
 Lcom/android/inputmethod/latin/UserHistoryDictionary;->getWordsInner(Lcom/android/inputmethod/latin/WordComposer;Ljava/lang/CharSequence;Lcom/android/inputmethod/keyboard/ProximityInfo;)Ljava/util/ArrayList;
 Lcom/android/i18n/phonenumbers/Phonemetadata$PhoneMetadata;->getInternationalPrefix()Ljava/lang/String;
-libcore/net/url/FtpURLConnection->getInputStream()Ljava/io/InputStream;
+libcore/net/url/FtpURLConnection;->getInputStream()Ljava/io/InputStream;
 Lcom/google/android/picasasync/UploadTaskEntry;->getAccount()Ljava/lang/String;
 Landroid/content/BroadcastReceiver$PendingResult;->getResultCode()I
 Lorg/apache/harmony/security/asn1/ASN1Type;->getDecodedObject(Lorg/apache/harmony/security/asn1/BerInputStream;)Ljava/lang/Object;
@@ -9450,7 +9450,7 @@ Ljava/net/URLConnection;->getIfModifiedSince()J
 Lcom/google/common/collect/MapMakerInternalMap$NullEntry;->getPreviousEvictable()Lcom/google/common/collect/MapMakerInternalMap$ReferenceEntry;
 Landroid/webkit/WebSettingsClassic;->getMinimumFontSize()I
 Landroid/content/SyncStorageEngine;->getSingleton()Landroid/content/SyncStorageEngine;
-libcore/net/http/HttpEngine->getSslSocketFactory()Ljavax/net/ssl/SSLSocketFactory;
+libcore/net/http/HttpEngine;->getSslSocketFactory()Ljavax/net/ssl/SSLSocketFactory;
 Lgov/nist/javax/sip/header/ims/PChargingVector;->getICIDGeneratedAt()Ljava/lang/String;
 Lcom/google/android/picasastore/SystemProperties;->getLong(Ljava/lang/String;J)J
 Lgov/nist/javax/sip/header/AuthenticationHeader;->getDomain()Ljava/lang/String;
@@ -9485,7 +9485,7 @@ Landroid/os/IUserManager$Stub$Proxy;->getUserIcon(I)Landroid/graphics/Bitmap;
 Lcom/android/launcher2/CellLayout$LayoutParams;->getWidth()I
 Lorg/apache/http/ProtocolVersion;->getProtocol()Ljava/lang/String;
 Lcom/android/server/pm/Settings;->getVerifierDeviceIdentityLPw()Landroid/content/pm/VerifierDeviceIdentity;
-libcore/net/http/ResponseHeaders->getContentEncoding()Ljava/lang/String;
+libcore/net/http/ResponseHeaders;->getContentEncoding()Ljava/lang/String;
 Landroid/app/WallpaperManager;->getDrawable()Landroid/graphics/drawable/Drawable;
 Landroid/view/ViewConfiguration;->getMaximumDrawingCacheSize()I
 Landroid/net/sip/SipSession;->getState()I
@@ -9509,7 +9509,7 @@ Landroid/widget/ResourceCursorAdapter;->newView(Landroid/content/Context;Landroi
 Lorg/apache/http/protocol/DefaultedHttpContext;->getDefaults()Lorg/apache/http/protocol/HttpContext;
 Landroid/hardware/display/WifiDisplayStatus;->getRememberedDisplays()[Landroid/hardware/display/WifiDisplay;
 Lcom/coremedia/iso/boxes/fragment/TrackFragmentHeaderBox;->getDefaultSampleSize()J
-libcore/util/ZoneInfoDB->getSystemDefault()Ljava/util/TimeZone;
+libcore/util/ZoneInfoDB;->getSystemDefault()Ljava/util/TimeZone;
 Landroid/content/pm/IPackageStatsObserver$Stub;->asBinder()Landroid/os/IBinder;
 Landroid/widget/AbsListView;->getListPaddingRight()I
 Landroid/preference/EditTextPreference;->getEditText()Landroid/widget/EditText;
@@ -9527,7 +9527,7 @@ Landroid/app/ApplicationPackageManager;->getNameForUid(I)Ljava/lang/String;
 Landroid/hardware/Camera$Parameters;->getColorEffect()Ljava/lang/String;
 Landroid/os/storage/IMountService$Stub$Proxy;->getStorageUsers(Ljava/lang/String;)[I
 Landroid/os/BatteryStats;->getRadioDataUptimeMs()J
-libcore/net/http/HttpsURLConnectionImpl->getRequestProperty(Ljava/lang/String;)Ljava/lang/String;
+libcore/net/http/HttpsURLConnectionImpl;->getRequestProperty(Ljava/lang/String;)Ljava/lang/String;
 Landroid/widget/TextView;->getLeftFadingEdgeStrength()F
 Landroid/os/Environment;->getSystemSecureDirectory()Ljava/io/File;
 Landroid/app/SearchManager;->getSuggestions(Landroid/app/SearchableInfo;Ljava/lang/String;I)Landroid/database/Cursor;
@@ -9539,7 +9539,7 @@ Ljava/io/InputStreamReader;->getEncoding()Ljava/lang/String;
 Landroid/text/SpannableStringBuilder;->getTextRunAdvances(IIIII[FILandroid/graphics/PaI;I)F
 Lcom/android/mms/ui/MessageListAdapter;->getViewTypeCount()I
 Landroid/app/DownloadManager$CursorTranslator;->getLong(I)J
-libcore/icu/NativeBreakIterator->getCharacterInstance(Ljava/util/Locale;)libcore/icu/NativeBreakIterator
+libcore/icu/NativeBreakIterator;->getCharacterInstance(Ljava/util/Locale;)libcore/icu/NativeBreakIterator
 Lcom/android/org/bouncycastle/asn1/LazyEncodedSequence;->getObjectAt(I)Lcom/android/org/bouncycastle/asn1/ASN1Encodable;
 Lcom/android/server/AppWidgetServiceImpl;->getAppWidgetIds(Landroid/content/ComponentName;)[I
 Lcom/android/launcher2/DragLayer;->getLocationInDragLayer(Landroid/view/View;[I)F
@@ -9563,7 +9563,7 @@ Lgov/nist/javax/sip/stack/SIPTransaction;->getPeerPacketSourceAddress()Ljava/net
 Lcom/android/internal/view/InputConnectionWrapper;->getTextAfterCursor(II)Ljava/lang/CharSequence;
 Lorg/apache/http/message/BasicStatusLine;->getStatusCode()I
 Landroid/media/MediaRouter$RouteCategory;->getName(Landroid/content/Context;)Ljava/lang/CharSequence;
-libcore/icu/ICU->getAvailableDateFormatLocales()[Ljava/util/Locale;
+libcore/icu/ICU;->getAvailableDateFormatLocales()[Ljava/util/Locale;
 Ljava/util/TreeMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 Lorg/apache/harmony/xnet/provider/jsse/ServerHello;->getRandom()[B
 Landroid/widget/FastScroller;->getSectionIndexer()Landroid/widget/SectionIndexer;
@@ -9600,7 +9600,7 @@ Lgov/nist/core/DuplicateNameValueList;->getValue(Ljava/lang/String;)Ljava/lang/O
 Lcom/coremedia/iso/boxes/SampleSizeBox;->getContentSize()J
 Lorg/apache/http/message/BasicNameValuePair;->getValue()Ljava/lang/String;
 Landroid/provider/Settings$System;->getLong(Landroid/content/ContentResolver;Ljava/lang/String;J)J
-junit/runner/BaseTestRunner->getTest(Ljava/lang/String;)junit/framework/Test
+junit/runner/BaseTestRunner;->getTest(Ljava/lang/String;)junit/framework/Test
 Lorg/apache/harmony/security/asn1/BerInputStream;->getLength([B)I
 Ljava/nio/MappedByteBufferAdapter;->get()B
 Lcom/android/email/activity/UIControllerBase;->getMessageViewFragment()Lcom/android/email/activity/MessageViewFragment;
@@ -9641,9 +9641,9 @@ Lcom/android/email/mail/store/Pop3Store;->getFolder(Ljava/lang/String;)Lcom/andr
 Ljava/security/Provider;->getServices()Ljava/util/Set;
 Landroid/os/Binder;->getInterfaceDescriptor()Ljava/lang/String;
 Lorg/apache/http/params/AbstractHttpParams;->getLongParameter(Ljava/lang/String;J)J
-libcore/net/url/JarURLConnectionImpl->openJarFile()Ljava/util/jar/JarFile;
+libcore/net/url/JarURLConnectionImpl;->openJarFile()Ljava/util/jar/JarFile;
 Landroid/webkit/WebSettings;->getDefaultFontSize()I
-libcore/icu/LocaleData->getTimeFormat(I)Ljava/lang/String;
+libcore/icu/LocaleData;->getTimeFormat(I)Ljava/lang/String;
 Lcom/android/email/mail/store/imap/ImapResponse;->getAlertTextOrEmpty()Lcom/android/email/mail/store/imap/ImapString;
 Landroid/view/accessibility/AccessibilityManager;->getInstalledAccessibilityServiceList()Ljava/util/List;
 Lorg/apache/http/impl/client/AbstractAuthenticationHandler;->parseChallenges([Lorg/apache/http/Header;)Ljava/util/Map;
@@ -9666,7 +9666,7 @@ Landroid/appwidget/AppWidgetHost;->createView(Landroid/content/Context;ILandroid
 Ljava/util/AbstractList;->subList(II)Ljava/util/List;
 Landroid/view/inputmethod/InputConnectionWrapper;->getCursorCapsMode(I)I
 Ljava/net/DatagramSocketImpl;->getLocalPort()I
-libcore/net/url/FileURLConnection->getInputStream()Ljava/io/InputStream;
+libcore/net/url/FileURLConnection;->getInputStream()Ljava/io/InputStream;
 Landroid/mtp/MtpStorage;->getMaxFileSize()J
 Landroid/content/ContentProvider;->getStreamTypes(Landroid/net/Uri;Ljava/lang/String;)[Ljava/lang/String;
 Landroid/os/Debug;->getLoadedClassCount()I
@@ -9899,11 +9899,11 @@ Ljava/net/ServerSocket;->getLocalPort()I
 Landroid/provider/SyncStateContract$Helpers;->get(Landroid/content/ContentProviderClient;Landroid/net/Uri;Landroid/accounts/Account;)[B
 Lorg/apache/harmony/security/x509/InhibitAnyPolicy;->getEncoded()[B
 Lcom/android/deskclock/AlarmAlert;->getLayoutResId()I
-libcore/net/http/HttpsURLConnectionImpl->getDate()J
+libcore/net/http/HttpsURLConnectionImpl;->getDate()J
 Lgov/nist/javax/sip/address/TelURLImpl;->getParameterNames()Ljava/util/Iterator;
 Lorg/apache/harmony/security/provider/cert/X509CertImpl;->getIssuerX500Principal()Ljavax/security/auth/x500/X500Principal;
 Lcom/android/email/mail/Store;->getInstance(Lcom/android/emailcommon/provider/Account;Landroid/content/Context;)Lcom/android/email/mail/Store;
-libcore/net/http/RequestHeaders->getHeaders()libcore/net/http/RawHeaders
+libcore/net/http/RequestHeaders;->getHeaders()libcore/net/http/RawHeaders
 Landroid/content/ContextWrapper;->getDir(Ljava/lang/String;I)Ljava/io/File;
 Landroid/content/ClipData;->getItemAt(I)Landroid/content/ClipData$Item;
 Landroid/content/Intent;->getExtra(Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/Object;
@@ -9918,7 +9918,7 @@ Lcom/android/inputmethod/accessibility/AccessibilityUtils;->getInstance()Lcom/an
 Landroid/widget/TextView;->getUrls()[Landroid/text/style/URLSpan;
 Ljava/text/NumberFormat;->getCurrencyInstance()Ljava/text/NumberFormat;
 Landroid/text/format/DateUtils;->getMonthString(II)Ljava/lang/String;
-libcore/net/http/HttpConnection->getSocket()Ljava/net/Socket;
+libcore/net/http/HttpConnection;->getSocket()Ljava/net/Socket;
 Ljava/text/DateFormat;->getDateTimeInstance(II)Ljava/text/DateFormat;
 Landroid/widget/ListPopupWindow;->getAnimationStyle()I
 Lcom/coremedia/iso/boxes/SampleDependencyTypeBox$Entry;->getSampleHasRedundancy()I
@@ -9941,7 +9941,7 @@ Landroid/hardware/usb/UsbAccessory;->getModel()Ljava/lang/String;
 Landroid/widget/AbsListView;->obtainView(I[Z)Landroid/view/View;
 Landroid/app/Fragment;->getArguments()Landroid/os/Bundle;
 Lorg/apache/http/impl/cookie/CookieSpecBase;->parse([Lorg/apache/http/HeaderElement;Lorg/apache/http/cookie/CookieOrigin;)Ljava/util/List;
-dalvik/system/SocketTagger->get()dalvik/system/SocketTagger
+dalvik/system/SocketTagger;->get()dalvik/system/SocketTagger
 Landroid/media/MediaRouter$RouteInfo;->getPlaybackType()I
 Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->getContent()Landroid/view/View;
 Landroid/os/Message;->getWhen()J
@@ -9987,7 +9987,7 @@ Lgov/nist/javax/sip/stack/TCPMessageProcessor;->getDefaultTargetPort()I
 Landroid/app/PendingIntent;->getTarget()Landroid/content/IIntentSender;
 Lorg/apache/harmony/security/x509/ORAddress;->getEncoded()[B
 Lcom/android/i18n/phonenumbers/geocoding/FlyweightMapStorage;->getDescription(I)Ljava/lang/String;
-libcore/net/http/HttpURLConnectionImpl->getPermission()Ljava/security/Permission;
+libcore/net/http/HttpURLConnectionImpl;->getPermission()Ljava/security/Permission;
 Landroid/hardware/input/InputManager;->getInputDevice(I)Landroid/view/InputDevice;
 Lgov/nist/javax/sip/message/SIPRequest;->getMessageAsEncodedStrings()Ljava/util/LinkedList;
 Landroid/content/SyncManager;->access$3000()J
@@ -10023,7 +10023,7 @@ Lgov/nist/javax/sip/stack/SIPTransactionStack;->getForkedTransaction(Ljava/lang/
 Ljava/security/Signature;->clone()Ljava/lang/Object;
 Landroid/media/audiofx/AudioEffect;->getParameter(I[I)I
 Lgov/nist/javax/sip/stack/SIPDialog;->getRemoteTag()Ljava/lang/String;
-junit/runner/BaseTestRunner->getLoader()junit/runner/TestSuiteLoader
+junit/runner/BaseTestRunner;->getLoader()junit/runner/TestSuiteLoader
 Landroid/app/ApplicationPackageManager;->getApplicationIcon(Landroid/content/pm/ApplicationInfo;)Landroid/graphics/drawable/Drawable;
 Landroid/content/res/XmlBlock$Parser;->getDepth()I
 Lcom/android/mms/MmsApp;->getRecentSuggestions()Landroid/provider/SearchRecentSuggestions;
@@ -10196,9 +10196,9 @@ Lcom/android/email/activity/setup/DuplicateAccountDialogFragment;->onCreateDialo
 Lorg/apache/harmony/security/x509/Certificate$1;->getDecodedObject(Lorg/apache/harmony/security/asn1/BerInputStream;)Ljava/lang/Object;
 Landroid/app/Fragment;->getFragmentManager()Landroid/app/FragmentManager;
 Landroid/widget/TextView;->getHighlightColor()I
-libcore/util/ZoneInfoDB->getAvailableIDs(I)[Ljava/lang/String;
+libcore/util/ZoneInfoDB;->getAvailableIDs(I)[Ljava/lang/String;
 Landroid/hardware/Camera$Parameters;->getZoom()I
-libcore/net/http/ResponseHeaders->getSMaxAgeSeconds()I
+libcore/net/http/ResponseHeaders;->getSMaxAgeSeconds()I
 Landroid/graphics/drawable/BitmapDrawable;->getIntrinsicHeight()I
 Landroid/app/ContextImpl;->getUserId()I
 Landroid/webkit/WebViewDatabase;->getInstance(Landroid/content/Context;)Landroid/webkit/WebViewDatabase;
@@ -10275,7 +10275,7 @@ Landroid/filterfw/core/Filter;->getInputPorts()Ljava/util/Collection;
 Lcom/android/camera/ComboPreferences;->getInt(Ljava/lang/String;I)I
 Lcom/android/inputmethod/keyboard/PointerTracker;->getKeyOn(II)Lcom/android/inputmethod/keyboard/Key;
 Lcom/android/mms/dom/smil/SmilPlayer$TimelineEntry;->getAction()I
-libcore/net/http/ResponseHeaders->getVaryFields()Ljava/util/Set;
+libcore/net/http/ResponseHeaders;->getVaryFields()Ljava/util/Set;
 Lorg/apache/commons/logging/impl/Jdk14Logger;->getLogger()Ljava/util/logging/Logger;
 Lgov/nist/core/ParserCore;->nameValue()Lgov/nist/core/NameValue;
 Landroid/widget/ListView;->getMaxScrollAmount()I
@@ -10343,7 +10343,7 @@ Lcom/android/email/activity/MessageViewFragmentBase;->getAccountId()J
 Lcom/google/common/collect/Lists$OnePlusArrayList;->get(I)Ljava/lang/Object;
 Ljavax/crypto/Mac;->getProvider()Ljava/security/Provider;
 Landroid/widget/AdapterView;->getFirstVisiblePosition()I
-libcore/net/http/HttpsURLConnectionImpl->getHeaderFields()Ljava/util/Map;
+libcore/net/http/HttpsURLConnectionImpl;->getHeaderFields()Ljava/util/Map;
 Lcom/coremedia/iso/boxes/SampleDescriptionBox;->getContentSize()J
 Lcom/android/i18n/phonenumbers/Phonemetadata$PhoneMetadata;->getNationalPrefixForParsing()Ljava/lang/String;
 Lcom/android/mms/model/RegionModel;->getRegionId()Ljava/lang/String;
@@ -10373,7 +10373,7 @@ Landroid/text/method/ReplacementTransformationMethod$SpannedReplacementCharSeque
 Landroid/text/method/SingleLineTransformationMethod;->getInstance()Landroid/text/method/SingleLineTransformationMethod;
 Lorg/apache/harmony/security/x509/Extension;->getExtnID()Ljava/lang/String;
 Landroid/app/LoadedApk;->getLibDir()Ljava/lang/String;
-libcore/net/http/HttpsURLConnectionImpl->getCipherSuite()Ljava/lang/String;
+libcore/net/http/HttpsURLConnectionImpl;->getCipherSuite()Ljava/lang/String;
 Lcom/android/inputmethod/latin/WordComposer;->getInputPointers()Lcom/android/inputmethod/latin/InputPoIers;
 Landroid/widget/ExpandableListView;->getSelectedPosition()J
 Lcom/android/internal/widget/multiwaveview/PointCloud;->getAlphaForPoint(Lcom/android/Iernal/widget/multiwaveview/PoICloud$PoI;)I
@@ -10402,14 +10402,14 @@ Lcom/android/mms/dom/NodeImpl;->getFirstChild()Lorg/w3c/dom/Node;
 Lcom/android/email/Preferences;->getEnableStrictMode()Z
 Lcom/android/internal/policy/PolicyManager;->makeNewLayoutInflater(Landroid/content/Context;)Landroid/view/LayoutInflater;
 Lgov/nist/core/NameValueList;->getParameter(Ljava/lang/String;)Ljava/lang/String;
-libcore/net/http/HttpEngine$1->getBody()Ljava/io/InputStream;
+libcore/net/http/HttpEngine$1;->getBody()Ljava/io/InputStream;
 Lgov/nist/javax/sip/stack/SIPClientTransaction;->getOutgoingViaHeader()Lgov/nist/javax/sip/header/Via;
 Lcom/coremedia/iso/boxes/SampleTableBox;->getCompositionTimeToSample()Lcom/coremedia/iso/boxes/CompositionTimeToSample;
 Ljava/util/ResourceBundle;->getBundle(Ljava/lang/String;Ljava/util/Locale;Ljava/lang/ClassLoader;Ljava/util/ResourceBundle$Control;)Ljava/util/ResourceBundle;
 Ljava/io/ObjectStreamClass;->getMethodReadResolve()Ljava/lang/reflect/Method;
 Lcom/android/mms/MmsApp;->getTelephonyManager()Landroid/telephony/TelephonyManager;
 Landroid/view/ViewConfiguration;->getTapTimeout()I
-libcore/io/ForwardingOs->getpwnam(Ljava/lang/String;)libcore/io/StructPasswd
+libcore/io/ForwardingOs;->getpwnam(Ljava/lang/String;)libcore/io/StructPasswd
 Landroid/media/IMediaScannerListener$Stub;->asBinder()Landroid/os/IBinder;
 Lcom/android/deskclock/widget/multiwaveview/GlowPadView;->getTargetResourceId()I
 Lcom/android/uiautomator/core/UiAutomatorBridge;->getInteractionController()Lcom/android/uiautomator/core/InteractionController;
@@ -10458,7 +10458,7 @@ Landroid/app/ApplicationPackageManager;->getInstalledApplications(I)Ljava/util/L
 Lcom/android/server/display/DisplayDevice;->getNameLocked()Ljava/lang/String;
 Landroid/widget/SimpleCursorAdapter;->getCursorToStringConverter()Landroid/widget/SimpleCursorAdapter$CursorToStringConverter;
 Landroid/view/SurfaceView;->getHolder()Landroid/view/SurfaceHolder;
-libcore/net/url/FtpURLConnection->getPermission()Ljava/security/Permission;
+libcore/net/url/FtpURLConnection;->getPermission()Ljava/security/Permission;
 Lcom/android/musicfx/ControlPanelEffect;->getParameterBoolean(Landroid/content/Context;Ljava/lang/String;ILcom/android/musicfx/ControlPanelEffect$Key;)Ljava/lang/Boolean;
 Landroid/webkit/PluginManager;->getPluginClass(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Class;
 Landroid/webkit/WebSettings;->getTextZoom()I
@@ -10466,7 +10466,7 @@ Landroid/media/AudioTrack;->getStreamType()I
 Ljava/text/NumberFormat;->parseObject(Ljava/lang/String;Ljava/text/ParsePosition;)Ljava/lang/Object;
 Landroid/os/SystemService;->getState(Ljava/lang/String;)Landroid/os/SystemService$State;
 Lgov/nist/javax/sip/SipStackImpl;->getSipProviders()Ljava/util/Iterator;
-libcore/net/http/RequestHeaders->getUserAgent()Ljava/lang/String;
+libcore/net/http/RequestHeaders;->getUserAgent()Ljava/lang/String;
 Ljava/util/IllegalFormatPrecisionException;->getMessage()Ljava/lang/String;
 Lcom/android/inputmethod/latin/ResizableIntArray;->getLength()I
 Lcom/android/videoeditor/service/MovieMediaItem;->getAppBoundaryBeginTime()J
@@ -10488,7 +10488,7 @@ Lcom/android/internal/os/ProcessStats;->getLastIrqTime()I
 Lcom/google/common/collect/AbstractSortedMultiset;->subMultiset(Ljava/lang/Object;Lcom/google/common/collect/BoundType;Ljava/lang/Object;Lcom/google/common/collect/BoundType;)Lcom/google/common/collect/SortedMultiset;
 Ljava/net/URL;->getDefaultPort()I
 Lgov/nist/javax/sip/address/Authority;->getHost()Lgov/nist/core/Host;
-libcore/net/http/HttpsURLConnectionImpl$ProxyConnectEngine->getNetworkRequestHeaders()libcore/net/http/RawHeaders
+libcore/net/http/HttpsURLConnectionImpl$ProxyConnectEngine;->getNetworkRequestHeaders()libcore/net/http/RawHeaders
 Landroid/view/TextureView;->getHardwareLayer()Landroid/view/HardwareLayer;
 Landroid/emoji/EmojiFactory;->getAndroidPuaFromVendorSpecificSjis(C)I
 Ljava/util/HashMap;->newValueIterator()Ljava/util/Iterator;
@@ -10583,11 +10583,11 @@ Ljava/util/logging/Logger;->getUseParentHandlers()Z
 Landroid/media/ExifInterface;->getAltitude(D)D
 Lcom/android/internal/os/ProcessStats;->getStats(I)Lcom/android/Iernal/os/ProcessStats$Stats;
 Lgov/nist/javax/sip/header/SIPHeaderList;->indexOf(Lgov/nist/core/GenericObject;)I
-libcore/icu/ICU->getAvailableNumberFormatLocales()[Ljava/util/Locale;
+libcore/icu/ICU;->getAvailableNumberFormatLocales()[Ljava/util/Locale;
 Landroid/emoji/EmojiFactory;->getMaximumAndroidPua()I
 Landroid/view/PointerIcon;->getDefaultIcon(Landroid/content/Context;)Landroid/view/PoIerIcon;
 Lcom/android/launcher2/LauncherAppWidgetHost;->onCreateView(Landroid/content/Context;ILandroid/appwidget/AppWidgetProviderInfo;)Landroid/appwidget/AppWidgetHostView;
-libcore/icu/NativeDecimalFormat->getPositiveSuffix()Ljava/lang/String;
+libcore/icu/NativeDecimalFormat;->getPositiveSuffix()Ljava/lang/String;
 Lcom/android/deskclock/worldclock/WorldClockAdapter;->getItem(I)Ljava/lang/Object;
 Landroid/view/ViewGroup;->getLayoutMode()I
 Landroid/content/res/XmlBlock$Parser;->getColumnNumber()I
@@ -10609,7 +10609,7 @@ Lcom/android/internal/os/PowerProfile;->getAveragePower(Ljava/lang/String;)D
 Lcom/android/i18n/phonenumbers/Phonemetadata$PhoneNumberDesc;->getExampleNumber()Ljava/lang/String;
 Landroid/media/videoeditor/MediaProperties;->getSupportedMaxVolume()I
 Lcom/google/common/collect/MapMakerInternalMap$SoftEntry;->getNext()Lcom/google/common/collect/MapMakerInternalMap$ReferenceEntry;
-libcore/icu/ICU->getAvailableCalendarLocales()[Ljava/util/Locale;
+libcore/icu/ICU;->getAvailableCalendarLocales()[Ljava/util/Locale;
 Lcom/android/mms/transaction/TransactionBundle;->getPushData()[B
 Landroid/widget/TextView;->getKeyListener()Landroid/text/method/KeyListener;
 Ljava/lang/Package;->getSpecificationVendor()Ljava/lang/String;
@@ -10619,7 +10619,7 @@ Landroid/widget/NumberPicker;->getTopFadingEdgeStrength()F
 Landroid/widget/Spinner;->getPrompt()Ljava/lang/CharSequence;
 Lcom/android/providers/telephony/MmsSmsDatabaseHelper;->getInstance(Landroid/content/Context;)Lcom/android/providers/telephony/MmsSmsDatabaseHelper;
 Lcom/android/inputmethod/latin/ExpandableBinaryDictionary;->getFilenameWithLocale(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-libcore/io/ForwardingOs->getenv(Ljava/lang/String;)Ljava/lang/String;
+libcore/io/ForwardingOs;->getenv(Ljava/lang/String;)Ljava/lang/String;
 Landroid/app/ActivityManagerProxy;->getProviderMimeType(Landroid/net/Uri;I)Ljava/lang/String;
 Landroid/filterfw/core/FrameFormat;->getDimensions()[I
 Lcom/android/email/provider/ContentCache;->getCachedCursor(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
@@ -10647,7 +10647,7 @@ Ljava/util/IllegalFormatPrecisionException;->getPrecision()I
 Ljava/util/Formatter$FormatSpecifierParser;->getFormatSpecifierText()Ljava/lang/String;
 Lcom/android/launcher2/PagedView;->getCurrentPageDescription()Ljava/lang/String;
 Landroid/widget/HeaderViewListAdapter;->getCount()I
-libcore/net/url/JarURLConnectionImpl->getContent()Ljava/lang/Object;
+libcore/net/url/JarURLConnectionImpl;->getContent()Ljava/lang/Object;
 Ljava/util/Locale;->getDisplayCountry()Ljava/lang/String;
 Lcom/android/org/bouncycastle/asn1/ASN1Set;->toDLObject()Lcom/android/org/bouncycastle/asn1/ASN1Primitive;
 Landroid/util/AtomicFile;->getBaseFile()Ljava/io/File;
@@ -10659,7 +10659,7 @@ Lcom/android/emailcommon/internet/Rfc822Output;->getHtmlBody(Ljava/lang/String;)
 Landroid/app/ApplicationPackageManager;->getActivityLogo(Landroid/content/Intent;)Landroid/graphics/drawable/Drawable;
 Lorg/apache/harmony/security/pkcs7/SignerInfo;->access$600(Lorg/apache/harmony/security/pkcs7/SignerInfo;)[B
 Landroid/media/IAudioFocusDispatcher$Stub$Proxy;->getInterfaceDescriptor()Ljava/lang/String;
-libcore/io/ForwardingOs->getpwuid(I)libcore/io/StructPasswd
+libcore/io/ForwardingOs;->getpwuid(I)libcore/io/StructPasswd
 Landroid/view/View;->getTextDirection()I
 Lcom/android/i18n/phonenumbers/PhoneNumberUtil;->getNddPrefixForRegion(Ljava/lang/String;Z)Ljava/lang/String;
 Lcom/android/launcher2/FastBitmapDrawable;->getMinimumWidth()I
@@ -10677,13 +10677,13 @@ Landroid/text/DynamicLayout;->getEllipsisStart(I)I
 Landroid/widget/LinearLayout;->getBaselineAlignedChildIndex()I
 Landroid/hardware/display/WifiDisplay;->getDeviceAlias()Ljava/lang/String;
 Lgov/nist/javax/sip/header/ims/SecurityAgree;->getProtocol()Ljava/lang/String;
-libcore/net/http/RawHeaders->getFieldName(I)Ljava/lang/String;
+libcore/net/http/RawHeaders;->getFieldName(I)Ljava/lang/String;
 Landroid/support/v4/view/ViewPager;->getAdapter()Landroid/support/v4/view/PagerAdapter;
 Lcom/android/launcher2/WallpaperChooserDialogFragment$WallpaperDrawable;->getOpacity()I
 Landroid/webkit/WebView;->getHttpAuthUsernamePassword(Ljava/lang/String;Ljava/lang/String;)[Ljava/lang/String;
 Landroid/app/ISearchManager$Stub$Proxy;->getGlobalSearchActivities()Ljava/util/List;
 Lcom/android/org/bouncycastle/asn1/DefiniteLengthInputStream;->toByteArray()[B
-libcore/net/http/HttpConnection->getInputStream()Ljava/io/InputStream;
+libcore/net/http/HttpConnection;->getInputStream()Ljava/io/InputStream;
 Lcom/android/deskclock/stopwatch/StopwatchFragment$ImageLabelAdapter;->getShowAllAdapter()Lcom/android/deskclock/stopwatch/StopwatchFragment$ImageLabelAdapter;
 Landroid/text/method/TextKeyListener;->getPrefs(Landroid/content/Context;)I
 Landroid/webkit/WebView$PrivateAccess;->getHorizontalScrollFactor()F
@@ -10705,7 +10705,7 @@ Landroid/view/MotionEvent;->getHistoricalTouchMinor(II)F
 Landroid/media/AudioManager;->getMode()I
 Ljava/security/cert/PKIXCertPathChecker;->clone()Ljava/lang/Object;
 Landroid/preference/ListPreference;->getEntryValues()[Ljava/lang/CharSequence;
-libcore/net/http/HttpURLConnectionImpl->getResponseMessage()Ljava/lang/String;
+libcore/net/http/HttpURLConnectionImpl;->getResponseMessage()Ljava/lang/String;
 Lcom/android/phone/PhoneGlobals;->getRestoreMuteOnInCallResume()Z
 Lcom/android/videoeditor/service/MovieOverlay;->getId()Ljava/lang/String;
 Lorg/apache/harmony/luni/lang/reflect/ImplForVariable;->getName()Ljava/lang/String;
@@ -10721,7 +10721,7 @@ Lcom/android/mms/model/TextModel;->getText()Ljava/lang/String;
 Lorg/apache/harmony/security/provider/cert/X509CertImpl;->getSignature()[B
 Landroid/text/style/TextAppearanceSpan;->getTextSize()I
 Lcom/android/inputmethod/keyboard/ProximityInfo;->getNativeProximityInfo()J
-libcore/net/url/UrlUtils->getSchemePrefix(Ljava/lang/String;)Ljava/lang/String;
+libcore/net/url/UrlUtils;->getSchemePrefix(Ljava/lang/String;)Ljava/lang/String;
 Landroid/accounts/IAccountAuthenticatorResponse$Stub;->asBinder()Landroid/os/IBinder;
 Landroid/view/accessibility/IAccessibilityManagerClient$Stub$Proxy;->getInterfaceDescriptor()Ljava/lang/String;
 Landroid/media/videoeditor/MediaVideoItem;->getHeight()I
@@ -10863,7 +10863,7 @@ Lcom/coremedia/iso/boxes/mdat/MediaDataBox;->getParent()Lcom/coremedia/iso/boxes
 Lcom/android/mms/MmsApp;->getCurrentCountryIso()Ljava/lang/String;
 Landroid/app/ContextImpl;->getDir(Ljava/lang/String;I)Ljava/io/File;
 Landroid/provider/Settings$System;->getShowGTalkServiceStatusForUser(Landroid/content/ContentResolver;I)Z
-libcore/net/http/HttpsURLConnectionImpl->getOutputStream()Ljava/io/OutputStream;
+libcore/net/http/HttpsURLConnectionImpl;->getOutputStream()Ljava/io/OutputStream;
 Lcom/android/mms/dom/NamedNodeMapImpl;->getNamedItem(Ljava/lang/String;)Lorg/w3c/dom/Node;
 Lorg/apache/http/util/EncodingUtils;->getString([BLjava/lang/String;)Ljava/lang/String;
 Lcom/google/common/collect/Ordering;->nullsFirst()Lcom/google/common/collect/Ordering;
@@ -10973,7 +10973,7 @@ Lgov/nist/javax/sip/header/AddressParametersHeader;->getAddress()Ljavax/sip/addr
 Lorg/kxml2/io/KXmlParser;->getColumnNumber()I
 Landroid/provider/Settings$Secure;->getIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 Landroid/speech/tts/SynthesisRequest;->getLanguage()Ljava/lang/String;
-libcore/net/http/HttpsURLConnectionImpl->getHeaderField(I)Ljava/lang/String;
+libcore/net/http/HttpsURLConnectionImpl;->getHeaderField(I)Ljava/lang/String;
 Lcom/google/common/collect/AbstractMultiset;->entrySet()Ljava/util/Set;
 Landroid/os/storage/StorageVolume;->getOwner()Landroid/os/UserHandle;
 Lgov/nist/javax/sip/header/Challenge;->getParameter(Ljava/lang/String;)Ljava/lang/String;
@@ -11077,7 +11077,7 @@ Lcom/android/internal/widget/DrawableHolder;->getDrawable()Landroid/graphics/dra
 Lcom/android/internal/view/menu/MenuBuilder;->getHeaderTitle()Ljava/lang/CharSequence;
 Lcom/android/videoeditor/service/MovieOverlay;->getAppStartTime()J
 Lcom/android/systemui/statusbar/NotificationData;->get(I)Lcom/android/systemui/statusbar/NotificationData$Entry;
-libcore/net/http/HttpURLConnectionImpl->getInputStream()Ljava/io/InputStream;
+libcore/net/http/HttpURLConnectionImpl;->getInputStream()Ljava/io/InputStream;
 Landroid/mtp/MtpStorageInfo;->getStorageId()I
 Lcom/android/inputmethod/keyboard/internal/KeyStylesSet$DeclaredKeyStyle;->getFlag(Landroid/content/res/TypedArray;I)I
 Lcom/android/i18n/phonenumbers/geocoding/PhoneNumberOfflineGeocoder;->getDescriptionForValidNumber(Lcom/android/i18n/phonenumbers/Phonenumber$PhoneNumber;Ljava/util/Locale;)Ljava/lang/String;
@@ -11113,7 +11113,7 @@ Landroid/mtp/MtpObjectInfo;->getThumbCompressedSize()I
 Landroid/widget/ExpandableListView;->getAdapter()Landroid/widget/Adapter;
 Landroid/filterfw/core/FrameFormat;->getLength()I
 Landroid/content/SyncStorageEngine;->getLongColumn(Landroid/database/Cursor;Ljava/lang/String;)J
-libcore/net/http/HttpsURLConnectionImpl->getPermission()Ljava/security/Permission;
+libcore/net/http/HttpsURLConnectionImpl;->getPermission()Ljava/security/Permission;
 Lcom/android/camera/Thumbnail;->createVideoThumbnailBitmap(Ljava/io/FileDescriptor;I)Landroid/graphics/Bitmap;
 Lcom/android/internal/util/TypedProperties;->getLong(Ljava/lang/String;J)J
 Landroid/app/admin/DevicePolicyManager;->getStorageEncryptionStatus(I)I
@@ -11156,7 +11156,7 @@ Lcom/android/internal/policy/impl/PhoneFallbackEventHandler;->getTelephonyManage
 Landroid/text/method/DateTimeKeyListener;->getInstance()Landroid/text/method/DateTimeKeyListener;
 Lcom/android/internal/view/IInputMethodSession$Stub$Proxy;->getInterfaceDescriptor()Ljava/lang/String;
 Ljava/nio/HeapByteBuffer;->getDouble(I)D
-libcore/net/http/HttpsURLConnectionImpl->getContentLength()I
+libcore/net/http/HttpsURLConnectionImpl;->getContentLength()I
 Lcom/coremedia/iso/boxes/SampleDependencyTypeBox$Entry;->getSampleIsDependentOn()I
 Lorg/apache/http/util/EncodingUtils;->getAsciiBytes(Ljava/lang/String;)[B
 Landroid/hardware/Camera$Parameters;->getSupportedVideoSizes()Ljava/util/List;
@@ -11236,11 +11236,11 @@ Lcom/android/email/activity/MessageFileView;->getFragment()Lcom/android/email/ac
 Landroid/widget/HeaderViewListAdapter;->getFilter()Landroid/widget/Filter;
 Lcom/android/email/provider/EmailProvider;->mostRecentMessageQuery(Landroid/net/Uri;)Landroid/database/Cursor;
 Landroid/app/Activity;->getRequestedOrientation()I
-libcore/icu/NativeBreakIterator->getLineInstance(Ljava/util/Locale;)libcore/icu/NativeBreakIterator
+libcore/icu/NativeBreakIterator;->getLineInstance(Ljava/util/Locale;)libcore/icu/NativeBreakIterator
 Ljava/security/ProtectionDomain;->getPrincipals()[Ljava/security/Principal;
 Ljavax/security/cert/X509Certificate$1;->getSerialNumber()Ljava/math/BigInteger;
 Landroid/os/storage/IMountService$Stub$Proxy;->getVolumeList()[Landroid/os/storage/StorageVolume;
-libcore/net/http/HttpURLConnectionImpl->getDefaultPort()I
+libcore/net/http/HttpURLConnectionImpl;->getDefaultPort()I
 Ljava/sql/Date;->getMinutes()I
 Lcom/android/launcher2/Launcher;->getDragController()Lcom/android/launcher2/DragController;
 Lgov/nist/javax/sip/stack/SIPTransaction;->getMessageChannel()Lgov/nist/javax/sip/stack/MessageChannel;
@@ -11270,7 +11270,7 @@ Lcom/android/email/SecurityPolicy;->wipeExpiredAccounts(Landroid/content/Context
 Landroid/provider/Settings$System;->getLong(Landroid/content/ContentResolver;Ljava/lang/String;)J
 Ljavax/crypto/CipherSpi;->engineWrap(Ljava/security/Key;)[B
 Landroid/view/PointerIcon;->getBitmap()Landroid/graphics/Bitmap;
-libcore/net/http/HttpsURLConnectionImpl$HttpUrlConnectionDelegate->getSSLSocket()Ljavax/net/ssl/SSLSocket;
+libcore/net/http/HttpsURLConnectionImpl$HttpUrlConnectionDelegate;->getSSLSocket()Ljavax/net/ssl/SSLSocket;
 Lcom/android/mms/transaction/NotificationTransaction;->getPdu(Ljava/lang/String;)[B
 Lcom/android/i18n/phonenumbers/geocoding/PhoneNumberOfflineGeocoder;->getDescriptionForNumber(Lcom/android/i18n/phonenumbers/Phonenumber$PhoneNumber;Ljava/util/Locale;Ljava/lang/String;)Ljava/lang/String;
 Lgov/nist/javax/sip/stack/SIPDialog;->getRemoteSeqNumber()J
@@ -11309,7 +11309,7 @@ Lcom/android/launcher2/LauncherModel;->getItemsInLocalCoordinates(Landroid/conte
 Landroid/widget/Spinner$DropDownAdapter;->getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
 Landroid/app/WallpaperInfo;->getPackageName()Ljava/lang/String;
 Landroid/media/videoeditor/OverlayFrame;->getOverlayFrameHeight()I
-libcore/net/http/HttpsURLConnectionImpl->getURL()Ljava/net/URL;
+libcore/net/http/HttpsURLConnectionImpl;->getURL()Ljava/net/URL;
 Landroid/appwidget/AppWidgetHost;->onCreateView(Landroid/content/Context;ILandroid/appwidget/AppWidgetProviderInfo;)Landroid/appwidget/AppWidgetHostView;
 Landroid/hardware/SerialManager;->getSerialPorts()[Ljava/lang/String;
 Ljava/nio/ShortToByteBufferAdapter;->get([SII)Ljava/nio/ShortBuffer;
@@ -11348,7 +11348,7 @@ Lcom/android/server/WiredAccessoryManager$WiredAccessoryObserver$UEventInfo;->ge
 Lcom/google/common/collect/AbstractListMultimap;->createCollection()Ljava/util/Collection;
 Landroid/graphics/drawable/GradientDrawable;->getIntrinsicHeight()I
 Landroid/view/Display;->getWidth()I
-libcore/io/ErrnoException->getMessage()Ljava/lang/String;
+libcore/io/ErrnoException;->getMessage()Ljava/lang/String;
 Landroid/view/inputmethod/InputMethodInfo;->getSubtypeAt(I)Landroid/view/inputmethod/InputMethodSubtype;
 Landroid/content/ContentValues;->getStringArrayList(Ljava/lang/String;)Ljava/util/ArrayList;
 Lcom/google/common/collect/SortedMultisets$DescendingMultiset;->headMultiset(Ljava/lang/Object;Lcom/google/common/collect/BoundType;)Lcom/google/common/collect/SortedMultiset;
@@ -11375,7 +11375,7 @@ Lcom/android/videoeditor/service/MovieMediaItem;->getId()Ljava/lang/String;
 Landroid/app/SearchManager;->getAssistIntent(Landroid/content/Context;)Landroid/content/Intent;
 Lcom/google/common/collect/ForwardingCollection;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 Landroid/os/Environment;->getExternalStorageState()Ljava/lang/String;
-junit/framework/TestCase->toString()Ljava/lang/String;
+junit/framework/TestCase;->toString()Ljava/lang/String;
 Landroid/os/HandlerThread;->getLooper()Landroid/os/Looper;
 Lcom/android/mms/dom/smil/ElementTimeImpl;->getFill()S
 Lcom/android/videoeditor/OverlayType;->getOverlays(Landroid/content/Context;)[Lcom/android/videoeditor/OverlayType;
@@ -11425,7 +11425,7 @@ Lorg/apache/harmony/luni/util/DeleteOnExit;->getInstance()Lorg/apache/harmony/lu
 Landroid/filterfw/core/Frame;->getFormat()Landroid/filterfw/core/FrameFormat;
 Lcom/android/videoeditor/service/VideoEditorProject;->getEffect(Ljava/lang/String;Ljava/lang/String;)Lcom/android/videoeditor/service/MovieEffect;
 Landroid/hardware/usb/UsbManager;->getDefaultFunction()Ljava/lang/String;
-libcore/icu/NativeBreakIterator->getWordInstance(Ljava/util/Locale;)libcore/icu/NativeBreakIterator
+libcore/icu/NativeBreakIterator;->getWordInstance(Ljava/util/Locale;)libcore/icu/NativeBreakIterator
 Landroid/renderscript/Element;->getSubElementName(I)Ljava/lang/String;
 Ljava/security/KeyPairGenerator;->getInstance(Ljava/lang/String;Ljava/lang/String;)Ljava/security/KeyPairGenerator;
 Lcom/google/common/collect/AbstractMultimap$3;->iterator()Ljava/util/Iterator;
@@ -11433,7 +11433,7 @@ Ljava/util/logging/LogRecord;->getMillis()J
 Lcom/google/common/collect/AbstractMultimap$4;->iterator()Ljava/util/Iterator;
 Lcom/google/common/collect/ImmutableCollection;->writeReplace()Ljava/lang/Object;
 Lcom/android/mms/ui/IconListAdapter$IconListItem;->getTitle()Ljava/lang/String;
-junit/framework/TestCase->getName()Ljava/lang/String;
+junit/framework/TestCase;->getName()Ljava/lang/String;
 Lgov/nist/core/ThreadAuditor$ThreadHandle;->toString()Ljava/lang/String;
 Landroid/os/IPermissionController$Stub$Proxy;->getInterfaceDescriptor()Ljava/lang/String;
 Landroid/view/IWindowManager$Stub$Proxy;->getInterfaceDescriptor()Ljava/lang/String;
@@ -11511,13 +11511,13 @@ Lcom/google/common/collect/ImmutableSortedMap;->valueIterator()Lcom/google/commo
 Landroid/graphics/ColorMatrix;->getArray()[F
 Lcom/android/videoeditor/service/VideoEditorProject;->getFirstMediaItem()Lcom/android/videoeditor/service/MovieMediaItem;
 Landroid/content/ISyncAdapter$Stub$Proxy;->getInterfaceDescriptor()Ljava/lang/String;
-junit/framework/ComparisonFailure->getActual()Ljava/lang/String;
+junit/framework/ComparisonFailure;->getActual()Ljava/lang/String;
 Landroid/app/Activity;->getLoaderManager(Ljava/lang/String;ZZ)Landroid/app/LoaderManagerImpl;
 Ljava/lang/System;->getProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 Landroid/hardware/Camera$Parameters;->getZoomRatios()Ljava/util/List;
 Lcom/android/providers/downloads/Helpers;->getFullPath(Ljava/lang/String;Ljava/lang/String;ILjava/io/File;)Ljava/lang/String;
 Lgov/nist/javax/sip/header/extensions/References;->getParameter(Ljava/lang/String;)Ljava/lang/String;
-libcore/net/http/HttpURLConnectionImpl->getHeaderFields()Ljava/util/Map;
+libcore/net/http/HttpURLConnectionImpl;->getHeaderFields()Ljava/util/Map;
 Lcom/google/common/collect/Multimaps$UnmodifiableSortedSetMultimap;->get(Ljava/lang/Object;)Ljava/util/Collection;
 Lorg/apache/james/mime4j/field/contenttype/parser/ContentTypeParserTokenManager;->jjFillToken()Lorg/apache/james/mime4j/field/contenttype/parser/Token;
 Landroid/view/View;->getRight()I
@@ -11629,7 +11629,7 @@ Ljava/util/logging/LogRecord;->getSourceClassName()Ljava/lang/String;
 Ljava/util/TimeZone;->getID()Ljava/lang/String;
 Lcom/android/internal/policy/impl/keyguard/KeyguardPasswordView;->getWrongPasswordStringId()I
 Lcom/google/common/collect/Multimaps$1;->getKey()Ljava/lang/Object;
-libcore/icu/RuleBasedCollatorICU->getAttribute(I)I
+libcore/icu/RuleBasedCollatorICU;->getAttribute(I)I
 Landroid/app/PendingIntent;->getBroadcast(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
 Landroid/webkit/CookieManager;->getCookie(Ljava/lang/String;)Ljava/lang/String;
 Landroid/text/method/BaseMovementMethod;->getMovementMetaState(Landroid/text/Spannable;Landroid/view/KeyEvent;)I
@@ -11686,7 +11686,7 @@ Landroid/hardware/Camera$Parameters;->getExposureCompensationStep()F
 Lgov/nist/javax/sip/message/SIPResponse;->getDialogId(Z)Ljava/lang/String;
 Lorg/apache/http/impl/client/AbstractHttpClient;->getProxyAuthenticationHandler()Lorg/apache/http/client/AuthenticationHandler;
 Lcom/android/mms/dom/DocumentImpl;->getStrictErrorChecking()Z
-libcore/icu/NativeDecimalFormat->getNegativePrefix()Ljava/lang/String;
+libcore/icu/NativeDecimalFormat;->getNegativePrefix()Ljava/lang/String;
 Landroid/view/animation/LayoutAnimationController;->getDelay()F
 Ljava/lang/Class;->getField(Ljava/lang/String;)Ljava/lang/reflect/Field;
 Lcom/android/server/am/ActivityStack;->getTaskAccessInfoLocked(IZ)Lcom/android/server/am/TaskAccessInfo;
@@ -11755,7 +11755,7 @@ Landroid/widget/ListPopupWindow;->getSelectedItem()Ljava/lang/Object;
 Lgov/nist/javax/sip/stack/TCPMessageChannel;->getKey()Ljava/lang/String;
 Lgov/nist/javax/sip/stack/TCPMessageChannel;->getViaHost()Ljava/lang/String;
 Lgov/nist/javax/sip/address/SipUri;->getHeaderNames()Ljava/util/Iterator;
-libcore/internal/StringPool->get([CII)Ljava/lang/String;
+libcore/internal/StringPool;->get([CII)Ljava/lang/String;
 Lcom/android/systemui/statusbar/tablet/TabletStatusBar;->getStatusBarGravity()I
 Landroid/view/LayoutInflater;->inflate(Lorg/xmlpull/v1/XmlPullParser;Landroid/view/ViewGroup;Z)Landroid/view/View;
 Landroid/text/SpannableStringInternal;->getSpanFlags(Ljava/lang/Object;)I
@@ -11820,7 +11820,7 @@ Ljava/lang/ProcessManager;->getInstance()Ljava/lang/ProcessManager;
 Lcom/android/mms/MmsConfig;->getMaxMessageCountPerThread()I
 Lcom/android/systemui/recent/RecentTasksLoader;->getDefaultThumbnail()Landroid/graphics/Bitmap;
 Lcom/android/inputmethod/latin/ResourceUtils;->getDimensionOrFraction(Landroid/content/res/TypedArray;IIF)F
-libcore/io/IoBridge->getSocketOption(Ljava/io/FileDescriptor;I)Ljava/lang/Object;
+libcore/io/IoBridge;->getSocketOption(Ljava/io/FileDescriptor;I)Ljava/lang/Object;
 Ljava/util/jar/JarEntry;->getCodeSigners()[Ljava/security/CodeSigner;
 Lgov/nist/core/GenericObject;->getMatcher()Lgov/nist/core/Match;
 Landroid/view/animation/LayoutAnimationController;->getAnimationForView(Landroid/view/View;)Landroid/view/animation/Animation;
@@ -11833,7 +11833,7 @@ Landroid/content/pm/ContainerEncryptionParams;->getMacSpec()Ljava/security/spec/
 Lcom/android/mms/dom/DocumentImpl;->getElementById(Ljava/lang/String;)Lorg/w3c/dom/Element;
 Lorg/apache/http/impl/conn/tsccm/ConnPoolByRoute;->getEntryBlocking(Lorg/apache/http/conn/routing/HttpRoute;Ljava/lang/Object;JLjava/util/concurrent/TimeUnit;Lorg/apache/http/impl/conn/tsccm/WaitingThreadAborter;)Lorg/apache/http/impl/conn/tsccm/BasicPoolEntry;
 Lorg/apache/http/entity/HttpEntityWrapper;->getContentType()Lorg/apache/http/Header;
-libcore/net/http/HttpConnection->getAddress()libcore/net/http/HttpConnection$Address
+libcore/net/http/HttpConnection;->getAddress()libcore/net/http/HttpConnection$Address
 Lcom/android/internal/widget/IRemoteViewsFactory$Stub$Proxy;->getLoadingView()Landroid/widget/RemoteViews;
 Lcom/android/i18n/phonenumbers/PhoneNumberUtil;->getExampleNumberForNonGeoEntity(I)Lcom/android/i18n/phonenumbers/Phonenumber$PhoneNumber;
 Lcom/android/launcher2/LauncherModel;->getFallbackIcon()Landroid/graphics/Bitmap;
@@ -11857,13 +11857,13 @@ Lcom/android/exchange/adapter/MoveItemsParser;->getNewServerId()Ljava/lang/Strin
 Ljava/net/URLConnection;->getUseCaches()Z
 Landroid/graphics/Paint;->getTextWidths(Ljava/lang/String;[F)I
 Landroid/media/effect/FilterEffect;->getFilterContext()Landroid/filterfw/core/FilterContext;
-libcore/net/http/HttpsHandler->getDefaultPort()I
+libcore/net/http/HttpsHandler;->getDefaultPort()I
 Lgov/nist/javax/sip/stack/SIPTransactionStack;->getDialogs(Ljavax/sip/DialogState;)Ljava/util/Collection;
 Lorg/apache/http/impl/client/EntityEnclosingRequestWrapper;->getEntity()Lorg/apache/http/HttpEntity;
 Lgov/nist/javax/sip/message/SIPMessage;->getContactHeaders()Lgov/nist/javax/sip/header/ContactList;
 Lcom/android/email/mail/store/Pop3Store$Pop3Folder;->getPermanentFlags()[Lcom/android/emailcommon/mail/Flag;
 Lcom/adobe/xmp/options/SerializeOptions;->getUseCompactFormat()Z
-dalvik/system/profiler/HprofData->getStartMillis()J
+dalvik/system/profiler/HprofData;->getStartMillis()J
 Lgov/nist/javax/sip/header/RAck;->getCSeqNumber()I
 Lorg/apache/http/impl/client/AbstractHttpClient;->getHttpRequestRetryHandler()Lorg/apache/http/client/HttpRequestRetryHandler;
 Lcom/android/internal/view/IInputMethodManager$Stub$Proxy;->getShortcutInputMethodsAndSubtypes()Ljava/util/List;
@@ -12025,7 +12025,7 @@ Lcom/android/internal/widget/ActionBarView;->getTitle()Ljava/lang/CharSequence;
 Lcom/android/mms/util/AddressUtils;->getFrom(Landroid/content/Context;Landroid/net/Uri;)Ljava/lang/String;
 Landroid/webkit/CertTool;->getCertType(Ljava/lang/String;)Ljava/lang/String;
 Landroid/filterfw/core/VertexFrame;->getBitmap()Landroid/graphics/Bitmap;
-libcore/icu/NativeBreakIterator->getSentenceInstance(Ljava/util/Locale;)libcore/icu/NativeBreakIterator
+libcore/icu/NativeBreakIterator;->getSentenceInstance(Ljava/util/Locale;)libcore/icu/NativeBreakIterator
 Lorg/apache/harmony/luni/lang/reflect/ImplForArray;->getGenericComponentType()Ljava/lang/reflect/Type;
 Landroid/widget/ListPopupWindow;->getWidth()I
 Lcom/google/common/collect/Ordering;->min(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -12033,7 +12033,7 @@ Lcom/android/email/activity/setup/EditQuickResponseDialog;->onCreateDialog(Landr
 Landroid/view/inputmethod/InputConnectionWrapper;->getTextBeforeCursor(II)Ljava/lang/CharSequence;
 Ljava/lang/reflect/Method;->getGenericParameterTypes()[Ljava/lang/reflect/Type;
 Lcom/android/internal/widget/IRemoteViewsAdapterConnection$Stub$Proxy;->getInterfaceDescriptor()Ljava/lang/String;
-libcore/net/http/HttpEngine->getHttpConnectionToCache()Ljava/net/HttpURLConnection;
+libcore/net/http/HttpEngine;->getHttpConnectionToCache()Ljava/net/HttpURLConnection;
 Landroid/media/videoeditor/Overlay;->getId()Ljava/lang/String;
 Lgov/nist/javax/sip/header/ims/PVisitedNetworkID;->getVisitedNetworkID()Ljava/lang/String;
 Landroid/widget/AbsListView;->getListPaddingBottom()I
@@ -12044,7 +12044,7 @@ Lcom/android/videoeditor/widgets/MediaLinearLayout;->getSelectedViewPos()I
 Lcom/android/launcher2/PagedView;->getScrollingIndicator()Landroid/view/View;
 Lorg/apache/harmony/xnet/provider/jsse/CipherSuite;->getBulkEncryptionAlgorithm()Ljava/lang/String;
 Lgov/nist/javax/sip/stack/SIPClientTransaction;->getViaPort()I
-dalvik/system/BlockGuard$BlockGuardPolicyException->getPolicy()I
+dalvik/system/BlockGuard$BlockGuardPolicyException;->getPolicy()I
 Lcom/android/server/power/DisplayPowerState;->getElectronBeamLevel()F
 Ljava/beans/PropertyChangeEvent;->getPropagationId()Ljava/lang/Object;
 Landroid/app/ApplicationPackageManager;->getLaunchIntentForPackage(Ljava/lang/String;)Landroid/content/Intent;
@@ -12067,7 +12067,7 @@ Lcom/google/android/apps/lightcycle/panorama/DeviceManager;->getCameraFieldOfVie
 Lcom/google/android/picasasync/UploadTaskEntry;->getBytesUploaded()J
 Landroid/widget/RelativeLayout$LayoutParams;->getRules()[I
 Lcom/android/videoeditor/TransitionType;->getType()I
-junit/runner/StandardTestSuiteLoader->load(Ljava/lang/String;)Ljava/lang/Class;
+junit/runner/StandardTestSuiteLoader;->load(Ljava/lang/String;)Ljava/lang/Class;
 Lgov/nist/javax/sip/message/SIPMessage;->clone()Ljava/lang/Object;
 Lcom/android/internal/statusbar/StatusBarNotification;->getUserId()I
 Landroid/os/Environment$UserEnvironment;->getExternalStorageAppFilesDirectory(Ljava/lang/String;)Ljava/io/File;
@@ -12119,7 +12119,7 @@ Landroid/app/ApplicationPackageManager;->getPackageSizeInfo(Ljava/lang/String;IL
 Landroid/widget/RemoteViews$BitmapCache;->getBitmapForId(I)Landroid/graphics/Bitmap;
 Lcom/android/inputmethod/latin/RichInputConnection;->getWordBeforeCursorIfAtEndOfWord(Lcom/android/inputmethod/latin/SettingsValues;)Ljava/lang/CharSequence;
 Ljava/net/ServerSocket;->getReceiveBufferSize()I
-libcore/net/http/RequestHeaders->getContentType()Ljava/lang/String;
+libcore/net/http/RequestHeaders;->getContentType()Ljava/lang/String;
 Lgov/nist/javax/sip/message/SIPRequest;->createSIPRequest(Lgov/nist/javax/sip/header/RequestLine;Z)Lgov/nist/javax/sip/message/SIPRequest;
 Lcom/android/exchange/adapter/Parser;->getValueInt()I
 Landroid/widget/TextView;->getMaxHeight()I
@@ -12137,7 +12137,7 @@ Lorg/apache/harmony/security/asn1/ASN1Integer;->getDecodedObject(Lorg/apache/har
 Lcom/android/mms/transaction/Transaction;->getPdu(Ljava/lang/String;)[B
 Lcom/android/ex/chips/BaseRecipientAdapter;->getCount()I
 Ljava/io/ObjectStreamClass;->getFields()[Ljava/io/ObjectStreamField;
-dalvik/system/VMRuntime->getMinimumHeapSize()J
+dalvik/system/VMRuntime;->getMinimumHeapSize()J
 Landroid/widget/CursorAdapter;->getFilter()Landroid/widget/Filter;
 Landroid/app/admin/IDevicePolicyManager$Stub$Proxy;->getStorageEncryption(Landroid/content/ComponentName;I)Z
 Lorg/apache/harmony/xnet/provider/jsse/AbstractSessionContext;->getSessionTimeout()I
@@ -12167,7 +12167,7 @@ Landroid/provider/Settings$Secure;->getFloat(Landroid/content/ContentResolver;Lj
 Ljava/util/concurrent/ThreadPoolExecutor;->getActiveCount()I
 Landroid/widget/NumberPicker;->getMaxValue()I
 Landroid/media/MediaFile;->getFileType(Ljava/lang/String;)Landroid/media/MediaFile$MediaFileType;
-libcore/io/ForwardingOs->getnameinfo(Ljava/net/InetAddress;I)Ljava/lang/String;
+libcore/io/ForwardingOs;->getnameinfo(Ljava/net/InetAddress;I)Ljava/lang/String;
 Landroid/content/pm/IPackageManager$Stub$Proxy;->getPreferredPackages(I)Ljava/util/List;
 Ljava/util/UnknownFormatConversionException;->getConversion()Ljava/lang/String;
 Lorg/apache/http/conn/routing/RouteTracker;->getLocalAddress()Ljava/net/InetAddress;
@@ -12192,7 +12192,7 @@ Lcom/android/videoeditor/service/MovieOverlay;->getTitle()Ljava/lang/String;
 Lcom/android/exchange/adapter/Parser;->getValue()Ljava/lang/String;
 Landroid/webkit/WebView;->getContentWidth()I
 Lcom/android/mms/model/MediaModel;->getData()[B
-libcore/net/http/HttpURLConnectionImpl->getErrorStream()Ljava/io/InputStream;
+libcore/net/http/HttpURLConnectionImpl;->getErrorStream()Ljava/io/InputStream;
 Lcom/android/org/bouncycastle/asn1/ASN1Sequence;->toDERObject()Lcom/android/org/bouncycastle/asn1/ASN1Primitive;
 Lgov/nist/javax/sip/message/SIPMessage;->getRecordRouteHeaders()Lgov/nist/javax/sip/header/RecordRouteList;
 Lorg/apache/harmony/security/asn1/ASN1GeneralizedTime;->getInstance()Lorg/apache/harmony/security/asn1/ASN1GeneralizedTime;
@@ -12222,7 +12222,7 @@ Ljavax/crypto/ExemptionMechanism;->getProvider()Ljava/security/Provider;
 Landroid/filterfw/core/Frame;->getFrameManager()Landroid/filterfw/core/FrameManager;
 Ljava/net/DatagramSocket;->getTrafficClass()I
 Lcom/android/internal/statusbar/IStatusBar$Stub;->asBinder()Landroid/os/IBinder;
-libcore/io/ForwardingOs->getpid()I
+libcore/io/ForwardingOs;->getpid()I
 Landroid/view/View;->getLayerType()I
 Landroid/widget/TimePicker;->getBaseline()I
 Landroid/app/Fragment;->getRetainInstance()Z
@@ -12243,8 +12243,8 @@ Ljava/util/logging/Logger;->getGlobal()Ljava/util/logging/Logger;
 Landroid/webkit/PluginManager;->getPluginsAPKName(Ljava/lang/String;)Ljava/lang/String;
 Lcom/android/internal/policy/impl/keyguard/KeyguardCircleFramedDrawable;->getScale()F
 Lcom/android/email/activity/MailboxFragmentAdapter$CombinedMailboxLoader;->loadInBackground()Landroid/database/Cursor;
-libcore/net/http/HttpsURLConnectionImpl->getInputStream()Ljava/io/InputStream;
-libcore/net/url/JarURLConnectionImpl->getDefaultUseCaches()Z
+libcore/net/http/HttpsURLConnectionImpl;->getInputStream()Ljava/io/InputStream;
+libcore/net/url/JarURLConnectionImpl;->getDefaultUseCaches()Z
 Landroid/view/inputmethod/InputConnectionWrapper;->getSelectedText(I)Ljava/lang/CharSequence;
 Landroid/os/CountDownTimer;->start()Landroid/os/CountDownTimer;
 Lgov/nist/javax/sip/stack/SIPDialog;->getCallId()Ljavax/sip/header/CallIdHeader;
@@ -12254,7 +12254,7 @@ Lcom/coremedia/iso/boxes/TrackHeaderBox;->getWidth()D
 Ljava/security/SecureRandom;->generateSeed(I)[B
 Ljava/util/MissingFormatWidthException;->getFormatSpecifier()Ljava/lang/String;
 Lcom/android/internal/util/MemInfoReader;->getCachedSize()J
-libcore/net/http/RequestHeaders->getIfNoneMatch()Ljava/lang/String;
+libcore/net/http/RequestHeaders;->getIfNoneMatch()Ljava/lang/String;
 Landroid/preference/PreferenceGroupAdapter;->getItem(I)Landroid/preference/Preference;
 Landroid/app/ContextImpl;->getCompatibilityInfo(I)Landroid/view/CompatibilityInfoHolder;
 Landroid/media/AudioManager;->getDevicesForStream(I)I
@@ -12271,7 +12271,7 @@ Lorg/apache/http/impl/client/AbstractHttpClient;->getRequestInterceptor(I)Lorg/a
 Lcom/android/phone/PhoneGlobals;->getInstance()Lcom/android/phone/PhoneGlobals;
 Landroid/content/ContentResolver;->acquireProvider(Landroid/net/Uri;)Landroid/content/IContentProvider;
 Landroid/webkit/CookieManager;->getCookie(Landroid/net/WebAddress;)Ljava/lang/String;
-libcore/util/ZoneInfoDB->getAvailableIDs()[Ljava/lang/String;
+libcore/util/ZoneInfoDB;->getAvailableIDs()[Ljava/lang/String;
 Landroid/webkit/HTML5Audio$IsPrivateBrowsingEnabledGetter;->get()Z
 Landroid/content/CursorLoader;->getProjection()[Ljava/lang/String;
 Lcom/android/mms/dom/AttrImpl;->getParentNode()Lorg/w3c/dom/Node;
@@ -12360,7 +12360,7 @@ Lorg/apache/harmony/security/pkcs7/SignerInfo;->getDigestEncryptionAlgorithm()Lj
 Lcom/google/common/collect/MapMakerInternalMap$EvictionQueue$1;->getPreviousEvictable()Lcom/google/common/collect/MapMakerInternalMap$ReferenceEntry;
 Landroid/text/Layout$SpannedEllipsizer;->getSpans(IILjava/lang/Class;)[Ljava/lang/Object;
 Lgov/nist/javax/sip/header/SIPHeader;->toString()Ljava/lang/String;
-libcore/net/http/RequestHeaders->getMinFreshSeconds()I
+libcore/net/http/RequestHeaders;->getMinFreshSeconds()I
 Landroid/app/admin/IDevicePolicyManager$Stub$Proxy;->getPasswordExpiration(Landroid/content/ComponentName;I)J
 Lcom/android/launcher2/IconCache;->getFullResDefaultActivityIcon()Landroid/graphics/drawable/Drawable;
 Lcom/android/i18n/phonenumbers/PhoneNumberUtil;->getExampleNumberForType(Ljava/lang/String;Lcom/android/i18n/phonenumbers/PhoneNumberUtil$PhoneNumberType;)Lcom/android/i18n/phonenumbers/Phonenumber$PhoneNumber;
@@ -12423,7 +12423,7 @@ Lcom/android/videoeditor/service/MovieMediaItem;->getAppRenderingMode()I
 Ljavax/crypto/spec/DHParameterSpec;->getL()I
 Ljavax/crypto/spec/DHParameterSpec;->getG()Ljava/math/BigInteger;
 Lgov/nist/javax/sip/stack/SIPServerTransaction;->getLastResponse()Lgov/nist/javax/sip/message/SIPResponse;
-libcore/net/http/HttpsURLConnectionImpl->getLastModified()J
+libcore/net/http/HttpsURLConnectionImpl;->getLastModified()J
 Lcom/android/inputmethod/latin/suggestions/MoreSuggestionsView$2;->getDrawingProxy()Lcom/android/inputmethod/keyboard/PoIerTracker$DrawingProxy;
 Lorg/apache/harmony/security/x501/Name;->getName(Ljava/lang/String;)Ljava/lang/String;
 Lorg/apache/http/impl/client/DefaultRequestDirector;->determineRoute(Lorg/apache/http/HttpHost;Lorg/apache/http/HttpRequest;Lorg/apache/http/protocol/HttpContext;)Lorg/apache/http/conn/routing/HttpRoute;
@@ -12454,10 +12454,10 @@ Ljava/security/spec/RSAPrivateCrtKeySpec;->getPrimeExponentP()Ljava/math/BigInte
 Lorg/apache/harmony/security/x509/DNParser;->getUTF8()C
 Lcom/google/common/collect/ForwardingCollection;->standardToArray()[Ljava/lang/Object;
 Lcom/android/videoeditor/service/VideoEditorProject;->getNextMediaItem(J)Lcom/android/videoeditor/service/MovieMediaItem;
-libcore/net/http/RequestHeaders->getHost()Ljava/lang/String;
+libcore/net/http/RequestHeaders;->getHost()Ljava/lang/String;
 Lcom/google/android/apps/lightcycle/panorama/LightCycleView;->getPreviewCallback()Landroid/hardware/Camera$PreviewCallback;
-libcore/net/http/ResponseHeaders->getContentLength()I
-libcore/net/http/HttpsURLConnectionImpl->getLocalPrincipal()Ljava/security/Principal;
+libcore/net/http/ResponseHeaders;->getContentLength()I
+libcore/net/http/HttpsURLConnectionImpl;->getLocalPrincipal()Ljava/security/Principal;
 Landroid/webkit/WebSettings;->getSaveFormData()Z
 Lcom/android/server/IntentResolver;->filterSet()Ljava/util/Set;
 Landroid/app/ActivityManager;->getRecentTasks(II)Ljava/util/List;
@@ -12511,9 +12511,9 @@ Lcom/android/inputmethod/latin/InputPointers;->getTimes()[I
 Landroid/content/ContentProviderClient;->getLocalContentProvider()Landroid/content/ContentProvider;
 Lcom/android/mms/dom/AttrImpl;->getSchemaTypeInfo()Lorg/w3c/dom/TypeInfo;
 Lgov/nist/javax/sip/DialogTimeoutEvent;->getReason()Lgov/nist/javax/sip/DialogTimeoutEvent$Reason;
-libcore/net/http/HttpsURLConnectionImpl->getExpiration()J
+libcore/net/http/HttpsURLConnectionImpl;->getExpiration()J
 Ljava/text/NumberFormat;->format(D)Ljava/lang/String;
-libcore/icu/ICU->getAvailableCollatorLocales()[Ljava/util/Locale;
+libcore/icu/ICU;->getAvailableCollatorLocales()[Ljava/util/Locale;
 Lcom/google/android/picasasync/UploadTaskEntry;->getAlbumTitle()Ljava/lang/String;
 Landroid/media/videoeditor/MediaImageItem;->getDecodedImageFileName()Ljava/lang/String;
 Ljava/nio/PipeImpl$PipeSinkChannel;->write([Ljava/nio/ByteBuffer;)J
@@ -12528,8 +12528,8 @@ Lgov/nist/javax/sip/header/Challenge;->getRealm()Ljava/lang/String;
 Lcom/google/common/collect/Multimaps$TransformedEntriesMultimap$TransformedEntries$1$1;->getValue()Ljava/lang/Object;
 Ljava/util/Currency;->getDisplayName(Ljava/util/Locale;)Ljava/lang/String;
 Lcom/android/inputmethod/keyboard/MainKeyboardView;->getKeyDetector()Lcom/android/inputmethod/keyboard/KeyDetector;
-junit/runner/BaseTestRunner->loadSuiteClass(Ljava/lang/String;)Ljava/lang/Class;
-sun/misc/Unsafe->getUnsafe()sun/misc/Unsafe
+junit/runner/BaseTestRunner;->loadSuiteClass(Ljava/lang/String;)Ljava/lang/Class;
+sun/misc/Unsafe;->getUnsafe()sun/misc/Unsafe
 Landroid/app/ActivityThread;->getIntentBeingBroadcast()Landroid/content/Intent;
 Landroid/media/MediaRouter$RouteGroup;->getName(Landroid/content/res/Resources;)Ljava/lang/CharSequence;
 Lcom/android/internal/view/menu/MenuItemImpl;->getTitleCondensed()Ljava/lang/CharSequence;
@@ -12538,7 +12538,7 @@ Lcom/android/ex/variablespeed/EngineParameters;->getDecodeBufferInitialSize()I
 Lcom/android/internal/view/InputConnectionWrapper;->getTextBeforeCursor(II)Ljava/lang/CharSequence;
 Landroid/security/KeyStore;->getPubkey(Ljava/lang/String;)[B
 Landroid/graphics/Bitmap;->getRowBytes()I
-dalvik/system/DexFile->getName()Ljava/lang/String;
+dalvik/system/DexFile;->getName()Ljava/lang/String;
 Lcom/google/android/apps/lightcycle/panorama/DeviceManager;->getOpenGlMinFieldOfViewDegrees()F
 Landroid/animation/Keyframe$IntKeyframe;->getValue()Ljava/lang/Object;
 Lgov/nist/core/ThreadAuditor$ThreadHandle;->getPingIntervalInMillisecs()J
@@ -12581,7 +12581,7 @@ Ljavax/security/cert/X509Certificate$1;->getIssuerDN()Ljava/security/Principal;
 Lorg/apache/harmony/security/x501/AttributeTypeAndValue$1;->getDecodedObject(Lorg/apache/harmony/security/asn1/BerInputStream;)Ljava/lang/Object;
 Landroid/app/ISearchManager$Stub$Proxy;->getSearchableInfo(Landroid/content/ComponentName;)Landroid/app/SearchableInfo;
 Lcom/android/internal/widget/multiwaveview/GlowPadView;->getTargetPosition(I)I
-libcore/io/IoBridge->getSocketLocalAddress(Ljava/io/FileDescriptor;)Ljava/net/InetAddress;
+libcore/io/IoBridge;->getSocketLocalAddress(Ljava/io/FileDescriptor;)Ljava/net/InetAddress;
 Landroid/widget/RemoteViews;->getLayoutId()I
 Lcom/coremedia/iso/boxes/SampleDependencyTypeBox;->getContentSize()J
 Landroid/view/View;->getTouchDelegate()Landroid/view/TouchDelegate;
@@ -12653,7 +12653,7 @@ Lcom/android/email/activity/UIControllerTwoPane;->getUIAccountId()J
 Ljavax/crypto/CipherSpi;->engineUnwrap([BLjava/lang/String;I)Ljava/security/Key;
 Lcom/android/exchange/EasResponse;->getLength()I
 Landroid/widget/LinearLayout;->getLocationOffset(Landroid/view/View;)I
-libcore/net/http/RawHeaders->getResponseMessage()Ljava/lang/String;
+libcore/net/http/RawHeaders;->getResponseMessage()Ljava/lang/String;
 Landroid/webkit/AccessibilityInjectorFallback$AccessibilityWebContentKeyBinding;->getSecondArgument(I)I
 Landroid/animation/Keyframe$ObjectKeyframe;->getValue()Ljava/lang/Object;
 Landroid/view/VelocityTracker;->getYVelocity()F
@@ -12687,7 +12687,7 @@ Lcom/android/videoeditor/util/MediaItemUtils;->getMinimumMediaItemDuration(Lcom/
 Landroid/os/Debug;->getGlobalClassInitCount()I
 Lcom/android/mms/MmsConfig;->getHttpSocketTimeout()I
 Lcom/coremedia/iso/PropertyBoxParserImpl$FourCcToBox;->getParam()[Ljava/lang/String;
-libcore/io/ForwardingOs->getuid()I
+libcore/io/ForwardingOs;->getuid()I
 Lcom/android/internal/view/IInputMethodManager$Stub;->asBinder()Landroid/os/IBinder;
 Ljava/net/InetAddress;->getAllByName(Ljava/lang/String;)[Ljava/net/InetAddress;
 Landroid/text/Layout;->getLineWidth(I)F
@@ -12696,7 +12696,7 @@ Lgov/nist/javax/sip/header/SIPHeaderList;->iterator()Ljava/util/Iterator;
 Lorg/apache/harmony/security/x509/GeneralNames;->getNames()Ljava/util/List;
 Lcom/google/common/collect/MapMaker;->getValueStrength()Lcom/google/common/collect/MapMakerInternalMap$Strength;
 Landroid/widget/TextView;->getAutoLinkMask()I
-libcore/net/http/RequestHeaders->getTransferEncoding()Ljava/lang/String;
+libcore/net/http/RequestHeaders;->getTransferEncoding()Ljava/lang/String;
 Landroid/mtp/MtpObjectInfo;->getDateCreated()J
 Lcom/android/org/bouncycastle/asn1/x500/X500Name;->getRDNs(Lcom/android/org/bouncycastle/asn1/ASN1ObjectIdentifier;)[Lcom/android/org/bouncycastle/asn1/x500/RDN;
 Landroid/graphics/drawable/AnimatedRotateDrawable;->getConstantState()Landroid/graphics/drawable/Drawable$ConstantState;
@@ -12722,7 +12722,7 @@ Ljava/net/URISyntaxException;->getMessage()Ljava/lang/String;
 Ljava/nio/charset/CharsetDecoder;->implFlush(Ljava/nio/CharBuffer;)Ljava/nio/Cset/CoderResult;
 Lcom/android/org/bouncycastle/asn1/ASN1TaggedObject;->getObjectParser(IZ)Lcom/android/org/bouncycastle/asn1/ASN1Encodable;
 Ljava/lang/reflect/UndeclaredThrowableException;->getUndeclaredThrowable()Ljava/lang/Throwable;
-libcore/net/http/HttpURLConnectionImpl->getChunkLength()I
+libcore/net/http/HttpURLConnectionImpl;->getChunkLength()I
 Landroid/content/ContextWrapper;->getExternalCacheDir()Ljava/io/File;
 Landroid/text/SpannableStringBuilder;->getTextRunCursor(IIIIILandroid/graphics/PaI;)I
 Landroid/view/ViewRootImpl;->getRunQueue()Landroid/view/ViewRootImpl$RunQueue;
@@ -12827,7 +12827,7 @@ Landroid/widget/RemoteViews$SetOnClickFillInIntent;->getActionName()Ljava/lang/S
 Landroid/app/admin/IDevicePolicyManager$Stub$Proxy;->getMaximumTimeToLock(Landroid/content/ComponentName;I)J
 Landroid/security/KeyStore;->getmtime(Ljava/lang/String;)J
 Landroid/drm/DrmInfo;->get(Ljava/lang/String;)Ljava/lang/Object;
-libcore/net/http/RawHeaders->getStatusLine()Ljava/lang/String;
+libcore/net/http/RawHeaders;->getStatusLine()Ljava/lang/String;
 Ljava/lang/Package;->getPackages()[Ljava/lang/Package;
 Lorg/apache/harmony/security/x509/AlgorithmIdentifier;->getAlgorithm()Ljava/lang/String;
 Ljava/nio/HeapByteBuffer;->getChar()C
@@ -12858,7 +12858,7 @@ Landroid/opengl/GLSurfaceView$GLThread;->getRenderMode()I
 Ljava/lang/ThreadGroup;->getParent()Ljava/lang/ThreadGroup;
 Lcom/android/email/mail/store/imap/ImapResponse;->getStatusResponseTextOrEmpty()Lcom/android/email/mail/store/imap/ImapString;
 Landroid/media/audiofx/AudioEffect;->concatArrays([B)[B
-libcore/net/http/HttpsURLConnectionImpl->getRequestMethod()Ljava/lang/String;
+libcore/net/http/HttpsURLConnectionImpl;->getRequestMethod()Ljava/lang/String;
 Lcom/android/internal/database/SortCursor;->getFloat(I)F
 Lorg/apache/http/message/BasicHttpEntityEnclosingRequest;->getEntity()Lorg/apache/http/HttpEntity;
 Landroid/app/ActivityThread;->getPackageInfo(Landroid/content/pm/ApplicationInfo;Landroid/content/res/CompatibilityInfo;I)Landroid/app/LoadedApk;
@@ -12884,7 +12884,7 @@ Lcom/android/emailcommon/internet/MimeMessage;->getInputStream()Ljava/io/InputSt
 Landroid/media/videoeditor/MediaVideoItem;->getThumbnail(IIJ)Landroid/graphics/Bitmap;
 Landroid/graphics/drawable/LayerDrawable;->getId(I)I
 Lcom/android/launcher2/Utilities;->createIconBitmap(Landroid/graphics/drawable/Drawable;Landroid/content/Context;)Landroid/graphics/Bitmap;
-libcore/net/url/JarURLConnectionImpl->getJarEntry()Ljava/util/jar/JarEntry;
+libcore/net/url/JarURLConnectionImpl;->getJarEntry()Ljava/util/jar/JarEntry;
 Landroid/app/TaskStackBuilder;->getIntentCount()I
 Landroid/widget/ListView;->getHeaderViewsCount()I
 Landroid/os/DropBoxManager$Entry;->getText(I)Ljava/lang/String;
@@ -12971,7 +12971,7 @@ Landroid/content/ContextWrapper;->createPackageContextAsUser(Ljava/lang/String;I
 Lcom/android/i18n/phonenumbers/geocoding/DefaultMapStorage;->getPrefix(I)I
 Landroid/view/IDisplayContentChangeListener$Stub;->asBinder()Landroid/os/IBinder;
 Lcom/android/mms/dom/ElementImpl;->getAttributeNS(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-junit/runner/BaseTestRunner->getPreferences()Ljava/util/Properties;
+junit/runner/BaseTestRunner;->getPreferences()Ljava/util/Properties;
 Ljava/lang/Class;->getProtectionDomain()Ljava/security/ProtectionDomain;
 Ljava/lang/reflect/Constructor;->getSignatureAttribute()Ljava/lang/String;
 Landroid/widget/FastScroller;->getWidth()I
@@ -12988,7 +12988,7 @@ Lgov/nist/javax/sip/stack/SIPTransaction;->getPeerPort()I
 Landroid/support/v4/os/ParcelableCompat$CompatCreator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
 Lcom/google/common/collect/Lists$CharSequenceAsList;->get(I)Ljava/lang/Character;
 Lcom/android/server/pm/Settings;->getInstallerPackageNameLPr(Ljava/lang/String;)Ljava/lang/String;
-libcore/io/ForwardingOs->getgid()I
+libcore/io/ForwardingOs;->getgid()I
 Lorg/apache/harmony/security/x509/BasicConstraints$1;->getDecodedObject(Lorg/apache/harmony/security/asn1/BerInputStream;)Ljava/lang/Object;
 Lcom/android/videoeditor/service/MovieEffect;->getStartTime()J
 Landroid/widget/AbsListView;->getDistance(Landroid/graphics/Rect;Landroid/graphics/Rect;I)I
@@ -12997,7 +12997,7 @@ Landroid/preference/PreferenceManager;->getNextRequestCode()I
 Lgov/nist/javax/sip/stack/SIPDialog;->getEarlyDialogId()Ljava/lang/String;
 Ljava/lang/Package;->getDeclaredAnnotations()[Ljava/lang/annotation/Annotation;
 Lcom/android/mms/model/RegionMediaModel;->getRegion()Lcom/android/mms/model/RegionModel;
-libcore/net/http/RequestHeaders->getAcceptEncoding()Ljava/lang/String;
+libcore/net/http/RequestHeaders;->getAcceptEncoding()Ljava/lang/String;
 Landroid/content/ContentValues;->getAsByteArray(Ljava/lang/String;)[B
 Lgov/nist/javax/sip/stack/SIPDialog;->getLocalParty()Ljavax/sip/address/Address;
 Ljava/text/FieldPosition;->getFieldAttribute()Ljava/text/Format$Field;
@@ -13047,7 +13047,7 @@ Lcom/android/email/provider/ContentCache$CachedCursor;->getWindow()Landroid/data
 Landroid/view/inputmethod/InputMethodManager;->getEnabledInputMethodList()Ljava/util/List;
 Lcom/android/org/bouncycastle/asn1/DERExternal;->getEncoding()I
 Lcom/android/email/activity/MessageListItemCoordinates;->getHeight(Landroid/content/Context;I)I
-libcore/net/url/JarURLConnectionImpl->getInputStream()Ljava/io/InputStream;
+libcore/net/url/JarURLConnectionImpl;->getInputStream()Ljava/io/InputStream;
 Landroid/widget/DatePicker;->getCalendarViewShown()Z
 Landroid/view/animation/AnimationUtils;->loadLayoutAnimation(Landroid/content/Context;I)Landroid/view/animation/LayoutAnimationController;
 Landroid/content/pm/ContainerEncryptionParams;->getDataEnd()J
@@ -13079,12 +13079,12 @@ Landroid/app/ContextImpl;->getApplicationInfo()Landroid/content/pm/ApplicationIn
 Lcom/android/mms/ui/RecipientsEditor;->getContextMenuInfo()Landroid/view/ContextMenu$ContextMenuInfo;
 Landroid/gesture/GestureLibrary;->getLearner()Landroid/gesture/Learner;
 Landroid/widget/CursorTreeAdapter;->getFilterQueryProvider()Landroid/widget/FilterQueryProvider;
-junit/runner/BaseTestRunner->getPreference(Ljava/lang/String;I)I
+junit/runner/BaseTestRunner;->getPreference(Ljava/lang/String;I)I
 Lgov/nist/javax/sip/header/Reason;->getProtocol()Ljava/lang/String;
 Landroid/media/audiofx/AudioEffect;->getEnabled()Z
 Lcom/android/launcher2/PagedViewGridLayout;->getPageChildCount()I
 Lcom/android/email/provider/EmailProvider;->getReadableDatabase(Landroid/content/Context;)Landroid/database/sqlite/SQLiteDatabase;
-junit/framework/TestCase->run()junit/framework/TestResult
+junit/framework/TestCase;->run()junit/framework/TestResult
 Landroid/text/Annotation;->getKey()Ljava/lang/String;
 Landroid/content/res/StringBlock;->get(I)Ljava/lang/CharSequence;
 Landroid/view/animation/Animation;->clone()Landroid/view/animation/Animation;
@@ -13111,7 +13111,7 @@ Lcom/android/email/mail/store/imap/ImapTempFileLiteral;->getAsStream()Ljava/io/I
 Lorg/kxml2/io/KXmlParser;->getAttributeType(I)Ljava/lang/String;
 Lcom/google/common/collect/MapMakerInternalMap$ExpirationQueue$1;->getNextExpirable()Lcom/google/common/collect/MapMakerInternalMap$ReferenceEntry;
 Ljava/nio/channels/spi/SelectorProvider;->inheritedChannel()Ljava/nio/channels/Channel;
-dalvik/system/profiler/HprofData$StackTrace->getStackFrames()[Ljava/lang/StackTraceElement;
+dalvik/system/profiler/HprofData$StackTrace;->getStackFrames()[Ljava/lang/StackTraceElement;
 Lcom/android/mms/dom/ElementImpl;->getElementsByTagNameNS(Ljava/lang/String;Ljava/lang/String;)Lorg/w3c/dom/NodeList;
 Lcom/android/camera/FocusOverlayManager;->getFocusAreas()Ljava/util/List;
 Lorg/apache/http/impl/conn/AbstractClientConnAdapter;->getManager()Lorg/apache/http/conn/ClientConnectionManager;
@@ -13196,7 +13196,7 @@ Landroid/app/SharedPreferencesImpl;->getAll()Ljava/util/Map;
 Ljava/net/URLConnection;->getLastModified()J
 Ljava/util/concurrent/CopyOnWriteArrayList;->getArray()[Ljava/lang/Object;
 Lcom/googlecode/mp4parser/authoring/TrackMetaData;->getGroup()I
-libcore/icu/RuleBasedCollatorICU->getCollationElementIterator(Ljava/lang/String;)libcore/icu/CollationElementIteratorICU
+libcore/icu/RuleBasedCollatorICU;->getCollationElementIterator(Ljava/lang/String;)libcore/icu/CollationElementIteratorICU
 Lcom/android/inputmethod/keyboard/PointerTracker;->getLastY()I
 Lcom/android/inputmethod/keyboard/PointerTracker;->getLastX()I
 Landroid/renderscript/Program;->getConstantCount()I
@@ -13277,7 +13277,7 @@ Lorg/apache/harmony/security/utils/JarUtils;->verifySignature(Ljava/io/InputStre
 Landroid/widget/RemoteViews$SetEmptyView;->getActionName()Ljava/lang/String;
 Lcom/android/phone/CallNotifier;->getVoicePrivacyState()Z
 Lcom/adobe/xmp/impl/xpath/XMPPathSegment;->getAliasForm()I
-libcore/io/GaiException->getMessage()Ljava/lang/String;
+libcore/io/GaiException;->getMessage()Ljava/lang/String;
 Lcom/android/internal/util/TypedProperties;->getInt(Ljava/lang/String;I)I
 Landroid/app/ActivityManagerProxy;->getTaskThumbnails(I)Landroid/app/ActivityManager$TaskThumbnails;
 Landroid/content/ContentProviderNative;->asBinder()Landroid/os/IBinder;
@@ -13287,7 +13287,7 @@ Ljavax/crypto/Cipher;->doFinal()[B
 Lcom/android/camera/IconListPreference;->getSingleIcon()I
 Landroid/app/admin/DevicePolicyManager;->getPasswordMinimumNonLetter(Landroid/content/ComponentName;I)I
 Lcom/android/server/wm/WindowState;->getDisplayId()I
-libcore/net/http/HttpsURLConnectionImpl->getContent()Ljava/lang/Object;
+libcore/net/http/HttpsURLConnectionImpl;->getContent()Ljava/lang/Object;
 Landroid/mtp/MtpObjectInfo;->getAssociationType()I
 Landroid/content/Intent;->resolveTypeIfNeeded(Landroid/content/ContentResolver;)Ljava/lang/String;
 Landroid/speech/tts/TextToSpeech;->getCurrentEngine()Ljava/lang/String;
@@ -13372,7 +13372,7 @@ Lorg/apache/harmony/security/x509/SubjectKeyIdentifier;->getEncoded()[B
 Lorg/apache/harmony/luni/lang/reflect/GenericSignatureParser;->parseFieldTypeSignature()Ljava/lang/reflect/Type;
 Landroid/webkit/CacheManager$CacheResult;->getLocalPath()Ljava/lang/String;
 Landroid/app/LoadedApk;->getReceiverDispatcher(Landroid/content/BroadcastReceiver;Landroid/content/Context;Landroid/os/Handler;Landroid/app/Instrumentation;Z)Landroid/content/IIntentReceiver;
-libcore/net/http/ResponseHeaders->getServedDate()Ljava/util/Date;
+libcore/net/http/ResponseHeaders;->getServedDate()Ljava/util/Date;
 Landroid/filterpacks/imageproc/ColorTemperatureFilter;->getOutputFormat(Ljava/lang/String;Landroid/filterfw/core/FrameFormat;)Landroid/filterfw/core/FrameFormat;
 Landroid/view/inputmethod/InputMethodInfo;->getSettingsActivity()Ljava/lang/String;
 Landroid/view/accessibility/AccessibilityRecord;->getWindowId()I
@@ -13390,11 +13390,11 @@ Lorg/apache/harmony/xnet/provider/jsse/ClientHello;->getRandom()[B
 Ljava/text/RuleBasedCollator;->getCollationKey(Ljava/lang/String;)Ljava/text/CollationKey;
 Lcom/android/internal/util/TypedProperties;->getDouble(Ljava/lang/String;D)D
 Landroid/content/res/TypedArray;->getIndex(I)I
-libcore/net/http/HttpEngine->getResponseBody()Ljava/io/InputStream;
+libcore/net/http/HttpEngine;->getResponseBody()Ljava/io/InputStream;
 Landroid/widget/ActivityChooserView$ActivityChooserViewAdapter;->getHistorySize()I
 Landroid/preference/ListPreference;->getEntries()[Ljava/lang/CharSequence;
 Landroid/view/LayoutInflater;->getFactory2()Landroid/view/LayoutInflater$Factory2;
-libcore/net/http/HttpConnection$Address->getProxy()Ljava/net/Proxy;
+libcore/net/http/HttpConnection$Address;->getProxy()Ljava/net/Proxy;
 Landroid/widget/ListView$ArrowScrollFocusResult;->getSelectedPosition()I
 Lcom/adobe/xmp/options/SerializeOptions;->getEncodeUTF16LE()Z
 Lorg/xml/sax/helpers/NamespaceSupport;->getPrefixes(Ljava/lang/String;)Ljava/util/Enumeration;
@@ -13644,7 +13644,7 @@ Lcom/coremedia/iso/boxes/CompositionTimeToSample;->getEntries()Ljava/util/List;
 Lcom/google/common/collect/SortedMultisets$ElementSet;->subSet(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/SortedSet;
 Landroid/hardware/SensorManager;->getInclination([F)F
 Ljava/text/DecimalFormatSymbols;->getExponentSeparator()Ljava/lang/String;
-libcore/icu/NativeDecimalFormat->getMaximumIntegerDigits()I
+libcore/icu/NativeDecimalFormat;->getMaximumIntegerDigits()I
 Ljava/io/ObjectStreamClass;->getMethodReadObject()Ljava/lang/reflect/Method;
 Landroid/view/View;->getDrawableState()[I
 Landroid/widget/GridView;->getAdapter()Landroid/widget/Adapter;
@@ -13694,7 +13694,7 @@ Lcom/android/ex/chips/BaseRecipientAdapter;->access$600(Lcom/android/ex/chips/Ba
 Landroid/app/ActivityManagerProxy;->getUidForIntentSender(Landroid/content/IIntentSender;)I
 Lcom/android/launcher2/IconCache;->getIcon(Landroid/content/Intent;)Landroid/graphics/Bitmap;
 Landroid/media/MediaPlayer;->getTrackInfo()[Landroid/media/MediaPlayer$TrackInfo;
-libcore/io/ForwardingOs->getsockoptLinger(Ljava/io/FileDescriptor;II)libcore/io/StructLinger
+libcore/io/ForwardingOs;->getsockoptLinger(Ljava/io/FileDescriptor;II)libcore/io/StructLinger
 Landroid/os/IMessenger$Stub$Proxy;->getInterfaceDescriptor()Ljava/lang/String;
 Ljava/net/Authenticator;->getRequestingScheme()Ljava/lang/String;
 Lcom/android/videoeditor/service/MovieOverlay;->getStartTime()J
@@ -13771,9 +13771,9 @@ Lcom/android/videoeditor/service/MovieOverlay;->getAttributeType(Ljava/lang/Stri
 Ljava/util/logging/LogManager;->getLogger(Ljava/lang/String;)Ljava/util/logging/Logger;
 Lorg/apache/harmony/security/x509/CertificatePolicies;->getPolicyInformations()Ljava/util/List;
 Lgov/nist/javax/sip/stack/MessageChannel;->getPeerHostPort()Lgov/nist/core/HostPort;
-libcore/net/url/FileURLConnection->getContentLength()I
+libcore/net/url/FileURLConnection;->getContentLength()I
 Ljava/lang/Package;->getSpecificationVersion()Ljava/lang/String;
-libcore/net/http/HttpHandler->getDefaultPort()I
+libcore/net/http/HttpHandler;->getDefaultPort()I
 Lorg/apache/http/conn/routing/HttpRoute;->getHopCount()I
 Landroid/app/ContextImpl;->getFileStreamPath(Ljava/lang/String;)Ljava/io/File;
 Lgov/nist/javax/sip/address/SipUri;->getScheme()Ljava/lang/String;
@@ -13838,7 +13838,7 @@ Landroid/view/animation/Transformation;->getAlpha()F
 Lcom/android/mms/MmsConfig;->getMinimumSlideElementDuration()I
 Lgov/nist/javax/sip/stack/IOHandler;->obtainLocalAddress(Ljava/net/InetAddress;ILjava/net/InetAddress;I)Ljava/net/SocketAddress;
 Ljava/util/concurrent/atomic/AtomicInteger;->getAndAdd(I)I
-libcore/net/http/HttpEngine->getRequestBody()Ljava/io/OutputStream;
+libcore/net/http/HttpEngine;->getRequestBody()Ljava/io/OutputStream;
 Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;)I
 Lcom/android/org/bouncycastle/asn1/x509/X509Name;->getValues(Lcom/android/org/bouncycastle/asn1/ASN1ObjectIdentifier;)Ljava/util/Vector;
 Landroid/preference/PreferenceActivity;->getPreferenceManager()Landroid/preference/PreferenceManager;
@@ -13859,7 +13859,7 @@ Lgov/nist/javax/sip/header/ParametersHeader;->getParameterNames()Ljava/util/Iter
 Landroid/os/storage/StorageVolume;->getMtpReserveSpace()I
 Landroid/media/videoeditor/MediaArtistNativeHelper;->getProjectAudioTrackPCMFilePath()Ljava/lang/String;
 Lorg/apache/http/impl/cookie/RFC2109Spec;->getVersion()I
-libcore/io/ForwardingOs->getsockoptInt(Ljava/io/FileDescriptor;II)I
+libcore/io/ForwardingOs;->getsockoptInt(Ljava/io/FileDescriptor;II)I
 Lcom/android/internal/policy/impl/keyguard/PagedView;->getScaledMeasuredWidth(Landroid/view/View;)I
 Landroid/media/videoeditor/MediaItem;->getAllEffects()Ljava/util/List;
 Landroid/view/accessibility/AccessibilityRecord;->getBeforeText()Ljava/lang/CharSequence;
@@ -13886,13 +13886,13 @@ Lorg/apache/http/conn/scheme/Scheme;->getDefaultPort()I
 Landroid/filterfw/core/Filter;->getNumberOfConnectedOutputs()I
 Ljava/nio/DoubleArrayBuffer;->get()D
 Landroid/os/storage/StorageVolume;->getMaxFileSize()J
-junit/runner/BaseTestRunner->getFilteredTrace(Ljava/lang/Throwable;)Ljava/lang/String;
+junit/runner/BaseTestRunner;->getFilteredTrace(Ljava/lang/Throwable;)Ljava/lang/String;
 Lcom/android/internal/widget/multiwaveview/Ease$Cubic$3;->getInterpolation(F)F
 Lcom/android/internal/widget/multiwaveview/Ease$Cubic$2;->getInterpolation(F)F
 Lcom/android/internal/widget/multiwaveview/Ease$Cubic$1;->getInterpolation(F)F
 Lgov/nist/javax/sip/stack/SIPDialog;->getLastAckReceived()Lgov/nist/javax/sip/message/SIPRequest;
 Landroid/view/KeyEvent;->getDeviceId()I
-libcore/net/http/HttpsURLConnectionImpl->getIfModifiedSince()J
+libcore/net/http/HttpsURLConnectionImpl;->getIfModifiedSince()J
 Lcom/android/email/activity/UiUtilities;->getViewOrNull(Landroid/view/View;I)Landroid/view/View;
 Landroid/support/v4/view/accessibility/AccessibilityNodeInfoCompat;->getInfo()Ljava/lang/Object;
 Lcom/google/android/apps/lightcycle/util/UiUtil;->getDrawableDimensions(Landroid/content/Context;I)Lcom/google/android/apps/lightcycle/util/Size;
@@ -13934,7 +13934,7 @@ Lorg/apache/harmony/security/asn1/BerInputStream;->getEndOffset()I
 Landroid/app/SearchableInfo;->getSettingsDescriptionId()I
 Lcom/coremedia/iso/boxes/TrackBox;->getMediaBox()Lcom/coremedia/iso/boxes/MediaBox;
 Ljava/io/FileDescriptor;->getInt$()I
-libcore/icu/NativeDecimalFormat->getMultiplier()I
+libcore/icu/NativeDecimalFormat;->getMultiplier()I
 Lgov/nist/javax/sip/header/HeaderFactoryImpl;->createContentLanguageHeader(Ljava/util/Locale;)Ljavax/sip/header/ContentLanguageHeader;
 Lcom/android/mms/widget/MmsWidgetService$MmsFactory;->getCount()I
 Landroid/webkit/CookieManager;->getCookie(Ljava/lang/String;Z)Ljava/lang/String;
@@ -13972,10 +13972,10 @@ Lgov/nist/javax/sip/stack/MessageChannel;->getMessageProcessor()Lgov/nist/javax/
 Landroid/app/SearchableInfo;->getSuggestIntentAction()Ljava/lang/String;
 Ljava/util/Currency;->getInstance(Ljava/util/Locale;)Ljava/util/Currency;
 Ljava/util/MissingFormatArgumentException;->getFormatSpecifier()Ljava/lang/String;
-dalvik/system/CloseGuard->get()dalvik/system/CloseGuard
+dalvik/system/CloseGuard;->get()dalvik/system/CloseGuard
 Landroid/media/videoeditor/VideoEditorImpl;->getAllAudioTracks()Ljava/util/List;
 Lcom/android/internal/view/menu/MenuBuilder;->getOptionalIconsVisible()Z
-libcore/net/http/HttpEngine->getCacheResponse()Ljava/net/CacheResponse;
+libcore/net/http/HttpEngine;->getCacheResponse()Ljava/net/CacheResponse;
 Lorg/apache/harmony/xnet/provider/jsse/AlertException;->getDescriptionCode()B
 Landroid/media/videoeditor/EffectColor;->getColor()I
 Landroid/speech/tts/TextToSpeechService$SpeechItem;->getCallerIdentity()Ljava/lang/Object;
@@ -13990,7 +13990,7 @@ Landroid/content/ClipDescription;->getMimeTypeCount()I
 Lcom/adobe/xmp/XMPMetaFactory;->getVersionInfo()Lcom/adobe/xmp/XMPVersionInfo;
 Lcom/android/mms/util/ImageCacheService;->getImageData(Ljava/lang/String;I)Lcom/android/mms/util/ImageCacheService$ImageData;
 Landroid/content/pm/IPackageManager$Stub$Proxy;->getSystemSharedLibraryNames()[Ljava/lang/String;
-junit/runner/BaseTestRunner->getFilteredTrace(Ljava/lang/String;)Ljava/lang/String;
+junit/runner/BaseTestRunner;->getFilteredTrace(Ljava/lang/String;)Ljava/lang/String;
 Lcom/android/server/NativeDaemonEvent;->getCmdNumber()I
 Lcom/android/org/bouncycastle/asn1/DERNumericString;->getOctets()[B
 Ljava/lang/reflect/Method;->getDeclaredAnnotations()[Ljava/lang/annotation/Annotation;
@@ -14012,7 +14012,7 @@ Landroid/app/ExpandableListActivity;->getExpandableListAdapter()Landroid/widget/
 Landroid/view/accessibility/IAccessibilityInteractionConnection$Stub$Proxy;->getInterfaceDescriptor()Ljava/lang/String;
 Landroid/graphics/drawable/DrawableContainer;->getChangingConfigurations()I
 Landroid/widget/RemoteViewsAdapter;->getRemoteViewsServiceIntent()Landroid/content/Intent;
-libcore/net/http/HttpConnection->getSecureSocketIfConnected()Ljavax/net/ssl/SSLSocket;
+libcore/net/http/HttpConnection;->getSecureSocketIfConnected()Ljavax/net/ssl/SSLSocket;
 Ljava/io/File;->getUsableSpace()J
 Landroid/widget/RemoteViewsAdapter$FixedSizeRemoteViewsCache;->getRemoteViewsAt(I)Landroid/widget/RemoteViews;
 Landroid/view/animation/AccelerateInterpolator;->getInterpolation(F)F
@@ -14088,7 +14088,7 @@ Ljava/text/NumberFormat;->parse(Ljava/lang/String;)Ljava/lang/Number;
 Lorg/apache/harmony/xnet/provider/jsse/Finished;->getData()[B
 Landroid/filterfw/core/Frame;->getCapacity()I
 Ljava/lang/Class;->getModifiers()I
-libcore/net/url/JarURLConnectionImpl->getUseCaches()Z
+libcore/net/url/JarURLConnectionImpl;->getUseCaches()Z
 Ljava/util/concurrent/locks/ReentrantLock;->getQueuedThreads()Ljava/util/Collection;
 Lorg/apache/harmony/security/x501/AttributeValue;->getHexString()Ljava/lang/String;
 Landroid/media/AudioRecord;->getAudioSessionId()I
@@ -14178,7 +14178,7 @@ Ljava/util/concurrent/locks/AbstractQueuedSynchronizer;->getQueuedThreads()Ljava
 Ljava/util/LinkedHashMap;->newKeyIterator()Ljava/util/Iterator;
 Landroid/content/res/AssetManager$AssetInputStream;->getAssetInt()I
 Landroid/hardware/input/IInputManager$Stub$Proxy;->getKeyboardLayoutsForInputDevice(Ljava/lang/String;)[Ljava/lang/String;
-libcore/net/UriCodec->validate(Ljava/lang/String;IILjava/lang/String;)Ljava/lang/String;
+libcore/net/UriCodec;->validate(Ljava/lang/String;IILjava/lang/String;)Ljava/lang/String;
 Ljava/security/MessageDigest;->digest()[B
 Lcom/android/internal/appwidget/IAppWidgetService$Stub$Proxy;->getAppWidgetOptions(I)Landroid/os/Bundle;
 Landroid/view/DragEvent;->getAction()I
@@ -14195,7 +14195,7 @@ Landroid/app/ContextImpl;->createPackageContextAsUser(Ljava/lang/String;ILandroi
 Landroid/content/ContextWrapper;->getApplicationContext()Landroid/content/Context;
 Landroid/app/LoadedApk$ReceiverDispatcher;->getLocation()Landroid/app/IntentReceiverLeaked;
 Landroid/os/Debug$MemoryInfo;->getTotalSharedDirty()I
-libcore/net/http/HttpURLConnectionImpl->getFixedContentLength()I
+libcore/net/http/HttpURLConnectionImpl;->getFixedContentLength()I
 Landroid/view/MotionEvent$PointerCoords;->getAxisValue(I)F
 Lcom/android/i18n/phonenumbers/PhoneNumberUtil;->getInstance(Ljava/lang/String;Ljava/util/Map;)Lcom/android/i18n/phonenumbers/PhoneNumberUtil;
 Lgov/nist/javax/sip/header/CallInfo;->getInfo()Ljavax/sip/address/URI;
@@ -14386,7 +14386,7 @@ Ljava/util/concurrent/ThreadPoolExecutor;->getTaskCount()J
 Ljava/text/RuleBasedCollator;->getCollationElementIterator(Ljava/text/CharacterIterator;)Ljava/text/CollationElementIterator;
 Lcom/android/org/bouncycastle/asn1/DERGeneralString;->getOctets()[B
 Ljava/security/KeyStore$Builder$BuilderImpl;->getProtectionParameter(Ljava/lang/String;)Ljava/security/KeyStore$ProtectionParameter;
-libcore/net/url/JarURLConnectionImpl->getPermission()Ljava/security/Permission;
+libcore/net/url/JarURLConnectionImpl;->getPermission()Ljava/security/Permission;
 Landroid/app/FragmentManager;->openTransaction()Landroid/app/FragmentTransaction;
 Ljava/security/spec/ECPoint;->getAffineX()Ljava/math/BigInteger;
 Lcom/android/videoeditor/AlertDialogs;->createAlert(Landroid/content/Context;Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Landroid/content/DialogInterface$OnClickListener;Ljava/lang/String;Landroid/content/DialogInterface$OnClickListener;Landroid/content/DialogInterface$OnCancelListener;Z)Landroid/app/AlertDialog;
@@ -14434,7 +14434,7 @@ Landroid/os/IUserManager$Stub$Proxy;->getUserInfo(I)Landroid/content/pm/UserInfo
 Lcom/coremedia/iso/boxes/TrackHeaderBox;->getCreationTime()J
 Landroid/media/audiofx/Virtualizer;->getStrengthSupported()Z
 Landroid/filterpacks/imageproc/CrossProcessFilter;->getOutputFormat(Ljava/lang/String;Landroid/filterfw/core/FrameFormat;)Landroid/filterfw/core/FrameFormat;
-libcore/net/http/HttpsURLConnectionImpl->getContent([Ljava/lang/Class;)Ljava/lang/Object;
+libcore/net/http/HttpsURLConnectionImpl;->getContent([Ljava/lang/Class;)Ljava/lang/Object;
 Landroid/app/backup/IFullBackupRestoreObserver$Stub$Proxy;->getInterfaceDescriptor()Ljava/lang/String;
 Lgov/nist/javax/sip/stack/TLSMessageChannel;->getPeerPort()I
 Lgov/nist/javax/sip/message/MessageFactoryImpl;->getDefaultServerHeader()Ljavax/sip/header/ServerHeader;
@@ -14560,7 +14560,7 @@ Ljava/security/cert/X509Certificate;->getExtendedKeyUsage()Ljava/util/List;
 Lcom/android/internal/app/IBatteryStats$Stub$Proxy;->getInterfaceDescriptor()Ljava/lang/String;
 Landroid/os/Binder;->getCallingUserHandle()Landroid/os/UserHandle;
 Landroid/accounts/Account;->toString()Ljava/lang/String;
-junit/framework/ComparisonFailure->getExpected()Ljava/lang/String;
+junit/framework/ComparisonFailure;->getExpected()Ljava/lang/String;
 Lorg/apache/harmony/security/asn1/ASN1Type;->decode([BII)Ljava/lang/Object;
 Ljava/io/ObjectStreamClass;->getMethodReadObjectNoData()Ljava/lang/reflect/Method;
 Landroid/view/View;->getOpticalInsets()Landroid/graphics/Insets;
@@ -14590,7 +14590,7 @@ Landroid/hardware/display/IDisplayManager$Stub;->asBinder()Landroid/os/IBinder;
 Landroid/filterfw/core/FilterGraph;->getFilters()Ljava/util/Set;
 Landroid/media/AudioManager;->getRingerMode()I
 Lcom/android/internal/policy/impl/PhoneWindowManager;->getMaxWallpaperLayer()I
-libcore/net/http/HttpsURLConnectionImpl->getErrorStream()Ljava/io/InputStream;
+libcore/net/http/HttpsURLConnectionImpl;->getErrorStream()Ljava/io/InputStream;
 Lcom/android/uiautomator/core/UiSelector;->getContainerSelector()Lcom/android/uiautomator/core/UiSelector;
 Lcom/android/videoeditor/ProjectPickerAdapter;->getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
 Lcom/android/ex/chips/BaseRecipientAdapter;->getItem(I)Ljava/lang/Object;
@@ -14618,7 +14618,7 @@ Lcom/android/internal/policy/impl/keyguard/KeyguardHostView$7;->getLockPatternUt
 Landroid/view/animation/DecelerateInterpolator;->getInterpolation(F)F
 Landroid/os/IUserManager$Stub;->asBinder()Landroid/os/IBinder;
 Lorg/apache/harmony/security/x509/Extension$2;->getDecodedObject(Lorg/apache/harmony/security/asn1/BerInputStream;)Ljava/lang/Object;
-libcore/io/ForwardingOs->getppid()I
+libcore/io/ForwardingOs;->getppid()I
 Landroid/content/ContextWrapper;->getWallpaperDesiredMinimumHeight()I
 Lcom/android/systemui/recent/RecentTasksLoader;->getInstance(Landroid/content/Context;)Lcom/android/systemui/recent/RecentTasksLoader;
 Lcom/android/phone/EditPhoneNumberPreference;->getSummaryOn()Ljava/lang/CharSequence;
@@ -14638,7 +14638,7 @@ Lcom/coremedia/iso/boxes/fragment/TrackExtendsBox;->getTrackId()J
 Landroid/app/backup/IBackupManager$Stub$Proxy;->getDestinationString(Ljava/lang/String;)Ljava/lang/String;
 Landroid/text/style/AbsoluteSizeSpan;->getDip()Z
 Lcom/adobe/xmp/impl/XMPDateTimeImpl;->getMonth()I
-libcore/net/url/FileURLConnection->getContentType()Ljava/lang/String;
+libcore/net/url/FileURLConnection;->getContentType()Ljava/lang/String;
 Ljava/lang/reflect/AccessibleObject;->getAnnotations()[Ljava/lang/annotation/Annotation;
 Landroid/app/admin/IDevicePolicyManager$Stub$Proxy;->getRemoveWarning(Landroid/content/ComponentName;Landroid/os/RemoteCallback;I)V
 Lgov/nist/javax/sip/message/SIPMessage;->getContentLength()Ljavax/sip/header/ContentLengthHeader;
@@ -14751,7 +14751,7 @@ Lcom/android/deskclock/widget/multiwaveview/GlowPadView;->getDirectionDescriptio
 Lcom/android/commands/monkey/MonkeyMotionEvent;->getAction()I
 Landroid/widget/PopupWindow;->getWindowLayoutType()I
 Landroid/content/res/TypedArray;->getNonResourceString(I)Ljava/lang/String;
-libcore/net/http/ResponseHeaders->getEtag()Ljava/lang/String;
+libcore/net/http/ResponseHeaders;->getEtag()Ljava/lang/String;
 Lcom/google/common/collect/MapMakerInternalMap$StrongExpirableEntry;->getNextExpirable()Lcom/google/common/collect/MapMakerInternalMap$ReferenceEntry;
 Lorg/apache/http/impl/conn/tsccm/BasicPooledConnAdapter;->getManager()Lorg/apache/http/conn/ClientConnectionManager;
 Lcom/android/mms/transaction/Transaction;->toString()Ljava/lang/String;
@@ -14824,7 +14824,7 @@ Landroid/text/method/MultiTapKeyListener;->getInputType()I
 Lcom/android/org/bouncycastle/asn1/DERBitString;->getString()Ljava/lang/String;
 Ljava/util/ResourceBundle;->getStringArray(Ljava/lang/String;)[Ljava/lang/String;
 Lgov/nist/javax/sip/header/ims/PChargingVector;->getOriginatingIOI()Ljava/lang/String;
-libcore/icu/NativeDecimalFormat->getMaximumFractionDigits()I
+libcore/icu/NativeDecimalFormat;->getMaximumFractionDigits()I
 Landroid/graphics/Paint;->getXfermode()Landroid/graphics/Xfermode;
 Landroid/sax/Element;->getChild(Ljava/lang/String;)Landroid/sax/Element;
 Landroid/os/Parcel;->readTypedArray(Landroid/os/Parcelable$Creator;)[Ljava/lang/Object;
@@ -14970,7 +14970,7 @@ Lcom/android/launcher2/Hotseat;->getOrderInHotseat(II)I
 Lorg/apache/harmony/security/provider/cert/X509CertImpl;->getCriticalExtensionOIDs()Ljava/util/Set;
 Lcom/adobe/xmp/impl/XMPMetaImpl;->getPropertyCalendar(Ljava/lang/String;Ljava/lang/String;)Ljava/util/Calendar;
 Lcom/android/phone/InCallUiState;->getPendingCallStatusCode()Lcom/android/phone/Constants$CallStatusCode;
-libcore/net/http/HttpEngine->getRequestHeaders()libcore/net/http/RequestHeaders
+libcore/net/http/HttpEngine;->getRequestHeaders()libcore/net/http/RequestHeaders
 Landroid/text/format/DateUtils;->getDayOfWeekString(II)Ljava/lang/String;
 Lgov/nist/javax/sip/header/ims/SecurityAgree;->getPortServer()I
 Landroid/view/inputmethod/InputBinding;->getConnectionToken()Landroid/os/IBinder;
@@ -14992,7 +14992,7 @@ Lcom/android/launcher2/SearchDropTargetBar;->getTransitionInDuration()I
 Lcom/android/mms/MmsApp;->getThumbnailManager()Lcom/android/mms/util/ThumbnailManager;
 Landroid/filterpacks/imageproc/SimpleImageFilter;->getOutputFormat(Ljava/lang/String;Landroid/filterfw/core/FrameFormat;)Landroid/filterfw/core/FrameFormat;
 Lcom/android/email/NotificationController;->getInstance(Landroid/content/Context;)Lcom/android/email/NotificationController;
-dalvik/system/profiler/HprofData->getDepth()I
+dalvik/system/profiler/HprofData;->getDepth()I
 Landroid/app/IProcessObserver$Stub$Proxy;->getInterfaceDescriptor()Ljava/lang/String;
 Lcom/google/android/picasasync/UploadsDatabaseHelper;->getReadableDatabase()Landroid/database/sqlite/SQLiteDatabase;
 Landroid/view/MotionEvent;->getHistoricalX(II)F
@@ -15012,7 +15012,7 @@ Lcom/android/mms/data/Conversation$Cache;->get(J)Lcom/android/mms/data/Conversat
 Lgov/nist/javax/sip/stack/IOHandler;->getSocket(Ljava/lang/String;)Ljava/net/Socket;
 Landroid/app/ListFragment;->getSelectedItemId()J
 Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
-libcore/icu/NativeDecimalFormat->getNegativeSuffix()Ljava/lang/String;
+libcore/icu/NativeDecimalFormat;->getNegativeSuffix()Ljava/lang/String;
 Landroid/media/videoeditor/TransitionAlpha;->getBlendingPercent()I
 Landroid/view/View;->getScrollBarFadeDuration()I
 Landroid/widget/DatePicker;->getCalendarView()Landroid/widget/CalendarView;
@@ -15097,7 +15097,7 @@ Lorg/kxml2/io/KXmlParser;->getAttributeNamespace(I)Ljava/lang/String;
 Lcom/android/providers/downloads/DownloadHandler;->getInstance()Lcom/android/providers/downloads/DownloadHandler;
 Landroid/webkit/WebSettings;->getBlockNetworkImage()Z
 Landroid/widget/NumberPicker$InputTextFilter;->getInputType()I
-libcore/icu/ICU->getAvailableDecimalFormatSymbolsLocales()[Ljava/util/Locale;
+libcore/icu/ICU;->getAvailableDecimalFormatSymbolsLocales()[Ljava/util/Locale;
 Lcom/android/email/mail/store/ImapFolder;->getMessages(IILcom/android/emailcommon/mail/Folder$MessageRetrievalListener;)[Lcom/android/emailcommon/mail/Message;
 Lorg/apache/harmony/xnet/provider/jsse/ConnectionState;->decrypt(B[B)[B
 Lcom/android/ex/chips/RecipientEntry;->getDestinationType()I
@@ -15169,7 +15169,7 @@ Lcom/android/exchange/adapter/GalParser;->getGalResult()Lcom/android/exchange/pr
 Lcom/android/internal/os/ProcessStats;->getTotalCpuPercent()F
 Landroid/preference/SeekBarDialogPreference;->getSeekBar(Landroid/view/View;)Landroid/widget/SeekBar;
 Lcom/android/launcher2/AppsCustomizeTabHost;->getContent()Landroid/view/View;
-libcore/net/http/HttpsURLConnectionImpl->getResponseCode()I
+libcore/net/http/HttpsURLConnectionImpl;->getResponseCode()I
 Lcom/android/mms/dom/NodeImpl;->getParentNode()Lorg/w3c/dom/Node;
 Landroid/text/DynamicLayout;->getEllipsizedWidth()I
 Landroid/preference/PreferenceManager;->getActivity()Landroid/app/Activity;
@@ -15266,7 +15266,7 @@ Lgov/nist/javax/sip/header/AllowEventsList;->getMethods()Ljava/util/ListIterator
 Landroid/support/v4/view/MotionEventCompat$BaseMotionEventVersionImpl;->getPointerCount(Landroid/view/MotionEvent;)I
 Lcom/android/internal/widget/LockPatternUtils;->getDevicePolicyManager()Landroid/app/admin/DevicePolicyManager;
 Ljava/util/Formatter$FormatToken;->getArgIndex()I
-libcore/io/ForwardingOs->ioctlInetAddress(Ljava/io/FileDescriptor;ILjava/lang/String;)Ljava/net/InetAddress;
+libcore/io/ForwardingOs;->ioctlInetAddress(Ljava/io/FileDescriptor;ILjava/lang/String;)Ljava/net/InetAddress;
 Lgov/nist/javax/sip/message/SIPRequest;->getDialogId(Z)Ljava/lang/String;
 Landroid/widget/TabWidget;->getChildTabViewAt(I)Landroid/view/View;
 Landroid/app/ActivityManagerProxy;->getPackageScreenCompatMode(Ljava/lang/String;)I
@@ -15293,7 +15293,7 @@ Ljava/util/jar/Attributes;->getValue(Ljava/lang/String;)Ljava/lang/String;
 Landroid/app/ContextImpl;->getPackageManager()Landroid/content/pm/PackageManager;
 Lorg/apache/http/message/HeaderGroup;->getCondensedHeader(Ljava/lang/String;)Lorg/apache/http/Header;
 Lcom/android/email/activity/ThreePaneLayout;->getLeftPaneId()I
-libcore/icu/RuleBasedCollatorICU->getRules()Ljava/lang/String;
+libcore/icu/RuleBasedCollatorICU;->getRules()Ljava/lang/String;
 Landroid/content/ContextWrapper;->getWallpaper()Landroid/graphics/drawable/Drawable;
 Lcom/android/internal/policy/impl/keyguard/PagedView;->getViewportOffsetX()I
 Lcom/android/internal/policy/impl/keyguard/PagedView;->getViewportOffsetY()I
@@ -15398,7 +15398,7 @@ Landroid/view/accessibility/AccessibilityRecord;->getFromIndex()I
 Lcom/android/launcher2/IconCache;->getFullResIcon(Landroid/content/pm/ActivityInfo;)Landroid/graphics/drawable/Drawable;
 Landroid/util/Property;->getName()Ljava/lang/String;
 Landroid/view/inputmethod/CorrectionInfo;->getOldText()Ljava/lang/CharSequence;
-dalvik/system/profiler/PortableThreadSampler->getStackTrace(Ljava/lang/Thread;)[Ljava/lang/StackTraceElement;
+dalvik/system/profiler/PortableThreadSampler;->getStackTrace(Ljava/lang/Thread;)[Ljava/lang/StackTraceElement;
 Lcom/android/internal/util/FastXmlSerializer;->getDepth()I
 Landroid/os/ISchedulingPolicyService$Stub;->asBinder()Landroid/os/IBinder;
 Lcom/android/org/bouncycastle/asn1/DERNumericString;->getString()Ljava/lang/String;
@@ -15437,7 +15437,7 @@ Landroid/view/WindowManagerGlobal;->getInstance()Landroid/view/WindowManagerGlob
 Lcom/android/mms/dom/ElementImpl;->getNodeType()S
 Landroid/app/backup/BackupManager;->requestRestore(Landroid/app/backup/RestoreObserver;)I
 Ljava/net/HttpRetryException;->getLocation()Ljava/lang/String;
-libcore/net/http/HttpEngine->getOriginAddress(Ljava/net/URL;)Ljava/lang/String;
+libcore/net/http/HttpEngine;->getOriginAddress(Ljava/net/URL;)Ljava/lang/String;
 Landroid/widget/TextView;->getEditableText()Landroid/text/Editable;
 Landroid/view/SurfaceView$4;->getSurface()Landroid/view/Surface;
 Landroid/view/View;->getSolidColor()I
@@ -15495,7 +15495,7 @@ Lorg/apache/commons/logging/LogFactory$2;->run()Ljava/lang/Object;
 Landroid/webkit/ZoomControlExternal;->getControls()Landroid/webkit/ZoomControlExternal$ExtendedZoomControls;
 Lcom/android/org/bouncycastle/asn1/ASN1Sequence;->getInstance(Ljava/lang/Object;)Lcom/android/org/bouncycastle/asn1/ASN1Sequence;
 Landroid/widget/ViewAnimator;->getDisplayedChild()I
-libcore/net/http/ResponseHeaders->getLastModified()Ljava/util/Date;
+libcore/net/http/ResponseHeaders;->getLastModified()Ljava/util/Date;
 Lcom/android/internal/widget/SlidingTab$Slider;->getTabHeight()I
 Landroid/speech/tts/SynthesisRequest;->getCountry()Ljava/lang/String;
 Lorg/apache/http/message/BasicHttpResponse;->getLocale()Ljava/util/Locale;
@@ -15620,7 +15620,7 @@ Lcom/android/server/power/DisplayPowerState;->getScreenBrightness()I
 Lcom/android/internal/os/PowerProfile;->getBatteryCapacity()D
 Ljava/util/jar/Attributes;->getValue(Ljava/util/jar/Attributes$Name;)Ljava/lang/String;
 Lorg/apache/http/client/methods/HttpRequestBase;->getRequestLine()Lorg/apache/http/RequestLine;
-libcore/net/url/FtpURLConnection->getContentType()Ljava/lang/String;
+libcore/net/url/FtpURLConnection;->getContentType()Ljava/lang/String;
 Landroid/widget/TextView;->getMaxEms()I
 Lorg/apache/harmony/security/asn1/BerInputStream;->getTagOffset()I
 Ljava/util/MapEntry;->getValue()Ljava/lang/Object;
@@ -15680,7 +15680,7 @@ Landroid/app/ApplicationPackageManager;->getXml(Ljava/lang/String;ILandroid/cont
 Lcom/android/inputmethod/keyboard/KeyDetector;->getTouchX(I)I
 Lcom/android/inputmethod/keyboard/KeyDetector;->getTouchY(I)I
 Lcom/google/common/collect/ForwardingMultimap;->delegate()Ljava/lang/Object;
-junit/runner/BaseTestRunner->processArguments([Ljava/lang/String;)Ljava/lang/String;
+junit/runner/BaseTestRunner;->processArguments([Ljava/lang/String;)Ljava/lang/String;
 Lcom/android/org/bouncycastle/asn1/x509/SubjectPublicKeyInfo;->getAlgorithmId()Lcom/android/org/bouncycastle/asn1/x509/AlgorithmIdentifier;
 Lcom/android/mms/transaction/RetrieveTransaction;->getPdu(Ljava/lang/String;)[B
 Landroid/net/sip/SipSession;->getPeerProfile()Landroid/net/sip/SipProfile;
@@ -15705,9 +15705,9 @@ Ljava/security/SignatureSpi;->engineGetParameters()Ljava/security/AlgorithmParam
 Lcom/google/android/picasasync/PicasaFacade;->getAuthority()Ljava/lang/String;
 Lgov/nist/javax/sip/stack/SIPDialog;->getMyContactHeader()Lgov/nist/javax/sip/header/Contact;
 Ljavax/security/cert/X509Certificate$1;->getEncoded()[B
-junit/framework/TestSuite->getName()Ljava/lang/String;
+junit/framework/TestSuite;->getName()Ljava/lang/String;
 Lcom/android/phone/PhoneGlobals;->getSendSmsFromNotificationPendingIntent(Landroid/content/Context;Ljava/lang/String;)Landroid/app/PendingIntent;
-libcore/net/http/HttpConnection->getOutputStream()Ljava/io/OutputStream;
+libcore/net/http/HttpConnection;->getOutputStream()Ljava/io/OutputStream;
 Landroid/preference/TwoStatePreference;->getDisableDependentsState()Z
 Lcom/android/camera/ui/PieItem;->getIntrinsicHeight()I
 Landroid/filterpacks/imageproc/AlphaBlendFilter;->getShaderProgram(Landroid/filterfw/core/FilterContext;)Landroid/filterfw/core/Program;
@@ -15735,7 +15735,7 @@ Ljava/nio/HeapByteBuffer;->get([BII)Ljava/nio/ByteBuffer;
 Landroid/text/Layout$SpannedEllipsizer;->getSpanStart(Ljava/lang/Object;)I
 Landroid/widget/AdapterViewAnimator;->getAdapter()Landroid/widget/Adapter;
 Landroid/net/Credentials;->getUid()I
-libcore/net/http/HttpEngine$1->getHeaders()Ljava/util/Map;
+libcore/net/http/HttpEngine$1;->getHeaders()Ljava/util/Map;
 Landroid/app/ActivityManagerProxy;->getConfiguration()Landroid/content/res/Configuration;
 Landroid/content/res/XmlBlock$Parser;->getProperty(Ljava/lang/String;)Ljava/lang/Object;
 Landroid/widget/TextView;->getInputExtras(Z)Landroid/os/Bundle;
@@ -15744,7 +15744,7 @@ Lcom/android/i18n/phonenumbers/PhoneNumberUtil;->isNumberMatch(Ljava/lang/String
 Landroid/hardware/usb/UsbDevice;->getDeviceSubclass()I
 Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;->getLocalIp()Ljava/lang/String;
 Lcom/android/ex/chips/RecipientEntry;->getContactId()J
-libcore/icu/CollationElementIteratorICU->getMaxExpansion(I)I
+libcore/icu/CollationElementIteratorICU;->getMaxExpansion(I)I
 Landroid/graphics/Canvas;->getMaximumBitmapHeight()I
 Lcom/android/mms/data/WorkingMessage;->getSubject()Ljava/lang/CharSequence;
 Landroid/webkit/PluginManager;->getInstance(Landroid/content/Context;)Landroid/webkit/PluginManager;
@@ -15763,7 +15763,7 @@ Lorg/xml/sax/InputSource;->getByteStream()Ljava/io/InputStream;
 Lcom/android/mms/ui/RecipientListActivity$RecipientListAdapter;->getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
 Lorg/apache/http/message/BufferedHeader;->getValue()Ljava/lang/String;
 Landroid/support/v4/app/TaskStackBuilder$TaskStackBuilderImplHoneycomb;->getPendingIntent(Landroid/content/Context;[Landroid/content/Intent;IILandroid/os/Bundle;)Landroid/app/PendingIntent;
-dalvik/system/profiler/HprofData->getFlags()I
+dalvik/system/profiler/HprofData;->getFlags()I
 Lcom/coremedia/iso/boxes/fragment/TrackFragmentHeaderBox;->getDefaultSampleDuration()J
 Lcom/android/internal/view/menu/MenuBuilder;->getVisibleItems()Ljava/util/ArrayList;
 Lcom/android/deskclock/widget/multiwaveview/TargetDrawable;->getAlpha()F
@@ -15794,7 +15794,7 @@ Lcom/android/mms/data/Conversation;->getSnippet()Ljava/lang/String;
 Landroid/renderscript/Script$FieldBase;->getAllocation()Landroid/renderscript/Allocation;
 Lcom/android/launcher2/PagedView;->getNextPage()I
 Landroid/speech/tts/TextToSpeech;->getDefaultEngine()Ljava/lang/String;
-libcore/net/http/RequestHeaders->getMaxAgeSeconds()I
+libcore/net/http/RequestHeaders;->getMaxAgeSeconds()I
 Landroid/widget/NumberPicker;->getAccessibilityNodeProvider()Landroid/view/accessibility/AccessibilityNodeProvider;
 Lgov/nist/javax/sip/stack/SIPTransactionStack;->findPendingTransaction(Lgov/nist/javax/sip/message/SIPRequest;)Lgov/nist/javax/sip/stack/SIPServerTransaction;
 Lcom/android/inputmethod/latin/ResourceUtils;->getFraction(Landroid/content/res/TypedArray;IF)F
@@ -15818,7 +15818,7 @@ Landroid/widget/AbsListView;->getBottomFadingEdgeStrength()F
 Lgov/nist/javax/sip/header/extensions/Replaces;->getCallIdentifer()Lgov/nist/javax/sip/header/CallIdentifier;
 Lcom/google/common/collect/MapMakerInternalMap;->getEntry(Ljava/lang/Object;)Lcom/google/common/collect/MapMakerInternalMap$ReferenceEntry;
 Landroid/view/Window;->getContainer()Landroid/view/Window;
-libcore/util/ZoneInfo->getRawOffset()I
+libcore/util/ZoneInfo;->getRawOffset()I
 Lcom/android/inputmethod/latin/RichInputConnection;->getTextBeforeCursor(II)Ljava/lang/CharSequence;
 Ljava/security/SecureRandom;->getAlgorithm()Ljava/lang/String;
 Landroid/widget/TextView;->getLineBounds(ILandroid/graphics/Rect;)I
@@ -15826,7 +15826,7 @@ Landroid/media/videoeditor/Transition;->getAfterMediaItem()Landroid/media/videoe
 Ljava/util/concurrent/locks/ReentrantReadWriteLock;->getWriteHoldCount()I
 Landroid/widget/LinearLayout;->getNextLocationOffset(Landroid/view/View;)I
 Landroid/view/accessibility/AccessibilityInteractionClient;->findAccessibilityNodeInfosByText(IIJLjava/lang/String;)Ljava/util/List;
-libcore/icu/RuleBasedCollatorICU->getCollationKey(Ljava/lang/String;)Ljava/text/CollationKey;
+libcore/icu/RuleBasedCollatorICU;->getCollationKey(Ljava/lang/String;)Ljava/text/CollationKey;
 Lcom/android/internal/os/RuntimeInit$1;->getId()Ljava/lang/String;
 Landroid/renderscript/RenderScript;->create(Landroid/content/Context;)Landroid/renderscript/RenderScript;
 Ljava/util/Currency;->getDefaultFractionDigits()I
@@ -15892,7 +15892,7 @@ Ljava/util/logging/Handler;->getFilter()Ljava/util/logging/Filter;
 Landroid/os/IVibratorService$Stub$Proxy;->getInterfaceDescriptor()Ljava/lang/String;
 Landroid/app/admin/DevicePolicyManager;->getPasswordMinimumUpperCase(Landroid/content/ComponentName;I)I
 Landroid/content/res/ColorStateList;->createFromXml(Landroid/content/res/Resources;Lorg/xmlpull/v1/XmlPullParser;)Landroid/content/res/ColorStateList;
-libcore/net/http/HttpURLConnectionImpl->getOutputStream()Ljava/io/OutputStream;
+libcore/net/http/HttpURLConnectionImpl;->getOutputStream()Ljava/io/OutputStream;
 Lcom/android/emailcommon/internet/MimeMessage;->getContentType()Ljava/lang/String;
 Landroid/os/Messenger;->getBinder()Landroid/os/IBinder;
 Landroid/view/View;->getAccessibilityNodeProvider()Landroid/view/accessibility/AccessibilityNodeProvider;
@@ -15916,11 +15916,11 @@ Lcom/android/systemui/statusbar/phone/NavigationBarView;->getSearchLight()Landro
 Landroid/view/Choreographer;->getFrameTime()J
 Lgov/nist/javax/sip/header/ims/PAssertedService;->getSubserviceIdentifiers()Ljava/lang/String;
 Lcom/coremedia/iso/boxes/FileTypeBox;->getMajorBrand()Ljava/lang/String;
-libcore/net/url/FtpURLConnection->getOutputStream()Ljava/io/OutputStream;
+libcore/net/url/FtpURLConnection;->getOutputStream()Ljava/io/OutputStream;
 Ljava/net/MulticastSocket;->getInterface()Ljava/net/InetAddress;
 Landroid/webkit/WebView;->saveState(Landroid/os/Bundle;)Landroid/webkit/WebBackForwardList;
 Landroid/widget/RemoteViewsAdapter$FixedSizeRemoteViewsCache;->getMetaDataAt(I)Landroid/widget/RemoteViewsAdapter$RemoteViewsIndexMetaData;
-libcore/net/http/HttpsURLConnectionImpl->getServerCertificates()[Ljava/security/cert/Certificate;
+libcore/net/http/HttpsURLConnectionImpl;->getServerCertificates()[Ljava/security/cert/Certificate;
 Lcom/android/ex/chips/RecipientEditTextView;->getChipBackground(Lcom/android/ex/chips/RecipientEntry;)Landroid/graphics/drawable/Drawable;
 Landroid/gesture/Gesture;->getStrokesCount()I
 Ljava/security/spec/RSAPublicKeySpec;->getModulus()Ljava/math/BigInteger;
@@ -15988,7 +15988,7 @@ Landroid/app/ISearchManager$Stub$Proxy;->getGlobalSearchActivity()Landroid/conte
 Lgov/nist/javax/sip/stack/SIPTransaction;->getCSeq()J
 Landroid/widget/Editor$ActionPopupWindow;->getTextOffset()I
 Landroid/view/MotionEvent;->getPointerId(I)I
-libcore/net/http/ResponseHeaders->getHeaders()libcore/net/http/RawHeaders
+libcore/net/http/ResponseHeaders;->getHeaders()libcore/net/http/RawHeaders
 Landroid/net/sip/ISipSession$Stub$Proxy;->getCallId()Ljava/lang/String;
 Lcom/android/internal/policy/impl/keyguard/PagedView;->mapPointFromParentToView(Landroid/view/View;FF)[F
 Lcom/googlecode/mp4parser/authoring/Movie;->getTracks()Ljava/util/List;
@@ -16041,7 +16041,7 @@ Landroid/view/View;->getScaleX()F
 Lcom/android/mms/layout/HVGALayoutParameters;->getImageHeight()I
 Landroid/view/KeyEvent;->getUnicodeChar()I
 Landroid/webkit/WebSettings;->getUserAgent()I
-libcore/net/http/HttpsURLConnectionImpl->getLocalCertificates()[Ljava/security/cert/Certificate;
+libcore/net/http/HttpsURLConnectionImpl;->getLocalCertificates()[Ljava/security/cert/Certificate;
 Landroid/view/View;->getTag(I)Ljava/lang/Object;
 Landroid/widget/Editor$SuggestionsPopupWindow$SuggestionAdapter;->getItemId(I)J
 Landroid/widget/GridLayout$Axis;->getTrailingMargins()[I
@@ -16087,7 +16087,7 @@ Lcom/android/launcher2/PagedViewGridLayout;->getChildOnPageAt(I)Landroid/view/Vi
 Lcom/android/inputmethod/keyboard/internal/KeySpecParser;->getOutputText(Ljava/lang/String;)Ljava/lang/String;
 Landroid/view/accessibility/AccessibilityNodeInfo;->getLabeledBy()Landroid/view/accessibility/AccessibilityNodeInfo;
 Landroid/view/TextureView;->getBitmap()Landroid/graphics/Bitmap;
-libcore/net/http/RequestHeaders->getMaxStaleSeconds()I
+libcore/net/http/RequestHeaders;->getMaxStaleSeconds()I
 Landroid/animation/LayoutTransition;->getTransitionListeners()Ljava/util/List;
 Lcom/android/server/NativeDaemonEvent;->getMessage()Ljava/lang/String;
 Ljavax/crypto/SecretKeyFactory;->getProvider()Ljava/security/Provider;
@@ -16159,7 +16159,7 @@ Lcom/android/mms/model/RegionModel;->getTop()I
 Lcom/google/android/picasastore/PicasaStoreFacade;->getAlbumCoverCacheFile(JLjava/lang/String;Ljava/lang/String;)Ljava/io/File;
 Lcom/android/inputmethod/latin/SubtypeLocale;->getSubtypeDisplayName(Landroid/view/inputmethod/InputMethodSubtype;Landroid/content/res/Resources;)Ljava/lang/String;
 Lcom/android/mms/model/MediaModel;->getSrc()Ljava/lang/String;
-libcore/util/ZoneInfoDB->getVersion()Ljava/lang/String;
+libcore/util/ZoneInfoDB;->getVersion()Ljava/lang/String;
 Lcom/android/emailcommon/internet/MimeBodyPart;->getMimeType()Ljava/lang/String;
 Lcom/android/mms/data/Conversation;->getRecipients()Lcom/android/mms/data/ContactList;
 Lcom/android/mms/ui/LayoutSelectorAdapter;->getData(Landroid/content/Context;)Ljava/util/List;
@@ -16187,7 +16187,7 @@ Lcom/android/emailcommon/mail/Message;->toString()Ljava/lang/String;
 Landroid/hardware/usb/UsbDevice;->getDeviceProtocol()I
 Landroid/app/FragmentManagerImpl;->getBackStackEntryCount()I
 Lcom/android/mms/util/ImageCacheService;->getBytes(Ljava/lang/String;)[B
-libcore/icu/NativeDecimalFormat->getMinimumFractionDigits()I
+libcore/icu/NativeDecimalFormat;->getMinimumFractionDigits()I
 Lcom/android/videoeditor/service/MovieMediaItem;->getEffect()Lcom/android/videoeditor/service/MovieEffect;
 Ljava/util/IllegalFormatCodePointException;->getCodePoint()I
 Landroid/webkit/WebSettingsClassic;->getDatabasePath()Ljava/lang/String;
@@ -16231,7 +16231,7 @@ Ljava/lang/Enum;->clone()Ljava/lang/Object;
 Landroid/media/IRemoteControlClient$Stub;->asBinder()Landroid/os/IBinder;
 Lgov/nist/javax/sip/header/AcceptLanguage;->getLanguageRange()Ljava/lang/String;
 Lgov/nist/javax/sip/stack/MessageChannel;->getViaHeader()Lgov/nist/javax/sip/header/Via;
-libcore/net/http/HttpsURLConnectionImpl->getHeaderField(Ljava/lang/String;)Ljava/lang/String;
+libcore/net/http/HttpsURLConnectionImpl;->getHeaderField(Ljava/lang/String;)Ljava/lang/String;
 Lcom/android/camera/ComboPreferences;->getBoolean(Ljava/lang/String;Z)Z
 Ljavax/xml/parsers/DocumentBuilderFactory;->getSchema()Ljavax/xml/validation/Schema;
 Landroid/app/admin/DevicePolicyManager;->getPasswordMinimumUpperCase(Landroid/content/ComponentName;)I
@@ -16348,7 +16348,7 @@ Ljava/text/FieldPosition;->getBeginIndex()I
 Lorg/kxml2/io/KXmlParser;->getAttributeValue(I)Ljava/lang/String;
 Lorg/apache/http/impl/conn/DefaultClientConnection;->createSessionOutputBuffer(Ljava/net/Socket;ILorg/apache/http/params/HttpParams;)Lorg/apache/http/io/SessionOutputBuffer;
 Landroid/widget/RemoteViews$MemoryUsageCounter;->getMemoryUsage()I
-dalvik/system/profiler/HprofData->getThreadHistory()Ljava/util/List;
+dalvik/system/profiler/HprofData;->getThreadHistory()Ljava/util/List;
 Lcom/android/providers/downloads/StorageManager;->getDownloadDataDirectory()Ljava/io/File;
 Ljava/util/ResourceBundle;->getBundle(Ljava/lang/String;Ljava/util/Locale;)Ljava/util/ResourceBundle;
 Landroid/text/BoringLayout;->getParagraphDirection(I)I
@@ -16429,7 +16429,7 @@ Lcom/android/internal/policy/impl/keyguard/PagedView;->getRelativeChildOffset(I)
 Ljava/util/ResourceBundle;->getBundle(Ljava/lang/String;Ljava/util/Locale;Ljava/util/ResourceBundle$Control;)Ljava/util/ResourceBundle;
 Landroid/content/ContentResolver;->getStreamTypes(Landroid/net/Uri;Ljava/lang/String;)[Ljava/lang/String;
 Lcom/android/mms/model/SlideModel;->get(I)Lcom/android/mms/model/MediaModel;
-libcore/icu/TimeZones->getDisplayName([Ljava/lang/String;Ljava/lang/String;ZI)Ljava/lang/String;
+libcore/icu/TimeZones;->getDisplayName([Ljava/lang/String;Ljava/lang/String;ZI)Ljava/lang/String;
 Lgov/nist/javax/sip/stack/SIPTransactionStack;->getReceiveUdpBufferSize()I
 Lcom/android/inputmethod/keyboard/MainKeyboardView;->getKeyboardActionListener()Lcom/android/inputmethod/keyboard/KeyboardActionListener;
 Lorg/apache/http/impl/cookie/BasicClientCookie;->getCommentURL()Ljava/lang/String;
@@ -16483,7 +16483,7 @@ Ljava/lang/Class;->getName()Ljava/lang/String;
 Lcom/android/camera/ui/PopupManager;->getInstance(Landroid/content/Context;)Lcom/android/camera/ui/PopupManager;
 Lorg/apache/harmony/security/asn1/ASN1StringType;->getDecodedObject(Lorg/apache/harmony/security/asn1/BerInputStream;)Ljava/lang/Object;
 Landroid/filterpacks/imageproc/ImageCombineFilter;->getOutputFormat(Ljava/lang/String;Landroid/filterfw/core/FrameFormat;)Landroid/filterfw/core/FrameFormat;
-libcore/util/BasicLruCache->get(Ljava/lang/Object;)Ljava/lang/Object;
+libcore/util/BasicLruCache;->get(Ljava/lang/Object;)Ljava/lang/Object;
 Lorg/apache/harmony/security/x509/AuthorityKeyIdentifier;->getAuthorityCertIssuer()Lorg/apache/harmony/security/x509/GeneralNames;
 Lcom/android/commands/monkey/MonkeySourceNetworkVars$10;->get()Ljava/lang/String;
 Lgov/nist/javax/sip/header/AuthenticationHeader;->getQop()Ljava/lang/String;
@@ -16501,7 +16501,7 @@ Lorg/apache/harmony/security/x509/Validity;->getNotBefore()Ljava/util/Date;
 Lcom/android/videoeditor/service/VideoEditorProject;->getLastMediaItemId()Ljava/lang/String;
 Landroid/widget/RemoteViewsAdapter;->getItemId(I)J
 Landroid/webkit/HTML5VideoView;->getTextureName()I
-libcore/net/http/HttpsURLConnectionImpl$HttpUrlConnectionDelegate->getCacheResponse()Ljava/net/SecureCacheResponse;
+libcore/net/http/HttpsURLConnectionImpl$HttpUrlConnectionDelegate;->getCacheResponse()Ljava/net/SecureCacheResponse;
 Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 Landroid/animation/PropertyValuesHolder;->getAnimatedValue()Ljava/lang/Object;
 Landroid/text/StaticLayout;->getTopPadding()I
@@ -16565,7 +16565,7 @@ Landroid/widget/ImageView;->getBaselineAlignBottom()Z
 Lcom/android/ex/chips/RecipientChip;->getDataId()J
 Lorg/apache/harmony/security/pkcs7/AuthenticatedAttributes;->getAttributes()Ljava/util/List;
 Landroid/os/Registrant;->getHandler()Landroid/os/Handler;
-libcore/net/http/HttpURLConnectionImpl->getRequestProperties()Ljava/util/Map;
+libcore/net/http/HttpURLConnectionImpl;->getRequestProperties()Ljava/util/Map;
 Lorg/apache/http/impl/client/RequestWrapper;->getProtocolVersion()Lorg/apache/http/ProtocolVersion;
 Ljava/util/AbstractList$SubAbstractList;->get(I)Ljava/lang/Object;
 Lgov/nist/javax/sip/stack/SIPTransactionStack;->getStackLogger()Lgov/nist/core/StackLogger;
@@ -16599,7 +16599,7 @@ Lcom/android/server/input/PersistentDataStore;->getKeyboardLayouts(Ljava/lang/St
 Landroid/app/ApplicationPackageManager;->getResourcesForApplication(Ljava/lang/String;)Landroid/content/res/Resources;
 Landroid/webkit/HTML5VideoView;->getReadyToUseSurfTex()Z
 Lcom/android/internal/widget/DrawableHolder;->getWidth()I
-libcore/icu/ICU->getISOCountries()[Ljava/lang/String;
+libcore/icu/ICU;->getISOCountries()[Ljava/lang/String;
 Landroid/app/ActivityThread;->applyConfigCompatMainThread(ILandroid/content/res/Configuration;Landroid/content/res/CompatibilityInfo;)Landroid/content/res/Configuration;
 Landroid/text/Layout;->getLineBaseline(I)I
 Lcom/android/internal/widget/SizeAdaptiveLayout;->getModestyPanel()Landroid/view/View;
@@ -16617,7 +16617,7 @@ Landroid/media/AudioTrack$NativeEventHandlerDelegate;->getHandler()Landroid/os/H
 Lcom/google/android/apps/lightcycle/storage/StorageManagerFactory;->getStorageManager()Lcom/google/android/apps/lightcycle/storage/StorageManager;
 Lorg/apache/harmony/security/x509/NameConstraints;->getEncoded()[B
 Ljava/lang/Class;->getTypeParameters()[Ljava/lang/reflect/TypeVariable;
-libcore/io/ForwardingOs->getsockoptInAddr(Ljava/io/FileDescriptor;II)Ljava/net/InetAddress;
+libcore/io/ForwardingOs;->getsockoptInAddr(Ljava/io/FileDescriptor;II)Ljava/net/InetAddress;
 Landroid/net/Credentials;->getGid()I
 Ljava/util/logging/LogRecord;->getLevel()Ljava/util/logging/Level;
 Landroid/content/res/AssetManager;->getResourceValue(IILandroid/util/TypedValue;Z)Z
@@ -16723,12 +16723,12 @@ Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
 Landroid/view/ViewGroup;->getChildMeasureSpec(III)I
 Lgov/nist/javax/sip/address/TelURLImpl;->getScheme()Ljava/lang/String;
 Lcom/android/mms/data/Conversation$Cache;->getInstance()Lcom/android/mms/data/Conversation$Cache;
-libcore/net/http/HttpURLConnectionImpl->getHttpEngine()libcore/net/http/HttpEngine
+libcore/net/http/HttpURLConnectionImpl;->getHttpEngine()libcore/net/http/HttpEngine
 Lcom/android/i18n/phonenumbers/Phonemetadata$NumberFormat;->leadingDigitPatterns()Ljava/util/List;
 Lcom/android/org/bouncycastle/asn1/x500/RDN;->getFirst()Lcom/android/org/bouncycastle/asn1/x500/AttributeTypeAndValue;
 Landroid/graphics/drawable/LayerDrawable$LayerState;->getChangingConfigurations()I
 Landroid/app/IUiModeManager$Stub$Proxy;->getInterfaceDescriptor()Ljava/lang/String;
-libcore/io/ForwardingOs->getsockname(Ljava/io/FileDescriptor;)Ljava/net/SocketAddress;
+libcore/io/ForwardingOs;->getsockname(Ljava/io/FileDescriptor;)Ljava/net/SocketAddress;
 Lgov/nist/javax/sip/stack/MessageProcessor;->getPort()I
 Lgov/nist/javax/sip/address/SipUri;->getHeader(Ljava/lang/String;)Ljava/lang/String;
 Lcom/android/server/pm/PackageSettingBase;->getEnabled(I)I
@@ -16749,7 +16749,7 @@ Lcom/android/systemui/statusbar/phone/PhoneStatusBar;->startDelay(ILandroid/anim
 Lgov/nist/core/LexerCore;->getString(C)Ljava/lang/String;
 Lcom/android/internal/view/menu/ActionMenuView;->getWindowAnimations()I
 Lcom/android/mms/dom/smil/SmilMediaElementImpl;->getEnd()Lorg/w3c/dom/smil/TimeList;
-libcore/net/url/FtpHandler->getDefaultPort()I
+libcore/net/url/FtpHandler;->getDefaultPort()I
 Lcom/android/camera/ui/PieRenderer;->getSize()I
 Ljava/util/concurrent/locks/AbstractQueuedSynchronizer;->getWaitQueueLength(Ljava/util/concurrent/locks/AbstractQueuedSynchronizer$ConditionObject;)I
 Landroid/view/ViewConfiguration;->getScaledWindowTouchSlop()I
@@ -16809,7 +16809,7 @@ Landroid/filterfw/core/Frame;->release()Landroid/filterfw/core/Frame;
 Landroid/app/Fragment;->getResources()Landroid/content/res/Resources;
 Lorg/apache/harmony/xnet/provider/jsse/CertificateRequest;->getTypesAsString()[Ljava/lang/String;
 Landroid/app/ActivityManager;->getRunningAppProcesses()Ljava/util/List;
-libcore/net/http/HttpEngine->getResponseCode()I
+libcore/net/http/HttpEngine;->getResponseCode()I
 Landroid/os/CommonTimeConfig;->getMasterElectionPriority()B
 Ljava/lang/SecurityManager;->currentLoadedClass()Ljava/lang/Class;
 Lcom/android/internal/view/menu/MenuItemImpl;->getItemId()I
@@ -16876,11 +16876,11 @@ Lgov/nist/javax/sip/message/MultipartMimeContentImpl;->getContents()Ljava/util/I
 Lgov/nist/javax/sip/header/ProxyRequire;->getOptionTag()Ljava/lang/String;
 Landroid/app/ITransientNotification$Stub$Proxy;->getInterfaceDescriptor()Ljava/lang/String;
 Lorg/apache/http/impl/cookie/RFC2109Spec;->getVersionHeader()Lorg/apache/http/Header;
-libcore/net/url/JarURLConnectionImpl->getContentType()Ljava/lang/String;
+libcore/net/url/JarURLConnectionImpl;->getContentType()Ljava/lang/String;
 Lgov/nist/javax/sip/stack/SIPTransactionStack;->getThreadAuditor()Lgov/nist/core/ThreadAuditor;
 Lcom/android/deskclock/timer/CountingTimerView$UnsignedTime;->getLabelWidth()F
 Landroid/graphics/Canvas;->getDrawFilter()Landroid/graphics/DrawFilter;
-libcore/icu/NativeDecimalFormat->getPositivePrefix()Ljava/lang/String;
+libcore/icu/NativeDecimalFormat;->getPositivePrefix()Ljava/lang/String;
 Lcom/android/i18n/phonenumbers/Phonemetadata$PhoneMetadata;->intlNumberFormats()Ljava/util/List;
 Lcom/android/inputmethod/latin/ResourceUtils;->getFraction(Landroid/content/res/TypedArray;I)F
 Landroid/view/GLES20Canvas;->getDrawFilter()Landroid/graphics/DrawFilter;
@@ -16900,7 +16900,7 @@ Lcom/android/commands/monkey/MonkeySourceNetworkVars$3;->get()Ljava/lang/String;
 Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 Lcom/android/commands/monkey/MonkeySourceNetworkVars$4;->get()Ljava/lang/String;
 Lcom/android/commands/monkey/MonkeySourceNetworkVars$5;->get()Ljava/lang/String;
-libcore/net/http/HttpsURLConnectionImpl->getResponseMessage()Ljava/lang/String;
+libcore/net/http/HttpsURLConnectionImpl;->getResponseMessage()Ljava/lang/String;
 Lorg/apache/http/impl/conn/tsccm/BasicPoolEntryRef;->getRoute()Lorg/apache/http/conn/routing/HttpRoute;
 Lcom/android/commands/monkey/MonkeySourceNetworkVars$1;->get()Ljava/lang/String;
 Lcom/android/commands/monkey/MonkeySourceNetworkVars$2;->get()Ljava/lang/String;
@@ -16914,7 +16914,7 @@ Landroid/support/v4/view/PagerAdapter;->getItemPosition(Ljava/lang/Object;)I
 Lcom/android/commands/monkey/MonkeySourceNetworkVars$7;->get()Ljava/lang/String;
 Lcom/coremedia/iso/boxes/SampleDependencyTypeBox;->getEntries()Ljava/util/List;
 Ljava/math/BigDecimal;->divideToIntegralValue(Ljava/math/BigDecimal;Ljava/math/MathContext;)Ljava/math/BigDecimal;
-libcore/net/http/RawHeaders->getAll(Ljava/util/Set;)libcore/net/http/RawHeaders
+libcore/net/http/RawHeaders;->getAll(Ljava/util/Set;)libcore/net/http/RawHeaders
 Ljava/util/Locale;->getCountry()Ljava/lang/String;
 Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 Landroid/view/ViewGroup;->getLayoutTransition()Landroid/animation/LayoutTransition;
@@ -16963,7 +16963,7 @@ Lcom/android/server/accessibility/ScreenMagnifier$MagnificationController;->getM
 Lcom/android/mms/model/SlideModel;->getSlideSize()I
 Lcom/coremedia/iso/boxes/TrackBox;->getTrackHeaderBox()Lcom/coremedia/iso/boxes/TrackHeaderBox;
 Lcom/android/email/NotificationController;->getNewMessageTitle(Ljava/lang/String;I)Landroid/text/SpannableString;
-libcore/io/EventLogger->getReporter()libcore/io/EventLogger$Reporter
+libcore/io/EventLogger;->getReporter()libcore/io/EventLogger$Reporter
 Landroid/view/IInputFilterHost$Stub$Proxy;->getInterfaceDescriptor()Ljava/lang/String;
 Landroid/content/ContentValues;->getAsLong(Ljava/lang/String;)Ljava/lang/Long;
 Landroid/content/pm/IPackageManager$Stub$Proxy;->nextPackageToClean(Landroid/content/pm/PackageCleanItem;)Landroid/content/pm/PackageCleanItem;
@@ -17063,7 +17063,7 @@ Lcom/android/launcher2/Workspace;->getCurrentPageDescription()Ljava/lang/String;
 Lcom/android/deskclock/widget/multiwaveview/GlowPadView;->getSuggestedMinimumHeight()I
 Landroid/graphics/drawable/ColorDrawable;->getAlpha()I
 Lgov/nist/javax/sip/header/ParametersHeader;->getParameterAsFloat(Ljava/lang/String;)F
-dalvik/system/BlockGuard->getThreadPolicy()dalvik/system/BlockGuard$Policy
+dalvik/system/BlockGuard;->getThreadPolicy()dalvik/system/BlockGuard$Policy
 Landroid/content/ContextWrapper;->getPackageManager()Landroid/content/pm/PackageManager;
 Ljava/nio/HeapByteBuffer;->getFloat(I)F
 Landroid/widget/PopupWindow;->getWidth()I
@@ -17080,7 +17080,7 @@ Lcom/android/email/activity/MessageList;->createFroyoIntent(Landroid/content/Con
 Lgov/nist/javax/sip/SipStackImpl;->getSecureAuthenticationHelper(Lgov/nist/javax/sip/clientauthutils/SecureAccountManager;Ljavax/sip/header/HeaderFactory;)Lgov/nist/javax/sip/clientauthutils/AuthenticationHelper;
 Lgov/nist/javax/sip/stack/SIPClientTransaction;->getDialog(Ljava/lang/String;)Lgov/nist/javax/sip/stack/SIPDialog;
 Ljava/io/SerializablePermission;->getActions()Ljava/lang/String;
-libcore/net/http/HttpEngine->getDefaultUserAgent()Ljava/lang/String;
+libcore/net/http/HttpEngine;->getDefaultUserAgent()Ljava/lang/String;
 Lcom/android/camera/drawable/TextDrawable;->getOpacity()I
 Landroid/view/accessibility/AccessibilityEvent;->getPackageName()Ljava/lang/CharSequence;
 Landroid/text/method/QwertyKeyListener;->getInputType()I
@@ -17195,7 +17195,7 @@ Landroid/view/IWindowManager$Stub$Proxy;->getWindowCompatibilityScale(Landroid/o
 Landroid/app/Activity;->getApplication()Landroid/app/Application;
 Lorg/apache/harmony/security/x509/TBSCertList$RevokedCertificate;->getEncoded()[B
 Lcom/android/org/bouncycastle/asn1/ASN1Null;->toString()Ljava/lang/String;
-junit/framework/TestSuite->getTestConstructor(Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
+junit/framework/TestSuite;->getTestConstructor(Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
 Lgov/nist/javax/sip/header/SIPHeaderList;->listIterator()Ljava/util/ListIterator;
 Landroid/view/GLES20TextureLayer;->getCanvas()Landroid/view/HardwareCanvas;
 Landroid/webkit/WebViewClassic;->onCreateInputConnection(Landroid/view/inputmethod/EditorInfo;)Landroid/view/inputmethod/InputConnection;
@@ -17225,7 +17225,7 @@ Landroid/view/View;->getScrollX()I
 Landroid/view/accessibility/AccessibilityRecord;->getScrollY()I
 Lgov/nist/javax/sip/header/ContentType;->getContentType()Ljava/lang/String;
 Landroid/view/accessibility/AccessibilityRecord;->getScrollX()I
-libcore/net/http/HttpsURLConnectionImpl->getContentType()Ljava/lang/String;
+libcore/net/http/HttpsURLConnectionImpl;->getContentType()Ljava/lang/String;
 Landroid/filterfw/format/PrimitiveFormat;->createInt32Format(II)Landroid/filterfw/core/MutableFrameFormat;
 Landroid/webkit/WebChromeClient;->getVideoLoadingProgressView()Landroid/view/View;
 Lorg/apache/james/mime4j/BodyDescriptor;->getMimeType()Ljava/lang/String;
@@ -17264,7 +17264,7 @@ Ljava/security/Security;->getProviders(Ljava/lang/String;)[Ljava/security/Provid
 Landroid/app/TaskStackBuilder;->getPendingIntent(IILandroid/os/Bundle;Landroid/os/UserHandle;)Landroid/app/PendingIntent;
 Ljava/net/SocketImpl;->toString()Ljava/lang/String;
 Lorg/apache/harmony/security/x509/PolicyInformation;->getPolicyIdentifier()Ljava/lang/String;
-libcore/icu/TimeZones$ZoneStringsCache->create(Ljava/lang/Object;)Ljava/lang/Object;
+libcore/icu/TimeZones$ZoneStringsCache;->create(Ljava/lang/Object;)Ljava/lang/Object;
 Landroid/hardware/Sensor;->getResolution()F
 Landroid/app/ExpandableListActivity;->getSelectedPosition()J
 Landroid/view/MotionEvent;->getEdgeFlags()I
@@ -17319,7 +17319,7 @@ Ljava/security/KeyStore$PasswordProtection;->getPassword()[C
 Ljava/security/cert/PKIXParameters;->getTrustAnchors()Ljava/util/Set;
 Landroid/media/MiniThumbFile;->getMagic(J)J
 Landroid/content/IntentSender;->getCreatorUserHandle()Landroid/os/UserHandle;
-libcore/net/url/JarURLConnectionImpl->getContentLength()I
+libcore/net/url/JarURLConnectionImpl;->getContentLength()I
 Lgov/nist/javax/sip/header/ims/SecurityAgree;->getAlgorithm()Ljava/lang/String;
 Landroid/view/InputDevice;->getKeyCharacterMap()Landroid/view/KeyCharacterMap;
 Landroid/os/Environment$UserEnvironment;->getExternalStorageDirectory()Ljava/io/File;
@@ -17339,8 +17339,8 @@ Ljava/io/ObjectStreamClass;->getSerialVersionUID()J
 Lcom/android/mms/transaction/TransactionState;->getState()I
 Landroid/webkit/CallbackProxy;->getProgress()I
 Lcom/android/mms/util/Recycler$SmsRecycler;->getMessageLimit(Landroid/content/Context;)I
-dalvik/system/BlockGuard$BlockGuardPolicyException->getPolicyViolation()I
-libcore/net/http/HttpsURLConnectionImpl->getHttpEngine()libcore/net/http/HttpEngine
+dalvik/system/BlockGuard$BlockGuardPolicyException;->getPolicyViolation()I
+libcore/net/http/HttpsURLConnectionImpl;->getHttpEngine()libcore/net/http/HttpEngine
 Lorg/apache/http/impl/conn/AbstractClientConnAdapter;->receiveResponseHeader()Lorg/apache/http/HttpResponse;
 Landroid/view/Display;->getHeight()I
 Landroid/content/pm/VerificationParams;->getInstallerUid()I
@@ -17360,7 +17360,7 @@ Lcom/android/internal/policy/impl/keyguard/PagedView;->getChildIndexForRelativeO
 Landroid/widget/ZoomButtonsController;->getZoomControls()Landroid/view/View;
 Lorg/apache/harmony/security/x509/InvalidityDate;->getEncoded()[B
 Lorg/apache/harmony/security/asn1/ASN1Any;->getEncodedLength(Lorg/apache/harmony/security/asn1/BerOutputStream;)I
-libcore/icu/NativeBreakIterator->getText()Ljava/text/CharacterIterator;
+libcore/icu/NativeBreakIterator;->getText()Ljava/text/CharacterIterator;
 Lcom/google/common/collect/Maps$ImprovedAbstractMap;->entrySet()Ljava/util/Set;
 Landroid/view/animation/AnimationUtils;->loadAnimation(Landroid/content/Context;I)Landroid/view/animation/Animation;
 Ljava/io/EmulatedFieldsForLoading;->get(Ljava/lang/String;B)B
@@ -17408,7 +17408,7 @@ Landroid/text/style/AbsoluteSizeSpan;->getSize()I
 Landroid/view/animation/AnimationUtils;->loadInterpolator(Landroid/content/Context;I)Landroid/view/animation/Interpolator;
 Lcom/adobe/xmp/impl/XMPNodeUtils;->serializeNodeValue(Ljava/lang/Object;)Ljava/lang/String;
 Landroid/webkit/WebBackForwardListClassic;->getClearPending()Z
-libcore/net/http/RequestHeaders->getProxyAuthorization()Ljava/lang/String;
+libcore/net/http/RequestHeaders;->getProxyAuthorization()Ljava/lang/String;
 Landroid/os/Parcel;->readParcelable(Ljava/lang/ClassLoader;)Landroid/os/Parcelable;
 Lorg/apache/harmony/xnet/provider/jsse/DHParameters;->getPrime()[B
 Landroid/app/IInstrumentationWatcher$Stub;->asBinder()Landroid/os/IBinder;
@@ -17485,7 +17485,7 @@ Landroid/graphics/Paint;->getTextRunAdvances(Ljava/lang/CharSequence;IIIII[FI)F
 Landroid/graphics/Bitmap;->createBitmap(Landroid/util/DisplayMetrics;[IIILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;
 Lcom/android/server/NativeDaemonConnector;->doCommand(Ljava/lang/String;)Ljava/util/ArrayList;
 Landroid/view/accessibility/AccessibilityEvent;->getAction()I
-libcore/net/http/HttpsURLConnectionImpl->getContentEncoding()Ljava/lang/String;
+libcore/net/http/HttpsURLConnectionImpl;->getContentEncoding()Ljava/lang/String;
 Lcom/android/deskclock/widget/multiwaveview/Ease$Quart$3;->getInterpolation(F)F
 Landroid/app/admin/DevicePolicyManager;->getMaximumFailedPasswordsForWipe(Landroid/content/ComponentName;I)I
 Landroid/webkit/WebStorage$Origin;->getQuota()J
@@ -17513,7 +17513,7 @@ Landroid/widget/SimpleAdapter;->getCount()I
 Landroid/view/animation/Animation;->getFillAfter()Z
 Landroid/app/LoadedApk;->getResDir()Ljava/lang/String;
 Lcom/android/org/bouncycastle/asn1/ASN1InputStream;->buildEncodableVector()Lcom/android/org/bouncycastle/asn1/ASN1EncodableVector;
-libcore/net/http/HttpURLConnectionImpl->getProxy()Ljava/net/Proxy;
+libcore/net/http/HttpURLConnectionImpl;->getProxy()Ljava/net/Proxy;
 Lgov/nist/javax/sip/stack/SIPTransaction;->getViaHost()Ljava/lang/String;
 Lcom/android/launcher2/WallpaperChooserDialogFragment$ImageAdapter;->getItemId(I)J
 Landroid/net/sip/SimpleSessionDescription$Fields;->getBandwidthTypes()[Ljava/lang/String;
@@ -17526,12 +17526,12 @@ Lcom/android/mms/dom/smil/ElementSequentialTimeContainerImpl;->getActiveChildren
 Landroid/hardware/display/IDisplayManagerCallback$Stub$Proxy;->getInterfaceDescriptor()Ljava/lang/String;
 Landroid/preference/PreferenceGroupAdapter;->getViewTypeCount()I
 Lcom/android/mms/model/LayoutModel;->getTextRegion()Lcom/android/mms/model/RegionModel;
-junit/framework/TestCase->createResult()junit/framework/TestResult
+junit/framework/TestCase;->createResult()junit/framework/TestResult
 Lgov/nist/javax/sip/stack/UDPMessageChannel;->getPeerName()Ljava/lang/String;
 Lorg/apache/harmony/security/x509/CertificateList;->getTbsCertList()Lorg/apache/harmony/security/x509/TBSCertList;
 Landroid/accounts/IAccountManager$Stub$Proxy;->getAuthenticatorTypes()[Landroid/accounts/AuthenticatorDescription;
 Landroid/filterfw/core/Frame;->getRefCount()I
-libcore/net/http/HttpsURLConnectionImpl$HttpsEngine->getSslSocketFactory()Ljavax/net/ssl/SSLSocketFactory;
+libcore/net/http/HttpsURLConnectionImpl$HttpsEngine;->getSslSocketFactory()Ljavax/net/ssl/SSLSocketFactory;
 Landroid/widget/ExpandableListConnector;->getAdapter()Landroid/widget/ExpandableListAdapter;
 Landroid/renderscript/Mesh;->getPrimitive(I)Landroid/renderscript/Mesh$Primitive;
 Landroid/filterfw/core/NativeBuffer;->getElementSize()I
@@ -17541,7 +17541,7 @@ Landroid/app/SearchManager;->getAssistIntent(Landroid/content/Context;I)Landroid
 Landroid/webkit/WebSettingsClassic;->getAutoFillProfile()Landroid/webkit/WebSettingsClassic$AutoFillProfile;
 Lgov/nist/javax/sip/header/ParametersHeader;->getMultiParameters()Lgov/nist/core/DuplicateNameValueList;
 Lorg/xml/sax/helpers/NewInstance;->getClassLoader()Ljava/lang/ClassLoader;
-dalvik/system/CloseGuard->getReporter()dalvik/system/CloseGuard$Reporter
+dalvik/system/CloseGuard;->getReporter()dalvik/system/CloseGuard$Reporter
 Lcom/android/camera/CameraActivity;->getJpegCallbackFinishTime()J
 Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 Landroid/media/AudioRecord;->getAudioSource()I
@@ -17568,7 +17568,7 @@ Ljava/net/InetAddress;->getHostName()Ljava/lang/String;
 Landroid/preference/Preference;->getWidgetLayoutResource()I
 Landroid/os/storage/IMountService$Stub$Proxy;->getMountedObbPath(Ljava/lang/String;)Ljava/lang/String;
 Lcom/google/common/collect/ImmutableCollection;->toArray()[Ljava/lang/Object;
-libcore/net/http/RawHeaders->get(Ljava/lang/String;)Ljava/lang/String;
+libcore/net/http/RawHeaders;->get(Ljava/lang/String;)Ljava/lang/String;
 Lorg/ccil/cowan/tagsoup/AttributesImpl;->getType(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 Lcom/android/mms/widget/MmsWidgetService$MmsFactory;->getViewAt(I)Landroid/widget/RemoteViews;
 Lorg/apache/http/impl/cookie/RFC2965Spec;->parse(Lorg/apache/http/Header;Lorg/apache/http/cookie/CookieOrigin;)Ljava/util/List;
@@ -17675,7 +17675,7 @@ Lcom/google/common/collect/BstMutationResult;->getOriginalTarget()Lcom/google/co
 Landroid/view/MotionEvent;->getButtonState()I
 Ljava/nio/charset/CharsetDecoder;->averageCharsPerByte()F
 Lcom/android/internal/view/ActionBarPolicy;->getMaxActionButtons()I
-libcore/io/ForwardingOs->getsockoptByte(Ljava/io/FileDescriptor;II)I
+libcore/io/ForwardingOs;->getsockoptByte(Ljava/io/FileDescriptor;II)I
 Ljavax/security/auth/callback/PasswordCallback;->getPrompt()Ljava/lang/String;
 Lcom/android/server/accessibility/ScreenMagnifier$MagnificationController;->getScale()F
 Lcom/android/email/activity/UIControllerSearchTwoPane;->getLayoutId()I
@@ -17782,7 +17782,7 @@ Landroid/speech/IRecognitionListener$Stub;->asBinder()Landroid/os/IBinder;
 Lcom/android/providers/userdictionary/UserDictionaryProvider;->getType(Landroid/net/Uri;)Ljava/lang/String;
 Landroid/app/ListFragment;->getListView()Landroid/widget/ListView;
 Lcom/android/systemui/recent/RecentsPanelView$TaskDescriptionAdapter;->getCount()I
-libcore/net/http/HttpsURLConnectionImpl$HttpsEngine->getHttpConnectionToCache()Ljava/net/HttpURLConnection;
+libcore/net/http/HttpsURLConnectionImpl$HttpsEngine;->getHttpConnectionToCache()Ljava/net/HttpURLConnection;
 Landroid/os/Bundle;->getSparseParcelableArray(Ljava/lang/String;)Landroid/util/SparseArray;
 Landroid/gesture/Gesture;->getID()J
 Landroid/widget/CursorAdapter;->getFilterQueryProvider()Landroid/widget/FilterQueryProvider;
@@ -17835,7 +17835,7 @@ Lcom/android/mms/widget/MmsWidgetService$MmsFactory;->getLoadingView()Landroid/w
 Landroid/widget/ImageView;->getDrawable()Landroid/graphics/drawable/Drawable;
 Landroid/media/videoeditor/MediaArtistNativeHelper;->getProjectPath()Ljava/lang/String;
 Ljavax/xml/parsers/DocumentBuilder;->parse(Ljava/io/InputStream;Ljava/lang/String;)Lorg/w3c/dom/Document;
-dalvik/system/profiler/HprofData->getSamples()Ljava/util/Set;
+dalvik/system/profiler/HprofData;->getSamples()Ljava/util/Set;
 Landroid/widget/GridLayout$Axis;->getLeadingMargins()[I
 Lcom/android/i18n/phonenumbers/NumberParseException;->getErrorType()Lcom/android/i18n/phonenumbers/NumberParseException$ErrorType;
 Landroid/app/admin/IDevicePolicyManager$Stub$Proxy;->getCurrentFailedPasswordAttempts(I)I
@@ -17965,7 +17965,7 @@ Ljava/text/DateFormat;->getDateTimeInstance()Ljava/text/DateFormat;
 Ljava/util/zip/Deflater;->getBytesRead()J
 Landroid/graphics/drawable/GradientDrawable$GradientState;->getChangingConfigurations()I
 Lcom/android/phone/PhoneInterfaceManager;->getAllCellInfo()Ljava/util/List;
-libcore/net/http/HttpEngine->getResponseHeaders()libcore/net/http/ResponseHeaders
+libcore/net/http/HttpEngine;->getResponseHeaders()libcore/net/http/ResponseHeaders
 Landroid/app/ContextImpl;->getOuterContext()Landroid/content/Context;
 Landroid/view/Window;->getAttributes()Landroid/view/WindowManager$LayoutParams;
 Ljava/util/concurrent/atomic/AtomicReferenceArray;->getAndSet(ILjava/lang/Object;)Ljava/lang/Object;
