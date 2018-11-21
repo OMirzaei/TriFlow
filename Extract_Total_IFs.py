@@ -3,7 +3,7 @@
 VERSION:
 -------
 
-Version (by release date): 2017-04-26
+Version (by release date): 2018-11-21
 
 DEVELOPER INFORMATION:
 ---------------------
@@ -61,11 +61,12 @@ import os
 import shutil
 import glob
 import zipfile
-import subprocess
 import pickle
-import time
 import multiprocessing
+import re
 import sys
+from sets import Set
+from DexParser import DalvikParser
 
 # ************************ End of Importing Modules ************************
 
@@ -82,11 +83,8 @@ else:
 
 # Home directory
 Home_Dir = os.path.curdir
-# Location of dexdump
-dexdump_Loc = Home_Dir + '/dexdump'
-
 # Number of processes
-n_procs = 4
+n_procs = 4                                                         
 # Dictionary of SuSi source API methods
 Dict_Srcs = {}
 # Dictionary of SuSi sink API methods
@@ -94,25 +92,47 @@ Dict_Snks = {}
 # Dictionary of total information flows between all sources and sinks
 Dict_Total_Flows = []
 
+Dict_Srcs = {}
 num_src = 0
 with open(os.path.join(Home_Dir,'Sources_Smali.txt')) as src_txt:
     for line in src_txt:
         line = line.strip()
-        line = line.replace('->','.')
-        line = line.replace('(',':(')
-        Dict_Srcs[line] = num_src + 1
-        num_src += 1
+        class_name = line.split(';->')[0]
+        method_name = line.split(';->')[1].split('(')[0]
+        output = line.split(';->')[1].split(')')[1]
+        params = line.split(';->')[1].split(')')[0]
+        params = params.split('(')[1]
+
+        params = params.split(';')
+        new_params = ''
+        for par in params:
+            new_params = new_params + re.sub('L.*', 'L', par)
+
+        key = class_name + ';' + method_name + '(' + new_params +')' + output
+        Dict_Srcs[key] = num_src + 1
+        num_src += 1                 
 
 num_src_method = num_src
 
+Dict_Snks = {}
 num_snk = 0
 with open(os.path.join(Home_Dir,'Sinks_Smali.txt')) as snk_txt:
     for line in snk_txt:
         line = line.strip()
-        line = line.replace('->','.')
-        line = line.replace('(',':(')
-        Dict_Snks[line] = num_snk + 1
-        num_snk += 1
+        class_name = line.split(';->')[0]
+        method_name = line.split(';->')[1].split('(')[0]
+        output = line.split(';->')[1].split(')')[1]
+        params = line.split(';->')[1].split(')')[0]
+        params = params.split('(')[1]
+
+        params = params.split(';')
+        new_params = ''
+        for par in params:
+            new_params = new_params + re.sub('L.*', 'L', par)
+
+        key = class_name + ';' + method_name + '(' + new_params +')' + output
+        Dict_Snks[key] = num_snk + 1
+        num_snk += 1                 
 
 num_snk_method = num_snk
 
@@ -120,23 +140,38 @@ num_snk_method = num_snk
 
 # ********************* Functions *********************
 
-def DisAssemble_Dex(app):
-    # ********************** Extracting App's Name **********************
+def Unzip(app):
+    # ---------------------- Extracting App's Name ---------------------- 
     app_name = app.split('/')[-1][:-4]
-    # ********************** End of Extracting App's Name **********************
-    # ********************** Removing Smali_Files and Unzipped_App folders if they already exist **********************
+    # ---------------------- End of Extracting App's Name ---------------------- 
+    # ---------------------- Removing Smali_Files and Unzipped_App folders if they already exist ---------------------- 
     if app_name in os.listdir(Input_Dir):
-        shutil.rmtree(os.path.join(Input_Dir,app_name))
-    # ********************** End of Removing Smali_Files and Unzipped_App folders if they already exist **********************
-    # ********************** Unzipping the application (.apk file) **********************
-    os.mkdir(os.path.join(Input_Dir,app_name))
+        shutil.rmtree(os.path.join(Input_Dir, app_name))
+    # ---------------------- End of Removing Smali_Files and Unzipped_App folders if they already exist ---------------------- 
+    # ---------------------- Unzipping the application (.apk file) ---------------------- 
+    os.mkdir(os.path.join(Input_Dir, app_name))
     with zipfile.ZipFile(app,"r") as zip_ref:
-        zip_ref.extractall(os.path.join(Input_Dir,app_name))
-    # ********************** End of Unzipping the application (.apk file) **********************
-    # ********************** Disassembling the classes.dex file within the unzipped folder using dexdump **********************
-    dex_file = open(os.path.join(Input_Dir,app_name,app_name + '.txt'),'wb')
-    subprocess.call([os.path.join(dexdump_Loc,'dexdump'), '-d', os.path.join(Input_Dir,app_name,'classes.dex')], stdout=dex_file)
-    # ********************** End of Disassembling the classes.dex file within the unzipped folder **********************
+        zip_ref.extractall(os.path.join(Input_Dir, app_name))
+    # ---------------------- End of Unzipping the application (.apk file) ---------------------- 
+    dex_file_paths = []
+    for root, dirs, files in os.walk(os.path.join(Input_Dir, app_name)):
+        for file in files:
+            if '.dex' in file:
+                dex_file_paths.append(os.path.join(root, file))
+    
+    return dex_file_paths
+
+
+def Extract_Methods(dex_file):
+
+    List_Methods = Set([])
+    dex = DalvikParser.Dalvik.fromfilename(dex_file)
+
+    for mtd in dex.methods.methods:
+        full_method_sig = mtd['class'] + mtd['name'] + '(' + mtd['proto']['name'][1:] + ')' + mtd['proto']['type']
+        List_Methods.add(full_method_sig)
+
+    return List_Methods
 
 
 def Extract_TotalFlows(appfile):
@@ -150,6 +185,7 @@ def Extract_TotalFlows(appfile):
     cols_idx_method = [0 for x in range(num_snk_method+1)]
 
     dirname,filename = os.path.split(appfile)
+    methods = Set([])
 
     if filename + '-Sources_Results.txt' not in os.listdir(Output_Dir) or filename + '-Sinks_Results.txt' not in os.listdir(Output_Dir):
         # Contains all the sources
@@ -157,17 +193,18 @@ def Extract_TotalFlows(appfile):
         # Contains all the sinks
         snks_results = open(os.path.join(Output_Dir,filename + '-Sinks_Results.txt'),'wb')
 
-        DisAssemble_Dex(appfile)
-        # Opening the diassembled .dex file
-        dex_file = open(os.path.join(Input_Dir, filename[:-4], filename[:-4] + '.txt'),'rb')
-        for line in dex_file:
-            if ';.' in line:
-                line = line.split(' ')
-                API_Method = [i for i in line if (';.' in i)][0]
-                if API_Method in Dict_Srcs.iterkeys() and flag_srcs[Dict_Srcs[API_Method]] == 0:
-                        flag_srcs[Dict_Srcs[API_Method]] = 1
-                if API_Method in Dict_Snks.iterkeys() and flag_snks[Dict_Snks[API_Method]] == 0:
-                        flag_snks[Dict_Snks[API_Method]] = 1
+        # ---------------------- Extracting Methods from Dex File ---------------------- 
+        dex_file_paths = Unzip(appfile)
+        for dex_path in dex_file_paths:
+            current_methods = Extract_Methods(dex_path)
+            methods = methods | current_methods
+        # ---------------------- End of Extracting Methods from Dex File ---------------------- 
+        
+        for m in methods:
+            if m in Dict_Srcs.iterkeys():
+                flag_srcs[Dict_Srcs[m]] = 1
+            if m in Dict_Snks.iterkeys():
+                flag_snks[Dict_Snks[m]] = 1
 
         pickle.dump(flag_srcs,srcs_results)
         pickle.dump(flag_snks,snks_results)
@@ -175,7 +212,7 @@ def Extract_TotalFlows(appfile):
         snks_results.close()
 
         rows_idx_method = pickle.load(open(os.path.join(Output_Dir,filename + '-Sources_Results.txt'),'rb'))
-        cols_idx_method = pickle.load(open(os.path.join(Output_Dir,filename + '-Sinks_Results.txt'),'rb'))
+        cols_idx_method = pickle.load(open(os.path.join(Output_Dir,filename + '-Sinks_Results.txt'),'rb')) 
 
         # Updating the dictionary based on the total number of sources and sinks in each app
         for i in range(0,num_src_method+1):
@@ -194,6 +231,8 @@ def Extract_TotalFlows(appfile):
         shutil.move(os.path.join(Output_Dir,filename + '-Sinks_Results.txt'),os.path.join(Output_Dir,'Sinks',filename + '-Sinks_Results.txt'))
         shutil.move(os.path.join(Output_Dir,filename + '-totalflows.txt'),os.path.join(Output_Dir,'Flows',filename + '-totalflows.txt'))
 
+    return methods
+    
 # ********************* End of Functions *********************
 
 # ********************* Main Body *********************
