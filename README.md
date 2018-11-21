@@ -64,7 +64,7 @@ WHAT’S NEW IN THE CURRENT VERSION?
 •	Users/Analysts can normalize scores to their arbitrary ranges. <br />
 •	The efficiencies of scripts have been improved. <br />
 
-Follow this link for more detailed information regarding Dalvik Executable Format: https://source.android.com/devices/tech/dalvik/dex-format
+Follow this link for more detailed information regarding Dalvik Executable format: https://source.android.com/devices/tech/dalvik/dex-format
 
 COPYRIGHT NOTICE:
 --------------------------
