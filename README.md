@@ -4,7 +4,7 @@ TriFlow: Triaging Android Applications using Speculative Information Flows
 VERSION:
 ------------
 
-Version (by release date): 2017-04-26
+Version (by release date): 2018-11-21
 
 DEVELOPER INFORMATION:
 ------------------------------------
@@ -60,11 +60,11 @@ To normalize scores to your arbitrary ranges, you need to do the following three
 
 WHAT’S NEW IN THE CURRENT VERSION? 
 ------------------------------------------------------
-•	Info-flows are extracted from smali code. <br />
+•	Source and sink API methods are extracted from .dex file directly by parsing its header. <br />
 •	Users/Analysts can normalize scores to their arbitrary ranges. <br />
 •	The efficiencies of scripts have been improved. <br />
 
-Note: The dexdump disassembler uploaded to this repository is for Mac operating system. You may need to download the relevant variant of this tool and replace it with the current one based on your operating system. <br />
+Follow this link for more detailed information regarding Dalvik Executable Format: https://source.android.com/devices/tech/dalvik/dex-format
 
 COPYRIGHT NOTICE:
 --------------------------
