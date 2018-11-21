@@ -61,6 +61,7 @@ To normalize scores to your arbitrary ranges, you need to do the following three
 WHAT’S NEW IN THE CURRENT VERSION? 
 ------------------------------------------------------
 •	Source and sink API methods are extracted from .dex file directly by parsing its header. <br />
+•	Multidex Android applications are taken into account. <br />
 •	Users/Analysts can normalize scores to their arbitrary ranges. <br />
 •	The efficiencies of scripts have been improved. <br />
 
