@@ -150,20 +150,20 @@ Dict_Weight = {}                # Dictionary of information flows' weights
 Dict_Total = {}                 # Dictionary of information flows' probabilities and weights
 with open(os.path.join(Tables_Dir,'Prob_InfoFlows_Sorted.csv')) as CSV_Prob:
     reader = csv.reader(CSV_Prob)
-    reader.next()
+    reader.__next__()
     for row in reader:
         Dict_Prob[(row[0],row[1])] = row[2]
 with open(os.path.join(Tables_Dir,'Weights_InfoFlows_Sorted.csv')) as CSV_Weights:
     reader = csv.reader(CSV_Weights)
-    reader.next()
+    reader.__next__()
     for row in reader:
         Dict_Weight[(row[0],row[1])] = row[2]
-for key,value in Dict_Prob.iteritems():
+for key,value in Dict_Prob.items():
     if key in Dict_Weight:
         Dict_Total[key] = [Dict_Prob[key],Dict_Weight[key]]
     else:
         Dict_Total[key] = [Dict_Prob[key],'0']
-for key,value in Dict_Weight.iteritems():
+for key,value in Dict_Weight.items():
     if key not in Dict_Prob:
         Dict_Total[key] = ['0',Dict_Weight[key]]
 
@@ -174,11 +174,11 @@ for key,value in Dict_Weight.iteritems():
 def normalize(value,old_min,old_max,new_min,new_max):
     # Checks range
     if old_min == old_max:
-        print "Warning: Zero input range"
+        print("Warning: Zero input range")
         return None
 
     if new_min == new_max:
-        print "Warning: Zero output range"
+        print("Warning: Zero output range")
         return None
 
     # Checks reversed input range
@@ -212,7 +212,7 @@ def normalize(value,old_min,old_max,new_min,new_max):
 if not os.path.exists(Output_Dir):
     os.mkdir(Output_Dir)
 
-Output_File = open(os.path.join(Output_Dir,'Scores_Percent.txt'),'wb')
+Output_File = open(os.path.join(Output_Dir,'Scores_Percent.txt'),'w')
 
 for file in glob.iglob(os.path.join(Total_Flows_Dir, "*.txt")):
 
@@ -327,10 +327,10 @@ for file in glob.iglob(os.path.join(Total_Flows_Dir, "*.txt")):
 # ********************* Creating the table of scores based on information flows for methods *********************
 
 # Creating the headers
-with open(os.path.join(Output_Dir,'Scores.csv'), 'wb') as csvfile:
+with open(os.path.join(Output_Dir,'Scores.csv'), 'w') as csvfile:
     a = csv.writer(csvfile)
     a.writerow(['Application']+['Score'])
-    for key in Normalized_Scores.iterkeys():
+    for key in Normalized_Scores.keys():
         if '.apk' in key:
             App_Name = key[:-10]
         else:
@@ -341,11 +341,11 @@ with open(os.path.join(Output_Dir,'Scores.csv'), 'wb') as csvfile:
 
 # ********************* Sorting the table of scores based on information flows for methods *********************
 
-Unsorted_File =open(os.path.join(Output_Dir,'Scores.csv'), 'rb')
+Unsorted_File =open(os.path.join(Output_Dir,'Scores.csv'), 'r')
 infile = csv.reader(Unsorted_File)
-infields = infile.next()
+infields = infile.__next__()
 Sorted_File = sorted(infile, key=lambda t: float(t[1]))
-with open(os.path.join(Output_Dir,"Sorted_Scores.csv"),'wb') as csvfile:
+with open(os.path.join(Output_Dir,"Sorted_Scores.csv"),'w') as csvfile:
     a = csv.writer(csvfile)
     a.writerow(infields)
     for row in Sorted_File:
