@@ -87,23 +87,23 @@ Dict_Score = {}
 K = 0
 with open(os.path.join(Input_Dir,'Freq_InfoFlows_Malware.csv')) as Freq_Mal:
         reader = csv.reader(Freq_Mal)
-        reader.next()
+        reader.__next__()
         for row in reader:
             Dict_Freq_Mal[(row[0],row[1])]=row[2]
 with open(os.path.join(Input_Dir,'Freq_InfoFlows_Benign.csv')) as Freq_Good:
         reader = csv.reader(Freq_Good)
-        reader.next()
+        reader.__next__()
         for row in reader:
             Dict_Freq_Good[(row[0],row[1])]=row[2]
 
 min_value = Dict_Freq_Good[min(Dict_Freq_Good, key=Dict_Freq_Good.get)]     # Minimum frequency value in goodware dataset
 K =  math.ceil(-math.log(ast.literal_eval(min_value),2))
-for key,value in Dict_Freq_Mal.iteritems():
+for key,value in Dict_Freq_Mal.items():
     if key in Dict_Freq_Good:
         Dict_Score[key] = -ast.literal_eval(Dict_Freq_Mal[key]) * math.log(ast.literal_eval(Dict_Freq_Good[key]),2)
     else:
         Dict_Score[key] = ast.literal_eval(Dict_Freq_Mal[key]) * K
-for key,value in Dict_Freq_Good.iteritems():
+for key,value in Dict_Freq_Good.items():
     if key not in Dict_Freq_Mal:
         Dict_Score[key] = 0
 
@@ -120,10 +120,10 @@ if not os.path.exists(Output_Dir):
     os.mkdir(Output_Dir)
 
 # Creating the headers
-with open(os.path.join(Output_Dir,'Weights_InfoFlows_Sorted.csv'), 'wb') as csvfile:
+with open(os.path.join(Output_Dir,'Weights_InfoFlows_Sorted.csv'), 'w') as csvfile:
     a = csv.writer(csvfile)
     a.writerow(['Source']+['Sink']+['Weight'])
-    for key,value in Sorted_Dict_Score.iteritems():
+    for key,value in Sorted_Dict_Score.items():
         a.writerow([key[0]]+[key[1]]+[Sorted_Dict_Score[key]])
 
 # ****************** End of Creating the weight table for all information flows ******************
