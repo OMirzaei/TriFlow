@@ -65,7 +65,6 @@ import pickle
 import multiprocessing
 import re
 import sys
-from sets import Set
 from DexParser import DalvikParser
 
 # ************************ End of Importing Modules ************************
@@ -164,9 +163,8 @@ def Unzip(app):
 
 def Extract_Methods(dex_file):
 
-    List_Methods = Set([])
+    List_Methods = set()
     dex = DalvikParser.Dalvik.fromfilename(dex_file)
-
     for mtd in dex.methods.methods:
         full_method_sig = mtd['class'] + mtd['name'] + '(' + mtd['proto']['name'][1:] + ')' + mtd['proto']['type']
         List_Methods.add(full_method_sig)
@@ -185,7 +183,7 @@ def Extract_TotalFlows(appfile):
     cols_idx_method = [0 for x in range(num_snk_method+1)]
 
     dirname,filename = os.path.split(appfile)
-    methods = Set([])
+    methods = set()
 
     if filename + '-Sources_Results.txt' not in os.listdir(Output_Dir) or filename + '-Sinks_Results.txt' not in os.listdir(Output_Dir):
         # Contains all the sources
@@ -199,11 +197,10 @@ def Extract_TotalFlows(appfile):
             current_methods = Extract_Methods(dex_path)
             methods = methods | current_methods
         # ---------------------- End of Extracting Methods from Dex File ---------------------- 
-        
         for m in methods:
-            if m in Dict_Srcs.iterkeys():
+            if m in Dict_Srcs.keys():
                 flag_srcs[Dict_Srcs[m]] = 1
-            if m in Dict_Snks.iterkeys():
+            if m in Dict_Snks.keys():
                 flag_snks[Dict_Snks[m]] = 1
 
         pickle.dump(flag_srcs,srcs_results)
