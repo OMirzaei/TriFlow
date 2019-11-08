@@ -3,7 +3,7 @@
 VERSION:
 -------
 
-Version (by release date): 2018-11-21
+Version (by release date): 2019-11-08
 
 DEVELOPER INFORMATION:
 ---------------------
