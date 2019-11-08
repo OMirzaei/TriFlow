@@ -34,7 +34,7 @@ AWARDS:
 INSTALLATION INSTRUCTIONS:
 ----------------------------------------
 
-TriFlow is now upgraded to work with python 3. There are two ways through which you can easily install, and, then, run TriFlow:
+TriFlow is now upgraded to be compatible with python 3. There are two ways through which you can easily install and run TriFlow:
 
 1\. pipenv install & pipenv shell <br />
 2\. pip install -U -r requirements.txt <br />
