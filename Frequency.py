@@ -128,7 +128,7 @@ for file in glob.iglob(os.path.join(Input_Dir, "*.txt")):
 
 
 # Creating the overall frequency matrix for information flows
-for key in Real_InfoFlows_method.iterkeys():
+for key in Real_InfoFlows_method.keys():
     if Real_InfoFlows_method[key] != 0:
         Freq_InfoFlows_method[key] = float(Real_InfoFlows_method[key]) / Num_Apps
 
@@ -142,10 +142,10 @@ if not os.path.exists(Output_Dir):
 # ********************* Creating the frequency table of Non-Empty information flows for methods *********************
 
 # Creating the headers of rows and columns
-with open(os.path.join(Output_Dir,'Freq_InfoFlows.csv'), 'wb') as csvfile:
+with open(os.path.join(Output_Dir,'Freq_InfoFlows.csv'), 'w') as csvfile:
     a = csv.writer(csvfile)
     a.writerow(['Sources']+['Sinks']+['Frequency'])
-    for key in Freq_InfoFlows_method.iterkeys():
+    for key in Freq_InfoFlows_method.keys():
         if Freq_InfoFlows_method[key] != 0:
             fr = str(Freq_InfoFlows_method[key])
             a.writerow([Dict_Srcs_Nat[key[0]]]+[Dict_Snks_Nat[key[1]]]+[fr])
@@ -154,12 +154,12 @@ with open(os.path.join(Output_Dir,'Freq_InfoFlows.csv'), 'wb') as csvfile:
 
 # ********************* Sorting the frequency table of Non-Empty information flows for methods *********************
 
-Unsorted_File =open(os.path.join(Output_Dir,'Freq_InfoFlows.csv'), 'rb')
+Unsorted_File =open(os.path.join(Output_Dir,'Freq_InfoFlows.csv'), 'r')
 infile = csv.reader(Unsorted_File)
-infields = infile.next()
+infields = infile.__next__()
 index = infields.index('Frequency')
 Sorted_File = sorted(infile, key=operator.itemgetter(index))
-with open(os.path.join(Output_Dir,'Freq_InfoFlows_Sorted.csv'),'wb') as csvfile:
+with open(os.path.join(Output_Dir,'Freq_InfoFlows_Sorted.csv'),'w') as csvfile:
     a = csv.writer(csvfile)
     a.writerow(infields)
     for row in Sorted_File:
