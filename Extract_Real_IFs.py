@@ -125,7 +125,7 @@ def Extract_RealFlows(appfile):
 
     if filename not in os.listdir(Output_Dir):
         # Opening FlowDroid output file to extract real information flows
-        flows_file = open(os.path.join(Input_Dir,filename),'rb')
+        flows_file = open(os.path.join(Input_Dir,filename),'r')
         for line in flows_file:
             if 'Found a flow to sink' in line:
                 row_idx = 0
