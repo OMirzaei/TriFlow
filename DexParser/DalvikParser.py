@@ -1,6 +1,7 @@
 import zipfile
 import sys
 import struct
+import binascii
 
 class Dalvik:
         
@@ -18,9 +19,8 @@ class Dalvik:
 
     @classmethod
     def fromfilename(cls, filename):
-        handle=file(filename,'rb')
-        tmpsource=handle.read()
-        handle.close()
+        with open(filename,'rb') as handle:
+            tmpsource = handle.read()
         return cls(tmpsource)
 
     def getFileLis(self):
@@ -70,13 +70,13 @@ class Dalvik:
     
 class Dalvik_Header:
     def __init__(self, source):
-        self.magic = source[0:8].replace("\n","\\n").replace("\0","\\0")
+        self.magic = source[0:8].replace(b"\n", b"\\n").replace(b"\0", b"\\0")
         self.checksum = struct.unpack("<I", source[8:12])[0]
-        self.checksumHex = source[8:12].encode('hex')
-        self.sha_sign = source[12:32].encode('hex')
+        self.checksumHex = (binascii.b2a_hex(source[8:12])).decode()
+        self.sha_sign = (binascii.b2a_hex(source[12:32])).decode()
         self.file_size = struct.unpack("<I", source[32:36])[0]
         self.header_size = struct.unpack("<I", source[36:40])[0]
-        self.endian_tag = source[40:44].encode('hex')
+        self.endian_tag =  (binascii.b2a_hex(source[40:44])).decode()
         self.link_size = struct.unpack("<I", source[44:48])[0]
         self.link_offset = struct.unpack("<I", source[48:52])[0]
         self.map_offset= struct.unpack("<I", source[52:56])[0]
@@ -100,9 +100,9 @@ class Strings_Table:
         self.strings = []
         for i in range(0,size):
             temp_offset = struct.unpack("<I", source[offset+(i*4):offset+((i+1)*4)])[0]
-            string_size = struct.unpack("<B", source[temp_offset])[0]
+            string_size = source[temp_offset]
             temp_limit = temp_offset + string_size +1
-            self.strings.append(source[temp_offset+1:temp_limit])
+            self.strings.append(source[temp_offset+1:temp_limit].decode("utf-8", "ignore"))
                                      
 class Type_Table:
     def __init__(self, source, offset,size,strings):
@@ -165,7 +165,7 @@ class Class_Table:
             annotations_off = struct.unpack("<I", source[offset+((i*32)+20):offset+((i*32)+24)])[0]
             class_data_off = struct.unpack("<I", source[offset+((i*32)+24):offset+((i*32)+28)])[0]
             static_values_off = struct.unpack("<I", source[offset+((i*32)+28):offset+((i*32)+32)])[0]
-            if source[offset+((i*32)+16):offset+((i*32)+20)].encode('hex') != "ffffffff":
+            if (binascii.b2a_hex(source[offset+((i*32)+16):offset+((i*32)+20)])).decode() != "ffffffff":
                 source_file_name = strings[source_file_id]
             else:
                 try:
