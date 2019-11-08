@@ -137,8 +137,8 @@ for file in glob.iglob(os.path.join(Real_Flows_Dir, "*.txt")):
     f.close()
             
 # Creating the overall probability matrix for information flows
-for key in Real_InfoFlows_method.iterkeys():
-    if key in Total_InfoFlows_method.iterkeys() and Total_InfoFlows_method[key] != 0:
+for key in Real_InfoFlows_method.keys():
+    if key in Total_InfoFlows_method.keys() and Total_InfoFlows_method[key] != 0:
         Prob_InfoFlows_method[key] = float(Real_InfoFlows_method[key]) / (Total_InfoFlows_method[key])
 
 # ********************* End of Main Body *********************
@@ -151,10 +151,10 @@ if not os.path.exists(Output_Dir):
 # ********************* Creating the probability table of Non-Empty information flows *********************
 
 # Creating the headers of rows and columns
-with open(os.path.join(Output_Dir,'Prob_InfoFlows.csv'), 'wb') as csvfile:
+with open(os.path.join(Output_Dir,'Prob_InfoFlows.csv'), 'w') as csvfile:
     a = csv.writer(csvfile)
     a.writerow(['Sources']+['Sinks']+['Probability'])
-    for key in Prob_InfoFlows_method.iterkeys():
+    for key in Prob_InfoFlows_method.keys():
         if Prob_InfoFlows_method[key] != 0:
             pr = str(Prob_InfoFlows_method[key])
             a.writerow([Dict_Srcs_Nat[key[0]]]+[Dict_Snks_Nat[key[1]]]+[pr])
@@ -163,12 +163,12 @@ with open(os.path.join(Output_Dir,'Prob_InfoFlows.csv'), 'wb') as csvfile:
 
 # ********************* Sorting the probability table of Non-Empty information flows *********************
 
-Unsorted_File =open(os.path.join(Output_Dir,'Prob_InfoFlows.csv'), 'rb')
+Unsorted_File =open(os.path.join(Output_Dir,'Prob_InfoFlows.csv'), 'r')
 infile = csv.reader(Unsorted_File)
-infields = infile.next()
+infields = infile.__next__()
 index = infields.index('Probability')
 Sorted_File = sorted(infile, key=operator.itemgetter(index))
-with open(os.path.join(Output_Dir,'Prob_InfoFlows_Sorted.csv'),'wb') as csvfile:
+with open(os.path.join(Output_Dir,'Prob_InfoFlows_Sorted.csv'),'w') as csvfile:
     a = csv.writer(csvfile)
     a.writerow(infields)
     for row in Sorted_File:
