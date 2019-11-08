@@ -34,7 +34,10 @@ AWARDS:
 INSTALLATION INSTRUCTIONS:
 ----------------------------------------
 
-Before using TriFlow, you only need to install python 2.7.11 on your system successfully. Moreover, you might need to install some python modules which are not commonly included in the regular installation of python and have been used in our scripts.
+TriFlow is now upgraded to work with python 3. There are two ways through which you can easily install, and, then, run TriFlow:
+
+1\. pipenv install & pipenv shell <br />
+2\. pip install -U -r requirements.txt <br />
 
 USAGE:
 ---------
