@@ -84,14 +84,14 @@ Home_Dir = os.path.curdir											# Home directory
 
 # ********************* Main Body *********************
 
-print 'Scoring process started...'
+print('Scoring process started...')
 #os.mkdir(os.path.join(Home_Dir,'Total_Flows_Apps'))
-print 'Extracting total information flows from applications...'
+print('Extracting total information flows from applications...')
 subprocess.call([sys.executable, os.path.join(Home_Dir,'Extract_Total_IFs.py'), '-i', Apps_Dir, '-o', os.path.join(Home_Dir,'Total_Flows_Apps')])
-print 'Scoring applications and preparing a detailed report...'
+print('Scoring applications and preparing a detailed report...')
 subprocess.call([sys.executable, os.path.join(Home_Dir,'Score.py'), '-f', os.path.join(Home_Dir,'Total_Flows_Apps/Flows'), '-t', Tables_Dir, '-o', Output_Dir])
-#subprocess.call([sys.executable, os.path.join(Home_Dir,'Score_Normalized.py'), '-f', os.path.join(Home_Dir,'Total_Flows_Apps/Flows'), '-t', Tables_Dir, '-o', Output_Dir])
+# subprocess.call([sys.executable, os.path.join(Home_Dir,'Score_Normalized.py'), '-f', os.path.join(Home_Dir,'Total_Flows_Apps/Flows'), '-t', Tables_Dir, '-o', Output_Dir])
 
-print 'End of scoring!'
+print('End of scoring!')
 
 # ********************* End of Main Body *********************
