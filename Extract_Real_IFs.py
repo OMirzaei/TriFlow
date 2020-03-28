@@ -65,6 +65,8 @@ import pickle
 import time
 import multiprocessing
 import sys
+from xml.dom.minidom import parse 
+import xml.dom.minidom
 
 # ************************ End of Importing Modules ************************
 
@@ -124,24 +126,37 @@ def Extract_RealFlows(appfile):
     col_idx = 0
 
     if filename not in os.listdir(Output_Dir):
-        # Opening FlowDroid output file to extract real information flows
-        flows_file = open(os.path.join(Input_Dir,filename),'r')
-        for line in flows_file:
-            if 'Found a flow to sink' in line:
+        print(filename)
+        # Parsing FlowDroid output file to extract real information flows
+        DOMTree = xml.dom.minidom.parse(os.path.join(Input_Dir,filename))                  
+        results = DOMTree.documentElement
+        results = results.getElementsByTagName('Result')
+        if results:
+            for res_element in results:
                 row_idx = 0
                 col_idx = 0
-                snk_name = '<' + line.split('<')[1].split('>')[0] + '>'
+                sink_element = res_element.getElementsByTagName('Sink')
+                source_elements = res_element.getElementsByTagName('Sources')
+                snk_name = sink_element[0].getAttribute('Statement')
+                snk_name = snk_name.split('<')[1]
+                snk_name = snk_name.split('>')[0]
+                snk_name = '<' + snk_name + '>'
                 if snk_name in Dict_Snks_Nat.keys():
                     col_idx = Dict_Snks_Nat[snk_name]
-            if '	-' in line:
-                src_name = '<' + line.split('<')[1].split('>')[0] + '>'
-                if src_name in Dict_Srcs_Nat.keys():
-                    row_idx = Dict_Srcs_Nat[src_name]
-
-            if flag_realflows[row_idx][col_idx] == 0 and row_idx != 0 and col_idx != 0:
-                Dict_Real_Flows.append((row_idx,col_idx))
-                flag_realflows[row_idx][col_idx] = 1
-        flows_file.close()
+                    
+                for source_element in source_elements:
+                    sources = source_element.getElementsByTagName('Source')
+                    for source in sources:
+                        src_name = source.getAttribute('Statement')
+                        src_name = src_name.split('<')[1]
+                        src_name = src_name.split('>')[0]
+                        src_name = '<' + src_name + '>'
+                        if src_name in Dict_Srcs_Nat.keys():
+                            row_idx = Dict_Srcs_Nat[src_name]
+                            
+                        if flag_realflows[row_idx][col_idx] == 0 and row_idx != 0 and col_idx != 0:
+                            Dict_Real_Flows.append((row_idx,col_idx))
+                            flag_realflows[row_idx][col_idx] = 1
 
         result = open(os.path.join(Output_Dir,filename[:-10] + '-realflows.txt'),'wb')
         pickle.dump(Dict_Real_Flows,result)
@@ -156,7 +171,7 @@ if not os.path.exists(Output_Dir):
     os.mkdir(Output_Dir)
 
 pool = multiprocessing.Pool(n_procs)
-results = [pool.apply_async(Extract_RealFlows, [appfile]) for appfile in glob.iglob(os.path.join(Input_Dir, "*.txt"))]
+results = [pool.apply_async(Extract_RealFlows, [appfile]) for appfile in glob.iglob(os.path.join(Input_Dir, "*.xml"))]
 pool.close()
 pool.join()
 
