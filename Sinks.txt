@@ -532,7 +532,6 @@
 <android.view.HardwareRenderer: void setupDiskCache(java.io.File)>
 <android.app.AlertDialog: void setIcon(int)>
 <android.os.Parcel: void writeDoubleArray(double[])>
-<com.android.server.InputMethodManagerService$InputMethodFileManager: void <init>
 <com.android.deskclock.DeskClock$TabsAdapter: void notifySelectedPage(int)>
 <android.location.ILocationManager$Stub$Proxy: boolean addGpsStatusListener(android.location.IGpsStatusListener)>
 <com.android.internal.telephony.SMSDispatcher: void dispatchBroadcastMessage(android.telephony.SmsCbMessage)>
@@ -816,7 +815,6 @@
 <com.android.internal.telephony.RIL: void sendDtmf(char,android.os.Message)>
 <android.hardware.usb.IUsbManager$Stub$Proxy: android.os.ParcelFileDescriptor openDevice(java.lang.String)>
 <java.io.PrintStream: void println(char[])>
-<com.android.server.am.AppErrorDialog: void <init>
 <com.android.deskclock.TimerSetupView: void restoreEntryState(android.os.Bundle,java.lang.String)>
 <android.util.Log: int w(java.lang.String,java.lang.String)>
 <android.webkit.WebView: void setWebViewClient(android.webkit.WebViewClient)>
@@ -1725,7 +1723,6 @@
 <com.android.commands.am.Am$MyActivityController: boolean appCrashed(java.lang.String,int,java.lang.String,java.lang.String,long,java.lang.String)>
 <android.accounts.IAccountManager$Stub$Proxy: boolean addAccount(android.accounts.Account,java.lang.String,android.os.Bundle)>
 <gov.nist.javax.sip.address.AddressImpl: void setUser(java.lang.String)>
-<gov.nist.javax.sip.stack.UDPMessageChannel$PingBackTimerTask: void <init>
 <java.io.BufferedWriter: void write(char[],int,int)>
 <com.android.internal.telephony.RIL: void setMute(boolean,android.os.Message)>
 <org.apache.harmony.xnet.provider.jsse.OpenSSLSocketImplWrapper: void setTrafficClass(int)>
@@ -3130,7 +3127,6 @@
 <com.android.vcard.VCardProperty: void setValues(java.lang.String[])>
 <android.widget.ImageSwitcher: void setImageDrawable(android.graphics.drawable.Drawable)>
 <com.google.common.collect.MapMakerInternalMap$AbstractReferenceEntry: void setExpirationTime(long)>
-<com.android.server.accessibility.AccessibilityManagerService$Service: void <init>
 <com.android.internal.telephony.sip.SipPhone: void setRadioPower(boolean)>
 <android.app.admin.IDevicePolicyManager$Stub$Proxy: void setPasswordQuality(android.content.ComponentName,int,int)>
 <com.android.internal.telephony.IccCardProxy: void setIccFdnEnabled(boolean,java.lang.String,android.os.Message)>
@@ -5743,7 +5739,6 @@
 <com.android.systemui.statusbar.AnimatedImageView: void setImageResource(int)>
 <android.os.Handler$MessengerImpl: void send(android.os.Message)>
 <com.android.internal.app.IBatteryStats$Stub$Proxy: void setBatteryState(int,int,int,int,int,int)>
-<gov.nist.javax.sip.SipStackImpl: void <init>
 <android.media.IRingtonePlayer$Stub$Proxy: void playAsync(android.net.Uri,android.os.UserHandle,boolean,int)>
 <android.inputmethodservice.ExtractEditLayout$ExtractActionMode: void setCustomView(android.view.View)>
 <android.widget.TextView: void setPaintFlags(int)>
@@ -7963,7 +7958,6 @@
 <java.lang.ProcessBuilder: java.lang.Process start()>
 <android.service.wallpaper.IWallpaperConnection$Stub$Proxy: android.os.ParcelFileDescriptor setWallpaper(java.lang.String)>
 <com.android.mms.util.SendingProgressTokenManager: void put(java.lang.Object,long)>
-<org.apache.harmony.xnet.provider.jsse.ConnectionStateSSLv3: void <init>
 <android.view.IWindowSession$Stub$Proxy: void wallpaperOffsetsComplete(android.os.IBinder)>
 <android.provider.ContactsContract$ProfileSyncState: void set(android.content.ContentProviderClient,android.accounts.Account,byte[])>
 <com.android.server.wm.WindowManagerService: void dumpAnimatorLocked(java.io.PrintWriter,java.lang.String[],boolean)>
