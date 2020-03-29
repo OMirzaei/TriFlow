@@ -1358,7 +1358,7 @@
 <android.widget.LinearLayout: int getDividerPadding()>
 <org.apache.harmony.xml.ExpatParser$ClonedAttributes: int getParserPointer()>
 <com.android.camera.ListPreference: java.lang.String getKey()>
-<android.content.Intent: int getIntExtra(java.lang.String, int)>
+<android.content.Intent: int getIntExtra(java.lang.String,int)>
 <android.media.videoeditor.EffectKenBurns: android.graphics.Rect getStartRect()>
 <com.android.inputmethod.latin.LocaleUtils$RunInLocale: java.lang.Object runInLocale(android.content.res.Resources,java.util.Locale)>
 <android.widget.SearchView: java.lang.CharSequence getQueryHint()>
@@ -1409,7 +1409,6 @@
 <com.android.server.pm.UserManagerService: android.graphics.Bitmap getUserIcon(int)>
 <android.widget.ActivityChooserView$ActivityChooserViewAdapter: java.lang.Object getItem(int)>
 <com.android.internal.widget.ActionBarContextView: java.lang.CharSequence getTitle()>
-<android.os.Bundle: java.util.ArrayList getStringArrayList(java.lang.String key)>
 <com.google.android.picasasync.UploadsManager: com.google.android.picasasync.SyncTaskProvider getManualPhotoUploadTaskProvider()>
 <android.webkit.WebViewClassic: java.lang.String getTitle()>
 <com.android.internal.view.menu.ActionMenuView: int getWindowAnimations()>
@@ -1969,7 +1968,7 @@
 <com.android.commands.monkey.MonkeyKeyEvent: int getKeyCode()>
 <org.apache.http.message.BasicNameValuePair: java.lang.String getValue()>
 <java.nio.channels.spi.SelectorProvider: java.nio.channels.Channel inheritedChannel()>
-<android.content.Intent: double getDoubleExtra(java.lang.String, double)>
+<android.content.Intent: double getDoubleExtra(java.lang.String,double)>
 <java.text.NumberFormat: java.lang.Number parse(java.lang.String)>
 <gov.nist.javax.sip.stack.UDPMessageChannel: java.lang.String getTransport()>
 <com.android.internal.telephony.gsm.GsmDataConnectionTracker: java.lang.String[] getActiveApnTypes()>
@@ -2615,7 +2614,7 @@
 <android.accounts.AccountManagerService: java.lang.String getPassword(android.accounts.Account)>
 <com.android.org.bouncycastle.util.encoders.Hex: byte[] decode(byte[])>
 <com.android.inputmethod.keyboard.internal.KeyStylesSet$EmptyKeyStyle: java.lang.String getString(android.content.res.TypedArray,int)>
-<android.content.Intent: char getCharExtra(java.lang.String, char)>
+<android.content.Intent: char getCharExtra(java.lang.String,char)>
 <android.content.IContentService$Stub$Proxy: java.lang.String getInterfaceDescriptor()>
 <android.content.SyncStorageEngine: android.content.SyncStorageEngine$AuthorityInfo getAuthority(int)>
 <com.android.server.net.NetworkStatsService: long getNetworkTotalBytes(android.net.NetworkTemplate,long,long)>
@@ -2767,7 +2766,7 @@
 <com.adobe.xmp.impl.XMPMetaImpl: java.lang.Object getPropertyObject(java.lang.String,java.lang.String,int)>
 <java.security.Signature: java.security.Signature getInstance(java.lang.String,java.lang.String)>
 <gov.nist.javax.sip.header.AcceptLanguage: java.lang.String getLanguageRange()>
-<android.content.Intent: long getLongExtra(java.lang.String, long)>
+<android.content.Intent: long getLongExtra(java.lang.String,long)>
 <com.android.server.wm.InputMonitor: int getPointerLayer()>
 <com.android.internal.telephony.gsm.UsimServiceTable: java.lang.String getTag()>
 <com.android.contacts.activities.PhotoSelectionActivity$PhotoHandler: long getWritableEntityId()>
@@ -2880,7 +2879,6 @@
 <android.media.AudioManager: int getVibrateSetting(int)>
 <com.android.emailcommon.internet.MimeHeader: java.lang.String getFirstHeader(java.lang.String)>
 <com.android.launcher2.Launcher: com.android.launcher2.CellLayout getCellLayout(long,int)>
-<android.telephony.TelephonyManager: java.lang.String getSimSerialNumber()> android.permission.READ_PHONE_STATE
 <android.widget.ActivityChooserModel: int getActivityCount()>
 <android.inputmethodservice.Keyboard: int getDimensionOrFraction(android.content.res.TypedArray,int,int,int)>
 <com.android.browser.BreadCrumbView: com.android.browser.BreadCrumbView$Crumb getTopCrumb()>
@@ -6071,7 +6069,7 @@
 <android.net.IConnectivityManager$Stub$Proxy: int getNetworkPreference()>
 <android.nfc.tech.MifareClassic: int getTimeout()>
 <org.apache.james.mime4j.field.contenttype.parser.SimpleCharStream: int getEndLine()>
-<android.content.Intent: float getFloatExtra(java.lang.String, float)>
+<android.content.Intent: float getFloatExtra(java.lang.String,float)>
 <android.filterfw.core.Filter: android.filterfw.core.InputPort getInputPort(java.lang.String)>
 <com.android.server.net.NetworkStatsCollection: long getEndMillis()>
 <com.google.android.mms.pdu.NotifyRespInd: int getReportAllowed()>
@@ -7317,7 +7315,7 @@
 <javax.obex.ClientOperation: int getMaxPacketSize()>
 <com.android.internal.util.MemInfoReader: long getFreeSize()>
 <android.app.SharedPreferencesImpl: java.util.Map getAll()>
-<android.content.Intent: short getShortExtra(java.lang.String, short)>
+<android.content.Intent: short getShortExtra(java.lang.String,short)>
 <com.android.internal.telephony.sip.SipPhone: java.lang.String getDeviceSvn()>
 <java.util.concurrent.atomic.AtomicLong: long getAndDecrement()>
 <com.android.mms.model.RegionModel: int getHeight()>
@@ -7970,7 +7968,6 @@
 <junit.runner.StandardTestSuiteLoader: java.lang.Class load(java.lang.String)>
 <android.media.ExifInterface: int getAttributeInt(java.lang.String,int)>
 <com.android.internal.telephony.IIccPhoneBook$Stub$Proxy: java.util.List getAdnRecordsInEf(int)>
-<android.telephony.TelephonyManager: java.lang.String getLine1Number()> android.permission.READ_PHONE_STATE
 <com.android.internal.telephony.cdma.CDMAPhone: void getSmscAddress(android.os.Message)>
 <android.nfc.tech.Ndef: byte[] transceive(byte[],boolean)>
 <com.android.server.MountService$ObbState: android.os.IBinder getBinder()>
@@ -8335,7 +8332,7 @@
 <com.android.providers.contacts.ContactsDatabaseHelper: long getOrCreateAccountIdInTransaction(com.android.providers.contacts.AccountWithDataSet)>
 <android.hardware.input.IInputDevicesChangedListener$Stub$Proxy: java.lang.String getInterfaceDescriptor()>
 <com.android.contacts.model.account.ExchangeAccountType: com.android.contacts.model.dataitem.DataKind addDataKindOrganization(android.content.Context)>
-<android.content.Intent: byte getByteExtra(java.lang.String, byte)>
+<android.content.Intent: byte getByteExtra(java.lang.String,byte)>
 <org.apache.http.client.methods.HttpEntityEnclosingRequestBase: org.apache.http.HttpEntity getEntity()>
 <android.widget.RemoteViews$BitmapReflectionAction: java.lang.String getActionName()>
 <org.xml.sax.InputSource: java.lang.String getEncoding()>
@@ -9714,7 +9711,6 @@
 <com.android.gallery3d.data.PathMatcher$Node: com.android.gallery3d.data.PathMatcher$Node getChild(java.lang.String)>
 <com.google.common.primitives.Ints$IntArrayAsList: java.lang.Integer get(int)>
 <java.util.Calendar: int getMinimalDaysInFirstWeek()>
-<android.telephony.TelephonyManager: java.lang.String getDeviceId()> android.permission.READ_PHONE_STATE
 <org.apache.http.impl.SocketHttpClientConnection: java.net.Socket getSocket()>
 <android.widget.TextView: int getGravity()>
 <android.content.res.Resources: java.lang.String[] getStringArray(int)>
@@ -12044,7 +12040,7 @@
 <com.android.bluetooth.hfp.HeadsetService$BluetoothHeadsetBinder: java.util.List getConnectedDevices()>
 <java.util.logging.Handler: java.lang.String getEncoding()>
 <android.nfc.tech.NfcA: byte[] transceive(byte[])>
-<android.content.Intent: boolean getBooleanExtra(java.lang.String, boolean)>
+<android.content.Intent: boolean getBooleanExtra(java.lang.String,boolean)>
 <android.media.AudioService$ScoClient: int getPid()>
 <java.util.logging.Logger: java.util.ResourceBundle getResourceBundle()>
 <com.android.mms.MmsApp: com.android.mms.util.PduLoaderManager getPduLoaderManager()>
@@ -17176,7 +17172,6 @@
 <android.app.admin.IDevicePolicyManager$Stub$Proxy: long getPasswordExpirationTimeout(android.content.ComponentName,int)>
 <android.telephony.TelephonyManager: java.lang.String[] getIsimImpu()>
 <android.content.pm.IPackageManager$Stub$Proxy: java.util.List queryContentProviders(java.lang.String,int,int)>
-<com.android.exchange.AbstractSyncService: void <init>
 <org.apache.harmony.xnet.provider.jsse.SSLSocketImpl: int getPeerPort()>
 <com.google.android.mms.pdu.PduPart: byte[] getContentType()>
 <com.android.internal.database.SortCursor: byte[] getBlob(int)>
@@ -17847,7 +17842,6 @@
 <android.media.MediaRouter$RouteInfo: android.media.MediaRouter$RouteGroup getGroup()>
 <com.android.calendar.Utils: long getNextMidnight(android.text.format.Time,long,java.lang.String)>
 <android.app.Activity: android.view.LayoutInflater getLayoutInflater()>
-<android.telephony.TelephonyManager: java.lang.String getSubscriberId()> android.permission.READ_PHONE_STATE
 <android.view.accessibility.IAccessibilityManagerClient$Stub$Proxy: java.lang.String getInterfaceDescriptor()>
 <java.text.SimpleDateFormat: java.util.Date get2DigitYearStart()>
 <com.google.common.collect.ForwardingMap$StandardValues: java.util.Map map()>
