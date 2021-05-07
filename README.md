@@ -17,7 +17,7 @@ Website: https://0m1d.com/software/TriFlow <br />
 PUBLICATION:
 ------------------
 
-TriFlow: Triaging Android Applications using Speculative Information Flows <br />
+[TriFlow: Triaging Android Applications using Speculative Information Flows](https://0m1d.com/assets/pdf/C4.pdf) <br />
 O. Mirzaei, G. Suarez-Tangil, J. E. Tapiador, J. M. de Fuentes <br />
 ACM Asia Conference on Computer and Communications Security (ASIACCS), Abu Dhabi, UAE (April 2017) <br />
 
